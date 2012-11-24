@@ -6,4 +6,7 @@ FactoryGirl.find_definitions
 
 RSpec.configure do |config|
   config.include SpecHelpers
+  config.include FactoryGirl::Syntax::Methods
+
+  config.alias_example_to :they
 end

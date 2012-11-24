@@ -2,3 +2,6 @@ en:
   home:
     index:
       page_title: "Home"
+  posts:
+    index:
+      page_title: "News"

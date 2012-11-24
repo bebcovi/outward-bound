@@ -20,6 +20,7 @@ gem "haml-rails"
 gem "redcarpet"
 gem "simple_form"
 gem "rails-i18n"
+gem "will_paginate"
 
 group :development, :test do
   gem "debugger"

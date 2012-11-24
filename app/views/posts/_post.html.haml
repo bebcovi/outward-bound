@@ -1,0 +1,7 @@
+= content_tag_for :article, post do
+
+  %header
+    %h2= smarty_pants post.title
+    = time_tag post.created_at.to_date
+
+  = markdown post.body
