@@ -11,6 +11,7 @@ module SpecHelpers
   end
 
   def setup_nulldb
+    require "active_record"
     require "nulldb"
     NullDB.nullify(schema: "#{::ROOT}/db/schema.rb")
   end

@@ -1,9 +1,9 @@
 !!!
-%html{:lang => "en"}
+%html{lang: I18n.locale}
   %head
     %title OutwardBound &middot; #{@title}
-    %meta{:charset => "utf-8"}
-    %link{:rel => "authors", :href => "humans.txt"}
+    %meta{charset: "utf-8"}
+    %link{rel: "authors", href: "humans.txt"}
     = favicon_link_tag
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"

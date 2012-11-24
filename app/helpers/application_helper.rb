@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def smarty_pants(text)
-    Redcarpet::Render::SmartyPants.render(text.to_s).html_safe
+    raw(Redcarpet::Render::SmartyPants.render(text))
   end
 
   Page = Struct.new(:title, :path)
@@ -15,11 +15,7 @@ module ApplicationHelper
       {controller: "home", action: "index"},
       {controller: "posts", action: "index"}
     ]
-    pages.map do |page|
-      Page.new(
-        t [page[:controller], page[:action], "page_title"].join("."),
-        page
-      )
-    end
+
+    pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }
   end
 end
