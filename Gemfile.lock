@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/chriseppstein/compass.git
+  revision: 7ff38d178cdfd167227dd7ed6bdbc028e9626a0e
+  branch: master
+  specs:
+    compass (0.13.alpha.0.7ff38d1)
+      chunky_png (~> 1.2)
+      listen (~> 0.5.3)
+      sass (~> 3.2.0.alpha.93)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -52,10 +62,6 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     columnize (0.3.6)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
@@ -75,7 +81,6 @@ GEM
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
     ffi (1.1.5)
-    fssm (0.2.9)
     haml (3.1.7)
     haml-rails (0.3.5)
       actionpack (>= 3.1, < 4.1)
@@ -91,6 +96,7 @@ GEM
     json (1.7.5)
     libwebsocket (0.1.5)
       addressable
+    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -149,7 +155,11 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     rubyzip (0.9.9)
-    sass (3.3.0.alpha.16)
+    sass (3.2.3)
+    sass-rails (3.2.5)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
     selenium-webdriver (2.26.0)
       childprocess (>= 0.2.5)
       libwebsocket (~> 0.1.3)
@@ -186,6 +196,7 @@ DEPENDENCIES
   activerecord-nulldb-adapter (>= 0.2.3)
   capybara
   coffee-rails
+  compass!
   compass-rails
   database_cleaner
   debugger
@@ -198,6 +209,7 @@ DEPENDENCIES
   rails-i18n
   redcarpet
   rspec-rails
+  sass-rails
   simple_form
   thin
   uglifier

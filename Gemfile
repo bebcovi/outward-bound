@@ -7,6 +7,8 @@ gem "rails", "~> 3.2.0"
 gem "pg"
 
 group :assets do
+  gem "sass-rails"
+  gem "compass", github: "chriseppstein/compass", branch: "master"
   gem "compass-rails"
   gem "coffee-rails"
   gem "uglifier"
