@@ -1,0 +1,4 @@
+- present course do |course_presenter|
+  %h1= course_presenter.name
+  = course_presenter.description
+  = course_presenter.admin_links if logged_in?

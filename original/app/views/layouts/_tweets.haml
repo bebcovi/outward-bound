@@ -1,0 +1,6 @@
+.tweets
+  %i.icon-twitter
+  = render @sidebar_tweets
+
+- if logged_in?
+  %p= edit_button "Uredi tweetove", tweets_path

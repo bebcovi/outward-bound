@@ -1,0 +1,19 @@
+#right {
+  @include span-columns($sidebar omega);
+  @include stretch-y;
+  right: 0;
+  padding-left: gutter();
+  padding-right: $side-gutter;
+  background: image-url('sidebar.png');
+  border-left: 1px solid rgba(black, .2);
+}
+
+[role=complementary] {
+  @include padding-leader(1);
+  left: auto;
+  right: 0;
+  padding-left: gutter();
+  .show {
+    display: none;
+  }
+}

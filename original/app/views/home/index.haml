@@ -1,0 +1,10 @@
+- @title = "Početna"
+
+#intro
+  = render @content
+
+#posts
+  = render @posts
+  %p= new_button "Nova vijest", new_post_path if logged_in?
+
+%p= link_to "← #{t("home.archive.page_title")}", archive_path

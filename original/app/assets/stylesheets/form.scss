@@ -1,0 +1,78 @@
+form {
+  div {
+    @include trailer(.5);
+  }
+}
+
+$error: darken(#f00, 5%);
+.error {
+  color: $error;
+  select + & {
+    padding-left: rhythm(.5);
+  }
+}
+
+$form: rgba($text, .6);
+input, textarea, select {
+  @include adjust-font-size-to($base-font-size);
+  font-family: $body;
+  color: $form;
+}
+
+[type=text], [type=password], [type=email], [type=tel], [type=url], textarea {
+  @extend .text-field;
+  display: block;
+  width: 100%;
+  &.error {
+    @include box-shadow(rgba($error, .1) 0 0 0 4px);
+    border-color: rgba($error, .75);
+    color: $form;
+  }
+}
+
+[type=radio], [type=checkbox] {
+  margin: 5px 4px 0 8px;
+}
+
+[type=number] {
+  @extend .text-field;
+  @include inline-block;
+  width: rhythm(4);
+  margin-left: rhythm(.5);
+}
+
+select {
+  margin: 0 0 0 rhythm(.25);
+  &.error { color: $form; }
+}
+
+textarea {
+  height: rhythm(12);
+  max-width: 100%;
+}
+
+label {
+  &:hover { cursor: pointer; }
+  &:after { content: ':'; }
+  &.radio, &.collection_radio_buttons,
+  &.checkbox, &.collection_check_boxes {
+    &:after { content: none; }
+  }
+}
+
+[type=submit] {
+  margin: 0;
+  padding: 0;
+}
+
+form .controls {
+  text-align: right;
+  input, a {
+    @extend .button;
+    float: right;
+    margin-left: rhythm(.5);
+  }
+  input {
+    @extend .primary;
+  }
+}

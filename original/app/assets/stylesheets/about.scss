@@ -1,0 +1,37 @@
+#about-instructors {
+  h2 {
+    clear: both;
+    &:first-of-type { clear: none; }
+  }
+  img {
+    margin-bottom: rhythm(.5);
+    &:nth-of-type(2n+1) {
+      float: left;
+      margin-right: rhythm(.5);
+    }
+    &:nth-of-type(2n) {
+      float: right;
+      margin-left: rhythm(.5);
+    }
+  }
+  .edit { clear: both; }
+}
+
+#about-partners {
+  ul {
+    @extend .unstyled-list;
+    li { @include trailer; }
+    a {
+      $font-size: 20px;
+      @include adjust-font-size-to($font-size);
+      &:after {
+        content: ' \f08e';
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  .img {
+    @extend .inline-block;
+    width: rhythm(5);
+  }
+}

@@ -1,0 +1,53 @@
+$total-columns: 24;
+$gutter-width: 4em;
+$grid-padding: 0;
+$container-style: fluid;
+
+$side-gutter: 2em;
+
+$sidebar: 8;
+$main: $total-columns - $sidebar;
+
+$tablet: 8 60em;
+$mobile: 8 35em;
+
+$base-font-size: 14px;
+$base-line-height: 24px;
+
+$body: Verdana, 'Trebuchet MS', Arial, sans-serif;
+$heading: 'Trebuchet MS', Arial, sans-serif;
+
+$color1: #c24704;
+$color2: #d9cc3c;
+$color3: #ffeb79;
+$color4: #a0e0a9;
+$color5: #00ada7;
+
+$text: rgba(black, .75); 
+$link1: $color5;
+$link2: darken($link1, 10%);
+
+@mixin unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin color-link($color1, $color2) {
+  @include link-colors($color1, $color2, $color2, $color1, $color2);
+}
+
+@mixin v-borders($width: 1px, $lines: 1, $font-size: $base-font-size, $border-style: $default-rhythm-border-style) {
+  @include apply-side-rhythm-border(left, $width, $lines, $font-size, $border-style);
+  @include apply-side-rhythm-border(right, $width, $lines, $font-size, $border-style);
+}
+
+@mixin size($size) {
+  @if length($size) == 1 {
+    width: $size;
+    height: $size;
+  } @else {
+    width: nth($size, 1);
+    height: nth($size, 2);
+  }
+}

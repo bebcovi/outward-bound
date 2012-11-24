@@ -1,0 +1,12 @@
+- @title = "Odabrani tweetovi"
+
+%p= link_to "← Natrag", back
+
+.tweets
+  - @tweets.each do |tweet|
+    .tweet
+      %i.icon-twitter
+      = render tweet
+      = delete_button "Izbriši", tweet
+
+%p= link_to "#{content_tag(:i, "", class: "icon-comments")} Lista tweetova".html_safe, stream_tweets_path

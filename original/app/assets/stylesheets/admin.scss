@@ -1,0 +1,23 @@
+body.admin {
+  .short {
+    time, .controls {
+      @include reset-columns;
+      float: right;
+    }
+    .controls {
+      @include leader(.25);
+      @include apply-side-rhythm-border(left, 1px, .5);
+      float: right;
+      margin-left: rhythm(.5);
+      border-color: rgba(black, .2);
+      a, [type=submit] {
+        $font-size: 18px;
+        @include adjust-font-size-to($font-size);
+        margin-left: rhythm(.1);
+      }
+    }
+    $cols: $main - 3;
+    h2 { @include span-columns($cols, $main); }
+  }
+
+}

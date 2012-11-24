@@ -1,0 +1,14 @@
+#toc
+  %dl
+    - Category.of_courses.each do |category|
+      %dt= category.name
+      %dd
+        %ul
+          = list_of category.courses do |course|
+            = link_to_unless_current course, course_path(course) do
+              %span.active= course
+
+  - if logged_in?
+    = new_button "Novi program", new_course_path
+    %br
+    = edit_button "Uredi tipove programa", categories_path

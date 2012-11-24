@@ -1,0 +1,5 @@
+en:
+  flash:
+    sent: "Your application was successfully sent."
+    incorrect_login: "Wrong username or password."
+    validation_errors: "Some fields are incorrectly filled in."

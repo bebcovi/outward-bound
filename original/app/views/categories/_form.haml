@@ -1,0 +1,9 @@
+= simple_form_for @category, defaults: {required: false} do |f|
+
+  = f.input :name_hr
+  = f.input :name_en
+  = f.hidden_field :object
+
+  .controls
+    = f.button :submit, "Spremi"
+    = link_to "Odustani", categories_path

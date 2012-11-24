@@ -1,0 +1,35 @@
+!!!
+%html{lang: I18n.locale}
+
+  %head
+    %title Outward Bound · #{@title}
+    %meta{charset: "utf-8"}
+    %meta{name: "robots", content: "noindex"}
+    %link{rel: "authors", href: "humans.txt"}
+    = favicon_link_tag "/favicon.ico?v=2"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = auto_discovery_link_tag(:atom, posts_url(format: "atom"))
+
+  %body{class: ("admin" if logged_in?)}
+
+    #left
+      %header{role: "banner"}
+        = render partial: "layouts/lang"
+        = render partial: "layouts/title"
+        = render partial: "layouts/navigation"
+        = render partial: "layouts/social_buttons"
+        = render partial: "layouts/log" if logged_in?
+
+      %div{role: "main", id: "#{params[:controller]}-#{params[:action]}"}
+        = render partial: "layouts/flash", locals: {flash: flash}
+
+        = content_for?(:content) ? yield(:content) : yield
+
+    #right
+      %aside{role: "complementary"}
+        %a.show{href: '#'}
+          %i.icon-calendar
+        = render partial: "layouts/calendar"
+        = render partial: "layouts/tweets"

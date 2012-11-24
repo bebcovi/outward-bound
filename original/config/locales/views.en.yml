@@ -1,0 +1,54 @@
+en:
+  home:
+    index:
+      page_title: "Home"
+    archive:
+      page_title: "Archive"
+
+  about:
+    index:
+      page_title: "About us"
+
+  courses:
+    index:
+      page_title: "Courses"
+    technical:
+      page_title: "Technical courses"
+
+  business:
+    index:
+      page_title: "Corporate education"
+
+  gallery:
+    index:
+      page_title: "Gallery"
+
+  faq:
+    index:
+      page_title: "F.A.Q."
+
+  partners:
+    index:
+      page_title: "Partners"
+
+  errors:
+    internal_server_error:
+      page_title: "Internal server error"
+      title: "500"
+      message: "There has been an error."
+    not_found:
+      page_title: "Page not found"
+      title: "404"
+      message: "Page is not found."
+
+  applications:
+    new:
+      page_title: "Application form"
+
+  sessions:
+    new:
+      page_title: "Login"
+
+  posts:
+    index:
+      page_title: "News"

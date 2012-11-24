@@ -1,0 +1,6 @@
+- present post do |post_presenter|
+  %article.short
+    %h2= post_presenter.title
+    = post_presenter.admin_links if logged_in?
+    = post_presenter.created_at
+    = post_presenter.body

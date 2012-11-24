@@ -1,0 +1,8 @@
+#color_preview {
+  @extend .inline-block;
+  @include border-radius(1px);
+  vertical-align: bottom;
+  width: rhythm();
+  height: rhythm();
+  margin-left: rhythm(.25);
+}

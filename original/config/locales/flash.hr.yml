@@ -1,0 +1,5 @@
+hr:
+  flash:
+    sent: "Vaša prijavnica je uspješno poslana."
+    incorrect_login: "Pogrešno korisničko ime ili lozinka."
+    validation_errors: "Neka polja nisu dobro ispunjena."

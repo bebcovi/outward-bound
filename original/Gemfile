@@ -1,0 +1,47 @@
+source :rubygems
+
+ruby "1.9.3"
+
+gem "thin"
+gem "rails"
+gem "pg"
+
+group :assets do
+  gem "sass-rails"
+  gem "compass-rails"
+  gem "susy"
+  gem "font-awesome-sass-rails"
+  gem "jquery-rails"
+  gem "coffee-rails"
+  gem "uglifier"
+end
+
+group :development do
+  gem "debugger"
+  gem "pry-rails"
+  gem "guard-livereload"
+end
+
+group :test, :development do
+  gem "rspec-rails"
+end
+
+# Views
+gem "event-calendar", require: "event_calendar"
+gem "haml-rails"
+gem "haml", "3.2.0.beta.1"
+gem "redcarpet"
+gem "simple_form"
+gem "will_paginate", require: ["will_paginate", "will_paginate/array"]
+
+# Translations
+gem "rails-i18n"
+gem "i18n-country-translations"
+gem "i18n_country_select"
+
+# Other
+gem "bcrypt-ruby"
+gem "friendly_id"
+gem "prawn"
+gem "twitter"
+gem "exception_notification"

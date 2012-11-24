@@ -1,0 +1,6 @@
+log/*.log
+tmp/
+config/settings.yml
+.rspec
+.sass-cache/
+*.DS_Store

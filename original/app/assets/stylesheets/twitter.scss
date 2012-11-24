@@ -1,0 +1,36 @@
+.tweets {
+  position: relative;
+  .icon-twitter {
+    $font-size: 46px;
+    @include adjust-font-size-to($font-size, 2);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: - rhythm(.5, $font-size);
+    color: darken(white, 20%)
+  }
+  cite {
+    font-style: normal;
+    padding-left: rhythm(1.2);
+    color: rgba(black, .35);
+  }
+  ol, ul {
+    @include unstyled-list;
+  }
+  blockquote {
+    @include trailer(.5);
+    @include border-radius(2px);
+    @include rhythm(0, 0, 0, .5);
+    margin-left: rhythm(.25);
+    margin-right: rhythm(.25);
+    padding: rhythm(1);
+    background: white;
+    border: 1px solid rgba(black, .1);
+  }
+}
+
+.tweet {
+  @include trailer;
+  position: relative;
+  .add { @extend .subtle; }
+}
