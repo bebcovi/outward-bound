@@ -13,9 +13,11 @@
       %h1#logo= link_to t("name"), root_path
       %nav
         %ol
-          = list_of navigation_pages do |page|
-            = link_to_unless current_page?(page.path), page.title, page.path do
-              = link_to page.title, page.path, class: "active"
+          - navigation_pages.each do |page|
+            - unless current_page?(page.path)
+              %li= link_to page.title, page.path
+            - else
+              %li.active= link_to page.title, page.path
         %ul
           %li= link_to "English", locale: :en
           %li= link_to "Hrvatski", locale: :hr
@@ -25,5 +27,5 @@
         %li= link_to "Twitter", "https://twitter.com/outwardb"
         %li= link_to "YouTube", "http://www.youtube.com/user/OutwardBoundCroatia"
 
-    %div{:role => "main"}
+    %div{role: "main"}
       = render "layouts/#{controller.send(:sub_layout)}"

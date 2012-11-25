@@ -1,11 +1,13 @@
 # encoding: utf-8
 require "date"
 
-Post.create([
+Post.destroy_all
+Post.create!([
   {
     title_en: "OBC Instructors restoring the roof of the new OBC center in Lika, Croatia",
-    created_at: Date.new(2012, 11, 10),
-    body_en: <<-BODY
+    title_hr: "Naslov",
+    created_at: Date.new(2012, 9, 1),
+    body_en: <<-BODY,
 From Monday, August 13th 'till Friday, August 17th 2012, our instructing team gathered in a small Village called Veliki Žitnik, not far from Gospić, on a mission to restore and renovate the area of our new center in Outward Bound Croatia.
 
 The school building waited for years for someone to visit, repaint it, renew it, and fill it’s halls with young people’s shouts and ambition. Our team was well prepared, from old shoes, working clothes, to the rations of pasta and pate, we were ready for whatever may come.
@@ -18,11 +20,13 @@ The whole endeavor was visited by two of our international guests, from Scotland
 
 After five days, lots of sweat, and with the help of many liters of tea, cedevita and other beverages, we accomplished more than we hoped for, bringing the building one step closer to becoming useable. Next phase is installing the kitchen and pretty soon our new school might be ready to recive the first groups of new participants in Outward Bound!
     BODY
+    body_hr: "Sadržaj"
   },
   {
     title_en: "Inside Out – Razmjena mladih",
+    title_hr: "Naslov",
     created_at: Date.new(2012, 11, 10),
-    body_en: <<-BODY
+    body_en: <<-BODY,
 From 25th September to 6th October, Outward Bound Croatia gathered together twenty two young people from five European countries to participate in an international adventure called "Inside Out – inner development through outdoor activities".
 
 They spent twelve memorable days together on an Outward Bound course, developing skills and knowledge that many of them never thought achievable. They were building shelters, walking for hours, cooking on an open fire, getting lost in the vastness of the Velebit mountain, finding their way, mastering ropes, discussing in circles, playing games, climbing rocks, helping each other and slowly but steadily becoming a powerful team of confident young people – The Wild Ones!
@@ -33,5 +37,6 @@ On 6th October, these twenty two young people left the island of Rab determined 
 
 The project was organized through the Youth in Action program, which gave these remarkable young people the opportunity to grow and develop their personal and community skills in an unique and inspiring way – the Outward Bound way.
     BODY
+    body_hr: "Sadržaj"
   }
 ])

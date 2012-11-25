@@ -1,13 +1,7 @@
 require "redcarpet"
 
 module ApplicationHelper
-  def markdown(text)
-    smarty_pants(Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(text))
-  end
-
-  def smarty_pants(text)
-    raw(Redcarpet::Render::SmartyPants.render(text))
-  end
+  include MarkdownRendering
 
   Page = Struct.new(:title, :path)
   def navigation_pages
