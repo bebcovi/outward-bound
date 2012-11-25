@@ -1,7 +1,11 @@
 = content_tag_for :article, post do
 
+  = image_tag post.cover_photo_url
+
   %header
     %h2= smarty_pants post.title
     = time_tag post.created_at.to_date
 
   = markdown post.body
+
+  %p= link_to "Slike", gallery_path(post.gallery)

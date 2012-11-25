@@ -10,5 +10,6 @@ OutwardBound::Application.routes.draw do
     end
 
     resources :posts
+    resources :galleries
   end
 end

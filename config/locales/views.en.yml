@@ -8,6 +8,10 @@ en:
     index:
       page_title: "News"
 
+  galleries:
+    index:
+      page_title: "Gallery"
+
   about:
     index:
       page_title: "About us"

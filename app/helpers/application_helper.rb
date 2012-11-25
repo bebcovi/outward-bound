@@ -9,6 +9,7 @@ module ApplicationHelper
       {controller: "home",      action: "index"},
       {controller: "about",     action: "index"},
       {controller: "posts",     action: "index"},
+      {controller: "galleries", action: "index"},
     ]
 
     pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }

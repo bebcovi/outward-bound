@@ -1,0 +1,6 @@
+- @title = @gallery.title
+
+%p= link_to "Natrag na galeriju", galleries_path
+
+- @gallery.photos.each do |photo_url|
+  = image_tag photo_url
