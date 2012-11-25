@@ -14,7 +14,7 @@ class Event
   end
 
   def photos
-    @photos ||= @flickr_set.get_photos(sizes: :all).map(&:medium640!)
+    @photos ||= @flickr_set.get_photos(sizes: :all).map(&:medium640!).sort_by(&:title)
   end
 
   def to_param
