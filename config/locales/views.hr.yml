@@ -1,0 +1,22 @@
+hr:
+  about:
+    applying:
+      page_title: "Prijava"
+    contact:
+      page_title: "Kontakt"
+    index:
+      page_title: "O nama"
+    instructors:
+      page_title: "Instruktori HŠOB"
+    international:
+      page_title: "Outward Bound International"
+    locations:
+      page_title: "Lokacije"
+    partners:
+      page_title: "Partneri"
+    safety:
+      page_title: "Sigurnost"
+    support:
+      page_title: "Podrška/Donacije"
+    what:
+      page_title: "Što je Outward Bound?"
