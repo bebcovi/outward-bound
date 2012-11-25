@@ -1,5 +1,3 @@
-require "redcarpet"
-
 module ApplicationHelper
   include MarkdownRendering
 
@@ -10,6 +8,8 @@ module ApplicationHelper
       {controller: "about",     action: "index"},
       {controller: "posts",     action: "index"},
       {controller: "galleries", action: "index"},
+      {controller: "courses",   action: "index"},
+      {controller: "business",  action: "index"},
       {controller: "faq",       action: "index"},
     ]
 

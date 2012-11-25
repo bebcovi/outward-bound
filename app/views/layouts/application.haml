@@ -14,10 +14,8 @@
       %nav
         %ol
           - navigation_pages.each do |page|
-            - unless current_page?(page.path)
-              %li= link_to page.title, page.path
-            - else
-              %li.active= link_to page.title, page.path
+            %li{class: (current_page?(page.path) && "active")}
+              = link_to page.title, page.path
         %ul
           %li= link_to "English", locale: :en
           %li= link_to "Hrvatski", locale: :hr

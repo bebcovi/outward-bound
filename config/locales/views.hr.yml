@@ -1,4 +1,21 @@
 hr:
+
+  home:
+    index:
+      page_title: "Početna"
+
+  posts:
+    index:
+      page_title: "Vijesti"
+
+  galleries:
+    index:
+      page_title: "Galerija"
+
+  faq:
+    index:
+      page_title: "Česta pitanja"
+
   about:
     applying:
       page_title: "Prijava"
@@ -20,3 +37,29 @@ hr:
       page_title: "Podrška/Donacije"
     what:
       page_title: "Što je Outward Bound?"
+
+  courses:
+    index:
+      page_title: "Programi"
+    high_wires:
+      page_title: "Visinski izazov"
+    sailing_adventure:
+      page_title: "Punim jedrima"
+    kayak_adventure:
+      page_title: "Morska pustolovina"
+    velebit_adventure:
+      page_title: "Velebitska pustolovina"
+    multi_element_adventure:
+      page_title: "Multi-Element pustolovina"
+    sport_climbing:
+      page_title: "Sportsko penjanje"
+    rock_climbing:
+      page_title: "Alpinistički tečaj"
+    scuba_diving:
+      page_title: "Outward Bound škola SCUBA ronjenja"
+
+  business:
+    index:
+      page_title: "Poslovna edukacija"
+    mount_everest:
+      page_title: "Ekspedicija Mt Everest"
