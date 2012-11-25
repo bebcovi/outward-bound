@@ -33,3 +33,7 @@ en:
       page_title: "Partners"
     applying:
       page_title: "Applying"
+
+  faq:
+    index:
+      page_title: "FAQ"
