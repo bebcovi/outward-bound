@@ -28,9 +28,6 @@ class AboutController < ApplicationController
   def partners
   end
 
-  def applying
-  end
-
   private
 
   def sub_layout
