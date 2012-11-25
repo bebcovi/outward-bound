@@ -1,7 +1,31 @@
 en:
+
   home:
     index:
       page_title: "Home"
+
   posts:
     index:
       page_title: "News"
+
+  about:
+    index:
+      page_title: "About us"
+    what:
+      page_title: "What is Outward Bound?"
+    international:
+      page_title: "Outward Bound International"
+    instructors:
+      page_title: "Instructors"
+    support:
+      page_title: "Contributions"
+    safety:
+      page_title: "Safety"
+    contact:
+      page_title: "Contact info"
+    locations:
+      page_title: "Locations"
+    partners:
+      page_title: "Partners"
+    applying:
+      page_title: "Applying"

@@ -12,8 +12,9 @@ module ApplicationHelper
   Page = Struct.new(:title, :path)
   def navigation_pages
     pages = [
-      {controller: "home", action: "index"},
-      {controller: "posts", action: "index"}
+      {controller: "home",      action: "index"},
+      {controller: "about",     action: "index"},
+      {controller: "posts",     action: "index"},
     ]
 
     pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }

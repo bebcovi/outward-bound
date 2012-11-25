@@ -26,4 +26,4 @@
         %li= link_to "YouTube", "http://www.youtube.com/user/OutwardBoundCroatia"
 
     %div{:role => "main"}
-      = yield
+      = render "layouts/#{controller.send(:sub_layout)}"

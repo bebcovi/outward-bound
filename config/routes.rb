@@ -4,6 +4,11 @@ OutwardBound::Application.routes.draw do
 
     get "", to: "home#index", as: "home_path"
 
+    controller :about do
+      get "about", to: :index
+      get "about/:action"
+    end
+
     resources :posts
   end
 end
