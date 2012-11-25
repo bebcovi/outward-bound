@@ -22,6 +22,8 @@ gem "simple_form"
 gem "rails-i18n"
 gem "will_paginate"
 
+gem "twitter"
+
 group :development, :test do
   gem "debugger"
   gem "pry-rails"
