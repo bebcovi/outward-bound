@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20121125175404) do
 
-  create_table "posts", :force => true do |t|
-    t.string   "title_en"
-    t.string   "title_hr"
-    t.text     "body_en"
-    t.text     "body_hr"
-    t.integer  "photo_id"
-    t.integer  "gallery_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "tweets", :force => true do |t|
     t.string   "tweet_id"
     t.string   "author"
