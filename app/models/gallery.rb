@@ -12,6 +12,6 @@ class Gallery
   end
 
   def to_param
-    1
+    title
   end
 end

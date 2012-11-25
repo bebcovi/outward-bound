@@ -4,6 +4,6 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.new(title: "My gallery")
+    @gallery = Gallery.new(title: params[:gallery].humanize)
   end
 end

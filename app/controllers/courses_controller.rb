@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   def index
   end
 
-  def course
+  def show
     render params[:course].underscore
   end
 
