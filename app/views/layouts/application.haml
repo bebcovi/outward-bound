@@ -1,7 +1,7 @@
 !!!
 %html{lang: I18n.locale}
   %head
-    %title OutwardBound &middot; #{@title}
+    %title Outward Bound &middot; #{@title}
     %meta{charset: "utf-8"}
     %link{rel: "authors", href: "humans.txt"}
     = favicon_link_tag
@@ -11,6 +11,10 @@
   %body
     %header#header
       %h1#logo= link_to t("name"), root_path
+      %ol.carousel
+        = image_tag "http://placekitten.com/700/350"
+        = image_tag "http://placekitten.com/700/350", style: "display: none;"
+        = image_tag "http://placekitten.com/700/350", style: "display: none;"
       %nav
         %ol
           - navigation_pages.each do |page|
@@ -21,9 +25,9 @@
           %li= link_to "Hrvatski", locale: :hr
 
       %ul#social
-        %li= link_to "Facebook", "https://www.facebook.com/outwardboundcroatia"
-        %li= link_to "Twitter", "https://twitter.com/outwardb"
-        %li= link_to "YouTube", "http://www.youtube.com/user/OutwardBoundCroatia"
+        %li= link_to "Facebook", "https://www.facebook.com/outwardboundcroatia", target: "_blank"
+        %li= link_to "Twitter", "https://twitter.com/outwardb", target: "_blank"
+        %li= link_to "YouTube", "http://www.youtube.com/user/OutwardBoundCroatia", target: "_blank"
 
     %div{role: "main"}
       = render "layouts/#{controller.send(:sub_layout)}"

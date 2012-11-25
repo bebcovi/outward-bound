@@ -4,17 +4,9 @@ en:
     index:
       page_title: "Home"
 
-  posts:
-    index:
-      page_title: "News"
-
-  galleries:
+  photosets:
     index:
       page_title: "Gallery"
-
-  faq:
-    index:
-      page_title: "FAQ"
 
   about:
     index:
@@ -30,7 +22,7 @@ en:
     safety:
       page_title: "Safety"
     contact:
-      page_title: "Contact info"
+      page_title: "Contact"
     locations:
       page_title: "Locations"
     partners:
@@ -58,8 +50,6 @@ en:
     scuba_diving:
       page_title: "Outward Bound SCUBA Diving school"
 
-  business:
-    index:
-      page_title: "Corporate education"
-    mount_everest:
-      page_title: "Mt Everest Expedition"
+  participants:
+    new:
+      page_title: "Applying"

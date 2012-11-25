@@ -2,17 +2,17 @@ OutwardBound::Application.routes.draw do
   scope "(:locale)", locale: /en|hr/ do
     root to: "home#index"
 
-    get "",         to: "home#index"
-    get "about",    to: "about#index"
-    get "posts",    to: "posts#index"
-    get "gallery",  to: "galleries#index", as: "galleries"
-    get "courses",  to: "courses#index"
-    get "business", to: "business#index"
-    get "faq",      to: "faq#index"
+    get "",        to: "home#index"
+    get "courses", to: "courses#index"
+    get "about",   to: "about#index"
+    resources :photosets, path: "gallery", only: [:index] do
+      resources :photos, only: [:index, :show]
+    end
 
-    controller(:about)     { get "about/:action" }
-    controller(:galleries) { get "gallery/:gallery", to: :show, as: "gallery"  }
-    controller(:courses)   { get "courses/:course", to: :show, as: "course" }
-    controller(:business)  { get "mount-everest", to: :mount_everest }
+    controller(:about)   { get "about/:action" }
+    controller(:gallery) { get "gallery/:gallery", to: :show, as: "gallery"  }
+    controller(:courses) { get "courses/:course", to: :show, as: "course" }
+
+    resources :participants, only: [:new, :create]
   end
 end

@@ -4,17 +4,9 @@ hr:
     index:
       page_title: "Početna"
 
-  posts:
-    index:
-      page_title: "Vijesti"
-
   galleries:
     index:
       page_title: "Galerija"
-
-  faq:
-    index:
-      page_title: "Česta pitanja"
 
   about:
     applying:
@@ -57,9 +49,3 @@ hr:
       page_title: "Alpinistički tečaj"
     scuba_diving:
       page_title: "Outward Bound škola SCUBA ronjenja"
-
-  business:
-    index:
-      page_title: "Poslovna edukacija"
-    mount_everest:
-      page_title: "Ekspedicija Mt Everest"
