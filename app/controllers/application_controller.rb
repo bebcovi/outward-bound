@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_mentions
-    @mentions = Tweet.recent
+    @tweets = Tweet.recent
   end
 
   def sub_layout

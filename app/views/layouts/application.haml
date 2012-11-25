@@ -29,11 +29,7 @@
         %li= link_to "Twitter", "https://twitter.com/outwardb", target: "_blank"
         %li= link_to "YouTube", "http://www.youtube.com/user/OutwardBoundCroatia", target: "_blank"
 
-      %ul.tweets
-        - @mentions.each do |tweet|
-          %cite= link_to "@#{tweet.author}", "https://twitter.com/#{tweet.author}"
-          %blockquote= parse_tweet(tweet.content)
-
+      %ul.tweets= render @tweets
 
     %div{role: "main"}
       = render "layouts/#{controller.send(:sub_layout)}"
