@@ -1,0 +1,8 @@
+- @title = @event.title
+
+%p= link_to "Natrag", events_path
+
+%h1= @event.title
+
+- @event.photos.each do |photo|
+  = image_tag photo.source_url, height: 300

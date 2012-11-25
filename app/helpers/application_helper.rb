@@ -7,7 +7,7 @@ module ApplicationHelper
       {controller: "home",         action: "index"},
       {controller: "courses",      action: "index"},
       {controller: "participants", action: "new"},
-      {controller: "photosets",    action: "index"},
+      {controller: "events",       action: "index"},
       {controller: "about",        action: "index"},
       {controller: "about",        action: "contact"},
     ]

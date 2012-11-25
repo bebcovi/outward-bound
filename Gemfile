@@ -22,7 +22,9 @@ gem "simple_form"
 gem "rails-i18n"
 gem "will_paginate"
 
+# External APIs
 gem "twitter"
+gem "flickr-objects"
 
 group :development, :test do
   gem "debugger"
