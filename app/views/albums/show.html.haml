@@ -1,0 +1,5 @@
+- @title = t("courses.#{@album.identifier}.page_title")
+
+%h1= @title
+
+%ul= render collection: @album.photos, partial: "item"

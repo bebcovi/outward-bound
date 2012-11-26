@@ -25,8 +25,8 @@ gem "will_paginate"
 gem "bootstrap-will_paginate"
 
 # External APIs
-gem "twitter"
-gem "flickr-objects"
+gem "twitter", require: false
+gem "flickr-objects", require: false
 
 group :development, :test do
   gem "debugger"

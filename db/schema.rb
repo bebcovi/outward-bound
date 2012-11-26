@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125175404) do
+ActiveRecord::Schema.define(:version => 20121126100337) do
+
+  create_table "albums", :force => true do |t|
+    t.string  "identifier"
+    t.integer "cover_photo_id"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string  "uid"
+    t.string  "url"
+    t.string  "source_url"
+    t.string  "title"
+    t.string  "stored_on"
+    t.integer "album_id"
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "tweet_id"
