@@ -14,7 +14,7 @@ en:
     what:
       page_title: "What is Outward Bound?"
     international:
-      page_title: "Outward Bound International"
+      page_title: "OB International"
     instructors:
       page_title: "Instructors"
     support:
@@ -46,7 +46,7 @@ en:
     rock_climbing:
       page_title: "Technical rock-climbing"
     scuba_diving:
-      page_title: "Outward Bound SCUBA Diving school"
+      page_title: "SCUBA Diving school"
 
   participants:
     new:

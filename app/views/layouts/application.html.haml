@@ -1,0 +1,25 @@
+!!!
+%html.no-js{lang: I18n.locale}
+  %head
+    %title Outward Bound &middot; #{@title}
+    %meta{charset: "utf-8"}
+    %link{rel: "authors", href: "humans.txt"}
+    = favicon_link_tag
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "//use.typekit.net/tca8gie.js"
+    = render "javascript"
+    = csrf_meta_tags
+
+  %body
+    = render "navbar"
+    = render "hero_unit"
+
+    .container
+
+      .row
+        = render "layouts/#{controller.send(:sub_layout)}"
+
+      %ul.tweets
+        = render @tweets
+
+    = javascript_include_tag "application"

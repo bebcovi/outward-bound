@@ -1,8 +1,6 @@
-%dl
+= affix do
   - @courses.each do |type, course_names|
-    %dt= t(".#{type}")
-    %dd
-      %ol
-        - course_names.each do |course_name|
-          %li{class: (current_page?(course: course_name.parameterize) && "active")}
-            = link_to t("courses.#{course_name}.page_title"), course_path(course_name.humanize.parameterize)
+    %li.nav-header= t(".#{type}")
+    - course_names.each do |course_name|
+      %li{class: (current_page?(course: course_name.humanize.parameterize) && "active")}
+        = link_to t("courses.#{course_name}.page_title"), course_path(course_name.humanize.parameterize)

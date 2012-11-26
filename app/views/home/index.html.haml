@@ -1,14 +1,19 @@
 - @title = t(".page_title")
 
-#about= render "about"
+- content_for :hero_unit do
+  %h1= t("name")
+  %p.lead Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi.
 
-#courses
-  %ul
-    %li
-      = link_to image_tag("http://placekitten.com/300/200"), course_path("velebit-adventure")
-      = t("courses.velebit_adventure.page_title")
-    %li
-      = link_to image_tag("http://placekitten.com/300/200"), course_path("kayak-adventure")
-      = t("courses.kayak_adventure.page_title")
+  = render "carousel"
+
+= render "about"
+
+%ul.courses
+  %li
+    = link_to image_tag("http://placekitten.com/300/200"), course_path("velebit-adventure")
+    = t("courses.velebit_adventure.page_title")
+  %li
+    = link_to image_tag("http://placekitten.com/300/200"), course_path("kayak-adventure")
+    = t("courses.kayak_adventure.page_title")
 
 %iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}

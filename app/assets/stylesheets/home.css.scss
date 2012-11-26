@@ -1,0 +1,24 @@
+.hero-unit {
+  @include text-shadow(rgba(black, .5) 1px 1px 5px);
+  @include padding-leader;
+  @include trailing-border(1px, 1);
+  @include trailer(0);
+  border-color: $primaryColor;
+  color: white;
+  border-radius: 0;
+  background: image-url('hero-bg.png');
+
+  h1 {
+    @include trailer(.5);
+  }
+}
+
+.lead {
+  @include adjust-font-size-to(26px, 1.5);
+  font-weight: $regular;
+}
+
+.carousel {
+  @include box-shadow(rgba(black, .5) 0 0 8px);
+  border: 1px solid rgba(black, .5);
+}

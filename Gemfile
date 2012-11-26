@@ -10,9 +10,10 @@ group :assets do
   gem "sass-rails"
   gem "compass", github: "chriseppstein/compass", branch: "master"
   gem "compass-rails"
+  gem "bootstrap-sass-rails"
+  gem "jquery-rails"
   gem "coffee-rails"
   gem "uglifier"
-  gem "jquery-rails"
 end
 
 # Views
@@ -21,6 +22,7 @@ gem "redcarpet"
 gem "simple_form"
 gem "rails-i18n"
 gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 # External APIs
 gem "twitter"

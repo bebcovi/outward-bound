@@ -1,6 +1,4 @@
-%ol
+= affix do
   - AboutController.action_methods.each do |action|
-    - unless current_page?(controller: "about", action: action)
-      %li= link_to t("about.#{action}.page_title"), action: action
-    - else
-      %li.active= link_to t("about.#{action}.page_title"), action: action
+    %li{class: current_page?(controller: "about", action: action) && "active"}
+      = link_to t("about.#{action}.page_title"), action: action

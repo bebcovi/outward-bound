@@ -18,7 +18,7 @@ hr:
     instructors:
       page_title: "Instruktori HŠOB"
     international:
-      page_title: "Outward Bound International"
+      page_title: "OB International"
     locations:
       page_title: "Lokacije"
     partners:
@@ -48,7 +48,7 @@ hr:
     rock_climbing:
       page_title: "Alpinistički tečaj"
     scuba_diving:
-      page_title: "Outward Bound škola SCUBA ronjenja"
+      page_title: "Škola SCUBA ronjenja"
 
   participants:
     new:

@@ -15,6 +15,22 @@ module ApplicationHelper
     pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }
   end
 
+  def icon(name)
+    raw content_tag(:i, "", class: "icon-#{name}")
+  end
+
+  def main_content(&block)
+    content_tag :div, class: "span9" do
+      content_tag :div, class: "main_content", &block
+    end
+  end
+
+  def affix(&block)
+    content_tag :div, class: "span3" do
+      content_tag :ol, class: "nav nav-pills nav-stacked affix affix-top", &block
+    end
+  end
+
   def parse_tweet(content)
     content
       .gsub(/@([\w\d_]+)/, link_to('@\1', 'http://twitter.com/\1', class: "mention"))

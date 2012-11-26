@@ -1,0 +1,10 @@
+@include establish-baseline;
+
+body {
+  @include rhythm-padding(0, 1);
+  overflow-y: scroll;
+}
+
+body > .container {
+  @include padding-leader;
+}

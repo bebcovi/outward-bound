@@ -1,5 +1,6 @@
-%ol
-  = list_of @events do |event|
-    = link_to event.title, event_path(event)
+= affix do
+  - @events.each do |event|
+    %li= link_to event.title, event_path(event)
 
-= yield
+= main_content do
+  = yield
