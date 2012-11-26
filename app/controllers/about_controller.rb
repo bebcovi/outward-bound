@@ -19,9 +19,6 @@ class AboutController < ApplicationController
   def safety
   end
 
-  def contact
-  end
-
   def locations
   end
 

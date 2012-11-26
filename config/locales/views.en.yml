@@ -21,8 +21,6 @@ en:
       page_title: "Contributions"
     safety:
       page_title: "Safety"
-    contact:
-      page_title: "Contact"
     locations:
       page_title: "Locations"
     partners:
@@ -51,3 +49,7 @@ en:
   participants:
     new:
       page_title: "Applying"
+
+  contact:
+    index:
+      page_title: "Contact"

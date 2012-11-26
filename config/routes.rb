@@ -6,6 +6,7 @@ OutwardBound::Application.routes.draw do
     get "courses", to: "courses#index"
     get "about",   to: "about#index"
     resources :events, path: "gallery", only: [:index, :show]
+    get "contact", to: "contact#index"
 
     controller(:about)   { get "about/:action" }
     controller(:gallery) { get "gallery/:gallery", to: :show, as: "gallery"  }

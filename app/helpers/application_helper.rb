@@ -9,7 +9,7 @@ module ApplicationHelper
       {controller: "participants", action: "new"},
       {controller: "events",       action: "index"},
       {controller: "about",        action: "index"},
-      {controller: "about",        action: "contact"},
+      {controller: "contact",      action: "index"},
     ]
 
     pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }
