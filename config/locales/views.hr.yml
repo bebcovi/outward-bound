@@ -4,7 +4,7 @@ hr:
     index:
       page_title: "Početna"
 
-  galleries:
+  events:
     index:
       page_title: "Galerija"
 
@@ -49,3 +49,7 @@ hr:
       page_title: "Alpinistički tečaj"
     scuba_diving:
       page_title: "Outward Bound škola SCUBA ronjenja"
+
+  participants:
+    new:
+      page_title: "Prijava"

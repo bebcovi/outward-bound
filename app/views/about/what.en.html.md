@@ -4,17 +4,17 @@
 
 **Objectives** of an Outward Bound course can be quite different depending on the target group and can be one or more of the following:
 
--	getting to know one’s own qualities and capabilities
--	teamwork training
--	developing initiative and leadership skills, effective communication skills, organizational skills
--	ability to act in unpredictable situations
+- getting to know one’s own qualities and capabilities
+- teamwork training
+- developing initiative and leadership skills, effective communication skills, organizational skills
+- ability to act in unpredictable situations
 
 **Activities** used on an Outward Bound course are tools used in creating new and powerful experiences. They include: trekking, wilderness orienteering, rock climbing, abseiling, caving, multi-day expeditions, building shelter and sleeping outdoors, raft building, mountain biking, low and high ropes; team initiative and problem-solving tasks and much more.
 
 **Target groups** for various Outward Bound courses:
 
--	organized grade-school and high-school groups
--	students
--	corporate teams
--	groups with special needs
--	open enrollment (everyone interested)
+- organized grade-school and high-school groups
+- students
+- corporate teams
+- groups with special needs
+- open enrollment (everyone interested)
