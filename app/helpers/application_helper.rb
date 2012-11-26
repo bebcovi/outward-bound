@@ -25,9 +25,9 @@ module ApplicationHelper
     end
   end
 
-  def affix(&block)
+  def navigation_sidebar(&block)
     content_tag :div, class: "span3" do
-      content_tag :ol, class: "nav nav-pills nav-stacked affix affix-top", &block
+      content_tag :ol, class: "navigation_sidebar nav nav-pills nav-stacked", &block
     end
   end
 

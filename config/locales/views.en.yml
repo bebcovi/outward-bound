@@ -3,6 +3,7 @@ en:
   home:
     index:
       page_title: "Home"
+      video: "Prefer videos? We got you covered."
 
   albums:
     index:
@@ -45,6 +46,10 @@ en:
       page_title: "Technical rock-climbing"
     scuba_diving:
       page_title: "SCUBA Diving school"
+    navigation:
+      one_day_courses: "1-day courses"
+      eight_day_courses: "Classical 8-day courses"
+      technical_courses: "Technical courses"
 
   participants:
     new:

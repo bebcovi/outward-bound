@@ -1,8 +1,0 @@
-= simple_form_for @content, defaults: {required: false} do |f|
-
-  = f.input :body_hr
-  = f.input :body_en
-
-  .controls
-    = f.button :submit, "Spremi"
-    = link_to "Odustani", @content.url_hash

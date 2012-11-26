@@ -3,6 +3,7 @@ hr:
   home:
     index:
       page_title: "Početna"
+      video: "Preferirate video?"
 
   events:
     index:
@@ -16,7 +17,7 @@ hr:
     index:
       page_title: "O nama"
     instructors:
-      page_title: "Instruktori HŠOB"
+      page_title: "Instruktori"
     international:
       page_title: "OB International"
     locations:
@@ -49,6 +50,10 @@ hr:
       page_title: "Alpinistički tečaj"
     scuba_diving:
       page_title: "Škola SCUBA ronjenja"
+    navigation:
+      one_day_courses: "Jednodnevni programi"
+      eight_day_courses: "Klasični 8-dnevni programi"
+      technical_courses: "Tehnički programi"
 
   participants:
     new:

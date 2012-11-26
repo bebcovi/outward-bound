@@ -1,9 +1,0 @@
-- present category do |category_presenter|
-
-  %dl.default
-    %dt Naziv (Hrvatski)
-    %dd= category_presenter.name_hr
-    %dt Naziv (Engleski)
-    %dd= category_presenter.name_en
-
-  = category_presenter.admin_links if logged_in?

@@ -1,18 +1,19 @@
 #carousel.carousel.slide
   .carousel-inner
-    - dimensions = "940/300"
+    - width = 940
+    - height = 300
     .item.active
-      = image_tag "http://placekitten.com/#{dimensions}"
+      = image_tag "http://placekitten.com/#{width}/#{height}", size: "#{width}x#{height}"
       .carousel-caption
         %h4 A Caption
         %p Janko je gay.
     .item
-      = image_tag "http://placekitten.com/#{dimensions}"
+      = image_tag "http://placekitten.com/#{width}/#{height}", size: "#{width}x#{height}"
       .carousel-caption
         %h4 A Caption
         %p Janko je gay.
     .item
-      = image_tag "http://placekitten.com/#{dimensions}"
+      = image_tag "http://placekitten.com/#{width}/#{height}"
       .carousel-caption
         %h4 A Caption
         %p Janko je gay.

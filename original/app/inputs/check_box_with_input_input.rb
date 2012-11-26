@@ -1,2 +1,0 @@
-module CheckBoxWithInputInput
-end

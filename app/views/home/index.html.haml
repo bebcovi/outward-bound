@@ -8,12 +8,6 @@
 
 = render "about"
 
-%ul.courses
-  %li
-    = link_to image_tag("http://placekitten.com/300/200"), course_path("velebit-adventure")
-    = t("courses.velebit_adventure.page_title")
-  %li
-    = link_to image_tag("http://placekitten.com/300/200"), course_path("kayak-adventure")
-    = t("courses.kayak_adventure.page_title")
-
-%iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
+.video
+  %h2= t(".video")
+  %iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}

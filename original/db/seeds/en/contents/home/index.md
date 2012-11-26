@@ -1,5 +1,0 @@
-**CROATIAN SCHOOL OUTWARD BOUND** is a non-profit organization which leads courses of experientally learning through adventurous activities in nature. The goals of the school is to allow people to realize their own capabilites and that they afterwards themselves encourage positive changes in their surrounding.
-
-**The Method** is based on strengthening the character during multiple-day programs in nature where attendants are learning to deal with unpredictable and challenging situations and activities, and developing trust in their own capabilities, as well as their skills of working in a group, effective communication, leadership and care for others.
-
-**Courses** are for everyone; young people, adults and professional teams, and goals of the course are set through agreement with the group of attendants. Courses are based on high professional standards of the world-wide system Outward Bound, and are lead by instructors with multiple-year experience and all technical skills necessary for secure completion of the course.

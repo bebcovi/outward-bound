@@ -10,16 +10,18 @@
     = render "javascript"
     = csrf_meta_tags
 
-  %body
+  %body{class: "#{params[:controller]} #{params[:action]}"}
     = render "navbar"
     = render "hero_unit"
 
-    .container
+    .site.container
 
       .row
         = render "layouts/#{controller.send(:sub_layout)}"
 
       %ul.tweets
         = render @tweets
+
+    = render "footer"
 
     = javascript_include_tag "application"

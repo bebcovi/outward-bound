@@ -1,12 +1,11 @@
 .hero-unit {
-  @include text-shadow(rgba(black, .5) 1px 1px 5px);
+  @extend %dark-design;
   @include padding-leader;
   @include trailing-border(1px, 1);
   @include trailer(0);
   border-color: $primaryColor;
-  color: white;
   border-radius: 0;
-  background: image-url('hero-bg.png');
+  background-image: image-url('hero-bg.png');
 
   h1 {
     @include trailer(.5);

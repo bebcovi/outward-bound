@@ -6,23 +6,8 @@
           %li{class: (current_page?(page.path) && "active")}
             = link_to page.title, page.path
 
-      %ol.nav.social
-        %li.dropdown
-          = link_to raw("#{icon("share")} #{icon("caret-down")}"), "#", class: "dropdown-toggle", data: {toggle: "dropdown"}
-          %ul.dropdown-menu
-            %li.facebook
-              %a{href: "https://www.facebook.com/outwardboundcroatia", target: "_blank"}
-                = icon("facebook")
-                %span Facebook
-            %li.twitter
-              %a{href: "https://twitter.com/outwardb", target: "_blank"}
-                = icon("twitter")
-                %span Twitter
-            %li.youtube
-              %a{href: "http://www.youtube.com/user/OutwardBoundCroatia", target: "_blank"}
-                = icon("youtube")
-                %span YouTube
-
       %ol.lang.nav.pull-right
-        %li= link_to image_tag("lang/GB.png"), locale: :en
-        %li= link_to image_tag("lang/HR.png"), locale: :hr
+        %li{class: current_page?(locale: :en) && "current"}
+          = link_to image_tag("lang/GB.png", size: "32x32"), locale: :en
+        %li{class: current_page?(locale: :hr) && "current"}
+          = link_to image_tag("lang/HR.png", size: "32x32"), locale: :hr

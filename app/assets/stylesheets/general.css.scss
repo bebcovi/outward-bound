@@ -1,10 +1,14 @@
 @include establish-baseline;
 
 body {
-  @include rhythm-padding(0, 1);
   overflow-y: scroll;
 }
 
-body > .container {
-  @include padding-leader;
+.site {
+  @include rhythm-padding;
+  min-height: 400px;
+
+  img {
+    @extend .img-polaroid;
+  }
 }
