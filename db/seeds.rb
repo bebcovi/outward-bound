@@ -23,11 +23,12 @@ Album.destroy_all
 album = Album.create!(identifier: "velebit_adventure")
 album.photos.create(flickr_photos.map do |flickr_photo|
   {
-    uid:        flickr_photo.id,
-    url:        flickr_photo.url,
-    source_url: flickr_photo.largest!.source_url,
-    title:      flickr_photo.title,
-    stored_on:  "flickr",
+    uid:           flickr_photo.id,
+    url:           flickr_photo.url,
+    source_url:    flickr_photo.largest!.source_url,
+    thumbnail_url: flickr_photo.small!(240).source_url,
+    title:         flickr_photo.title,
+    stored_on:     "flickr",
   }
 end)
 album.update_attributes(cover_photo: album.photos.first)
