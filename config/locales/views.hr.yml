@@ -5,7 +5,7 @@ hr:
       page_title: "Početna"
       video: "Preferirate video?"
 
-  events:
+  albums:
     index:
       page_title: "Galerija"
 
@@ -58,3 +58,7 @@ hr:
   participants:
     new:
       page_title: "Prijava"
+
+  contact:
+    index:
+      page_title: "Kontakt"
