@@ -2,4 +2,5 @@
 
 %h1= @title
 
-%ul= render collection: @album.photos, partial: "item"
+%ul.album_photos
+  = render collection: @album.photos, partial: "item"

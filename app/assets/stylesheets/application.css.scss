@@ -1,15 +1,18 @@
 @import 'variables';
 
 @import 'twitter/bootstrap-no-sprites';
+@import 'fancybox';
 @import 'compass';
 @import 'icons';
 
 @import 'extends';
 @import 'mixins';
+@import 'reset';
 @import 'general';
 @import 'header';
 @import 'main';
 @import 'footer';
 
 @import 'home';
+@import 'gallery';
 @import 'about';

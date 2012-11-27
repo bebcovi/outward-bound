@@ -85,6 +85,8 @@ GEM
       multi_json (~> 1.0)
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
+    fancybox2-rails (0.2.1)
+      railties (>= 3.1.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
     faraday_middleware (0.9.0)
@@ -225,6 +227,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   factory_girl
+  fancybox2-rails
   flickr-objects
   haml-rails
   jquery-rails

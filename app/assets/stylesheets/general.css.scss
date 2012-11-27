@@ -7,8 +7,4 @@ body {
 .site {
   @include rhythm-padding;
   min-height: 400px;
-
-  img {
-    @extend .img-polaroid;
-  }
 }

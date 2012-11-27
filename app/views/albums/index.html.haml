@@ -1,3 +1,4 @@
 - @title = t(".page_title")
 
-%ul= render collection: @albums, partial: "item"
+%ul.album_list
+  = render collection: @albums, partial: "item"

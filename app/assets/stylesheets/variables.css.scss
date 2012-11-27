@@ -32,6 +32,10 @@ $navbarInverseLinkBackgroundActive:   $navbarInverseBackground;
 
 $heroUnitBackground: adjust-color($primaryColor, $saturation: -10%, $lightness: 20%);
 
+// CSS3
+
+$default-transition-duration: .2s;
+
 // vertical rhythm
 
 $base-font-size: $baseFontSize;
