@@ -3,7 +3,7 @@
     .container
       %ol.nav
         - navigation_pages.each do |page|
-          %li{class: (current_page?(page.path) && "active")}
+          %li{class: (params[:controller] == page.path[:controller] && "active")}
             = link_to page.title, page.path
 
       %ol.lang.nav.pull-right
