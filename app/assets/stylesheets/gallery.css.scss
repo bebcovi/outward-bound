@@ -1,31 +1,72 @@
-.album_list {
-  @extend %unstyled-list;
-
-  img {
-    @extend .img-polaroid;
-  }
-}
-
+.album_list,
 .album_photos {
-  $max-width: 180px;
-  $max-height: 180px;
-  $spacing: 1px;
-
   @extend %unstyled-list;
   @include clearfix;
 
   li {
     position: relative;
     float: left;
-    width: $max-width;
-    height: $max-height;
-    margin: 0 $spacing $spacing 0;
     overflow: hidden;
   }
 
+  a { display: inline-block; }
+}
+
+.album_list {
+  $spacing: 5px;
+
+  li {
+    position: relative;
+    margin: 0 $spacing $spacing 0;
+  }
+
   a {
-    @include transition(.2s);
-    display: inline-block;
+    $hoverColor: $linkColor;
+    &:hover {
+      img {
+        background: rgba($hoverColor, .5);
+        border-color: rgba($hoverColor, .75);
+      }
+      + figcaption {
+        background: rgba($hoverColor, .75);
+        color: white;
+      }
+    }
+  }
+
+  img {
+    @extend %transition-all;
+    @extend .img-polaroid;
+    width: 450px;
+  }
+
+  figcaption {
+    @extend %transition-all;
+    $margin: 5px;
+    pointer-events: none;
+    position: absolute;
+    left: $margin;
+    right: $margin;
+    bottom: $margin;
+    padding: rhythm(.25) rhythm(.5);
+    color: rgba(black, .5);
+    border-top: 1px solid white;
+    background: rgba(white, .75);
+  }
+}
+
+.album_photos {
+  $width: 180px;
+  $height: 180px;
+  $spacing: 1px;
+
+  li {
+    @include size($height, $width);
+    margin: 0 $spacing $spacing 0;
+  }
+
+  a {
+    @extend %transition-all;
     color: transparent;
     background: transparent;
     &:after {
@@ -38,19 +79,18 @@
       height: 100%;
       font-family: icons;
       font-size: 32px;
-      line-height: $max-height;
+      line-height: $height;
       text-align: center;
       color: inherit;
       background: inherit;
     }
 
+    $hoverColor: black;
     &:hover {
-      background: rgba(black, .75);
+      background: rgba($hoverColor, .75);
       color: white;
     }
   }
 
-  img {
-    max-width: none;
-  }
+  img { max-width: none; }
 }

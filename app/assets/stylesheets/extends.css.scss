@@ -7,6 +7,10 @@
   list-style: none;
 }
 
+%transition-all {
+  @include transition(.2s);
+}
+
 %dark-design {
   @include text-shadow(rgba(black, .5) 1px 1px 5px);
   color: white;

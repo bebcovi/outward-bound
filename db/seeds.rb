@@ -26,7 +26,7 @@ album.photos.create(flickr_photos.map do |flickr_photo|
     uid:                flickr_photo.id,
     url:                flickr_photo.url,
     original_size_url:  flickr_photo.largest!.source_url,
-    medium_size_url:    flickr_photo.small!(320).source_url,
+    medium_size_url:    flickr_photo.medium!(500).source_url,
     thumbnail_size_url: flickr_photo.small!(240).source_url,
     title:              flickr_photo.title,
     stored_on:          "flickr",
