@@ -1,3 +1,3 @@
 %figure
-  = link_to image_tag(album.cover_photo.source_url), album_path(album)
+  = link_to image_tag(album.cover_photo.url(:medium)), album_path(album)
   %figcaption= t("courses.#{album.identifier}.page_title")

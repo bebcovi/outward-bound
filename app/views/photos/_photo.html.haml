@@ -1,1 +1,1 @@
-= link_to image_tag(photo.thumbnail_url, alt: photo.title), photo.source_url
+= link_to image_tag(photo.url(:thumbnail), alt: photo.title), photo.url(:original)
