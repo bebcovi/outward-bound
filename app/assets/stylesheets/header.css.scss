@@ -4,7 +4,17 @@
   }
 
   .brand {
+    @include square(50px);
+    @include box-shadow(rgba(black, .5) 0 0 3px);
+    margin-bottom: - rhythm(.5);
+    margin-left: 0;
+    padding: rhythm(.25);
     font-weight: $bold;
+    border: 1px solid $navbarInverseBorder;
+    border-top: none;
+    border-bottom-left-radius: $baseBorderRadius;
+    border-bottom-right-radius: $baseBorderRadius;
+    background: white;
   }
 
   .lang {
