@@ -8,6 +8,17 @@ body {
   @include rhythm-padding;
   min-height: 400px;
 
+  h1 { display: none; }
+
+  [class*='span'] .main_content {
+    > p, ol, ul {
+      &:nth-child(2) {
+        @include leader;
+      }
+    }
+  }
+}
+
 h1 {
   @include adjust-font-size-to(52px);
   font-weight: $regular;
