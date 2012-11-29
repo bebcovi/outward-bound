@@ -5,62 +5,24 @@ html,
 
 .site_footer {
   @extend %dark-design;
-  @include rhythm-padding;
+  @include rhythm-padding(.5);
   @include clearfix;
+}
 
-  h1 {
-    &:after {
-      content: ":"
-    }
+.latest_course {
+  img {
+    @include box-shadow(black 0 0 8px);
+    display: inline-block;
+    max-width: none;
+    padding: rhythm(.1);
+    background: white;
   }
 }
 
-.site_footer h1,
-.social {
-  @include rhythm-margins(0);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.social {
-  @extend %pie-clearfix;
-  @extend %unstyled-list;
-  @include adjust-font-size-to(42px);
-  float: right;
-
-  li {
-    float: left;
-    line-height: inherit;
-  }
-
-  a {
-    $c1: darken(white, 10%);
-    $c2: $c1;
-    @include color-link($c1, $c2);
-    display: block;
-    padding: rhythm(.25) rhythm(.5);
-    font-family: icons;
-    text-decoration: none;
-  }
-
-  .facebook a {
-    &:hover,
-    &:focus {
-      color: $facebook;
-    }
-  }
-
-  .twitter a {
-    &:hover,
-    &:focus {
-      color: $twitter;
-    }
-  }
-
-  .youtube a {
-    &:hover,
-    &:focus {
-      color: $youtube;
-    }
-  }
+.copyright {
+  @include adjust-font-size-to($baseFontSize - 2px);
+  @include leading-border(1px, .5);
+  color: rgba(white, .25);
+  border-color: rgba(white, .1);
+  border-top-style: dashed;
 }

@@ -1,14 +1,30 @@
 %footer.site_footer
   .container
-    %ol.social
-      %li.facebook
-        %a{href: "https://www.facebook.com/outwardboundcroatia", target: "_blank"}
-          = icon("facebook")
-      %li.twitter
-        %a{href: "https://twitter.com/outwardb", target: "_blank"}
-          = icon("twitter")
-      %li.youtube
-        %a{href: "http://www.youtube.com/user/OutwardBoundCroatia", target: "_blank"}
-          = icon("youtube")
+    .row
+      .span4
+        %h2 Contact us
+        = render "contact"
 
-    = render "contact"
+      .span4
+        %h2 We&rsquo;re social
+        %ol.social
+          %li.facebook
+            %a{href: "https://www.facebook.com/outwardboundcroatia", target: "_blank"}
+              = icon("facebook")
+              %span Facebook
+          %li.twitter
+            %a{href: "https://twitter.com/outwardb", target: "_blank"}
+              = icon("twitter")
+              %span Twitter
+          %li.youtube
+            %a{href: "http://www.youtube.com/user/OutwardBoundCroatia", target: "_blank"}
+              = icon("youtube")
+              %span YouTube
+
+      .span4
+        %h2 Apply for a course
+        .latest_course
+          %a{href: "#"}
+            = image_tag("http://placekitten.com/300/150")
+
+    %p.copyright 2012 © Outward Bound
