@@ -1,0 +1,32 @@
+:ruby
+  partners = [
+    {
+      image: "outward-bound-international.png",
+      href: "http://www.outwardbound.net/",
+      title: "Outward Bound International",
+    },
+    {
+      image: "waldorf-school-of-zagreb.png",
+      href: "http://www.waldorfska-skola-zg.skole.hr",
+      title: "Waldorfska škola u Zagrebu",
+    },
+    {
+      image: "udruga-igra.png",
+      href: "http://udrugaigra.hr/",
+      title: "Udruga Igra",
+    },
+    {
+      image: "youth-in-action.png",
+      href: "http://ec.europa.eu/youth/index_en.htm",
+      title: "Mladi na djelu",
+    },
+    {
+      image: "international-american-school-of-zagreb.png",
+      href: "http://www.aisz.hr/",
+      title: "Američka škola u Zagrebu",
+    },
+  ]
+
+%ul.partner_list
+  = list_of partners do |partner|
+    = link_to image_tag("partners/#{partner[:image]}"), partner[:href], title: partner[:title]

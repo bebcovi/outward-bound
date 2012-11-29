@@ -1,14 +1,34 @@
 .about {
 
-  .site {
-    h2 { clear: both; }
+  &.instructors {
+    .site {
+      h2 { clear: both; }
 
-    img {
-      @extend .img-polaroid;
-      float: left;
-      margin-right: rhythm(.5);
-      margin-top: rhythm(.5);
+      img {
+        @extend .img-polaroid;
+        float: left;
+        margin-right: rhythm(.5);
+        margin-top: rhythm(.5);
+      }
     }
   }
 
+}
+
+.partner_list {
+  @extend %unstyled-list;
+  @include clearfix;
+
+  li {
+    float: left;
+  }
+
+  a {
+    @include experimental(filter, grayscale(100%));
+    display: inline-block;
+    padding: rhythm(.5);
+    &:hover {
+      @include experimental(filter, grayscale(0%));
+    }
+  }
 }
