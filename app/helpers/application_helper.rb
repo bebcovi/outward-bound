@@ -6,7 +6,6 @@ module ApplicationHelper
     pages = [
       {controller: "home",         action: "index"},
       {controller: "courses",      action: "index"},
-      {controller: "participants", action: "new"},
       {controller: "albums",       action: "index"},
       {controller: "about",        action: "index"},
     ]
