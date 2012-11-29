@@ -8,6 +8,6 @@
 
 = render "about"
 
-.video
-  %h2= t(".video")
-  %iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
+- content_for :highlight do
+  .video
+    %iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}

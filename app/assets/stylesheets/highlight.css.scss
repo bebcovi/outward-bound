@@ -1,0 +1,12 @@
+.site_highlight {
+  @include rhythm-padding;
+  @include leading-border;
+  border-color: rgba($primaryColor, .25);
+  background: rgba($primaryColor, .1);
+
+  .video {
+    iframe {
+      border: 1px solid rgba(black, .75);
+    }
+  }
+}

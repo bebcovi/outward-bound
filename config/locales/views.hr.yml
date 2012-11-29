@@ -3,7 +3,6 @@ hr:
   home:
     index:
       page_title: "Početna"
-      video: "Preferirate video?"
 
   albums:
     index:
