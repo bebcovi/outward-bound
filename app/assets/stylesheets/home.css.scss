@@ -22,3 +22,11 @@
   @include box-shadow(rgba(black, .5) 0 0 8px);
   border: 1px solid rgba(black, .5);
 }
+
+.about_items {
+  h2 {
+    @include adjust-leading-to(1.5);
+    @include apply-side-rhythm-border(bottom, 1px, .25);
+    border-color: rgba(black, .25);
+  }
+}
