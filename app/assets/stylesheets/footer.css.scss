@@ -7,6 +7,10 @@ html,
   @extend %dark-design;
   @include rhythm-padding(.5);
   @include clearfix;
+
+  h2 {
+    font-weight: $semibold;
+  }
 }
 
 .latest_course {

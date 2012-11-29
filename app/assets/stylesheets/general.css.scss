@@ -7,4 +7,12 @@ body {
 .site {
   @include rhythm-padding;
   min-height: 400px;
+
+h1 {
+  @include adjust-font-size-to(52px);
+  font-weight: $regular;
+}
+
+h2 {
+  font-weight: $light;
 }
