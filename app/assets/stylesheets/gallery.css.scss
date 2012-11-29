@@ -24,7 +24,7 @@
     $hoverColor: $linkColor;
     &:hover {
       img {
-        background: rgba($hoverColor, .5);
+        background: rgba($hoverColor, .25);
         border-color: rgba($hoverColor, .75);
       }
       + figcaption {
