@@ -1,4 +1,6 @@
-- @title = t("courses.#{@album.identifier}.page_title")
+- @title = @album.name
+
+%p= back_button t("misc.back"), albums_path
 
 %h1= @title
 

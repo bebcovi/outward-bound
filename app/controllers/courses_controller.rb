@@ -5,20 +5,21 @@ class CoursesController < ApplicationController
   end
 
   def show
-    render params[:course].underscore
+    @course = Course.find(params[:id])
+  end
+
+  def apply
+    send_file "#{Rails.root}/public/files/Application_form_#{I18n.locale}.doc",
+      filename: "Application_form.doc", type: :doc, disposition: "attachment"
   end
 
   private
 
-  def set_courses
-    @courses = {
-      "one_day_courses"   => ["high_wires"],
-      "eight_day_courses" => ["sailing_adventure", "kayak_adventure", "velebit_adventure", "multi_element_adventure"],
-      "technical_courses" => ["sport_climbing", "rock_climbing", "scuba_diving"]
-    }
-  end
-
   def sub_layout
     "courses"
+  end
+
+  def set_courses
+    @kayak_adventure = Course.find("sea-kayak-adventure")
   end
 end

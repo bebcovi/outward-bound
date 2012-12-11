@@ -35,4 +35,16 @@ module ApplicationHelper
       .gsub(/#([\w\d]+)/,  link_to('#\1', 'http://twitter.com/search/#\1', class: "hashtag"))
       .html_safe
   end
+
+  def croatian?
+    I18n.locale == :hr
+  end
+
+  def english?
+    I18n.locale == :en
+  end
+
+  def back_button(string, path, options = {})
+    link_to string, path, options = {}
+  end
 end

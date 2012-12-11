@@ -29,6 +29,9 @@ gem "bootstrap-will_paginate"
 gem "twitter", require: false
 gem "flickr-objects", require: false
 
+# Other
+gem "friendly_id"
+
 group :development, :test do
   gem "debugger"
   gem "pry-rails"

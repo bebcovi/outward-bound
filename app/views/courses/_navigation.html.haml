@@ -1,6 +1,7 @@
 = navigation_sidebar do
-  - @courses.each do |type, course_names|
-    %li.nav-header= t(".#{type}")
-    - course_names.each do |course_name|
-      %li{class: (current_page?(course: course_name.humanize.parameterize) && "active")}
-        = link_to t("courses.#{course_name}.page_title"), course_path(course_name.humanize.parameterize)
+  %li.nav-header
+    = t(".one_day_courses")
+  %li.nav-header
+    = t(".eight_day_courses")
+    %li{class: request.path == course_path(@kayak_adventure) && "active"}
+      = link_to @kayak_adventure, course_path(@kayak_adventure)

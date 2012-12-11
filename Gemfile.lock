@@ -97,6 +97,7 @@ GEM
       faraday_middleware (>= 0.8)
       multi_xml (~> 0.4)
       simple_oauth (~> 0.1)
+    friendly_id (4.0.9)
     haml (3.1.7)
     haml-rails (0.3.5)
       actionpack (>= 3.1, < 4.1)
@@ -229,6 +230,7 @@ DEPENDENCIES
   factory_girl
   fancybox2-rails
   flickr-objects
+  friendly_id
   haml-rails
   jquery-rails
   pg

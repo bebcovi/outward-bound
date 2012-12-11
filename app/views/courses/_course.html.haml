@@ -1,0 +1,12 @@
+%h1= smarty_pants @course.name
+
+%p= link_to image_tag(@course.cover_photo.url(:original), alt: @course.cover_photo.title), @course.cover_photo.url
+
+= markdown @course.description
+
+%p= link_to t("misc.apply"), apply_course_path(@course)
+
+.dates= markdown @course.dates
+.price= money @course.price
+.people= "#{@course.min_people} - #{@course.max_people}"
+.duration= days @course.duration

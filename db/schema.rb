@@ -11,11 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121128134314) do
+ActiveRecord::Schema.define(:version => 20121211152214) do
 
   create_table "albums", :force => true do |t|
-    t.string  "identifier"
     t.integer "cover_photo_id"
+  end
+
+  create_table "courses", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_hr"
+    t.string   "slug"
+    t.text     "description_en"
+    t.text     "description_hr"
+    t.string   "dates_en"
+    t.string   "dates_hr"
+    t.string   "contact_en"
+    t.string   "contact_hr"
+    t.string   "price_en"
+    t.string   "price_hr"
+    t.string   "duration"
+    t.integer  "min_people"
+    t.integer  "max_people"
+    t.integer  "album_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "photos", :force => true do |t|

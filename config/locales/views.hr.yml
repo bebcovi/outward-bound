@@ -52,7 +52,6 @@ hr:
     navigation:
       one_day_courses: "Jednodnevni programi"
       eight_day_courses: "Klasični 8-dnevni programi"
-      technical_courses: "Tehnički programi"
 
   participants:
     new:
