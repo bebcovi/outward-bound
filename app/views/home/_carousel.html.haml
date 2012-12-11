@@ -1,22 +1,11 @@
 #carousel.carousel.slide
   .carousel-inner
-    - width = 940
-    - height = 300
-    .item.active
-      = image_tag "http://placekitten.com/#{width}/#{height}", size: "#{width}x#{height}"
-      .carousel-caption
-        %h4 A Caption
-        %p Janko je gay.
-    .item
-      = image_tag "http://placekitten.com/#{width}/#{height}", size: "#{width}x#{height}"
-      .carousel-caption
-        %h4 A Caption
-        %p Janko je gay.
-    .item
-      = image_tag "http://placekitten.com/#{width}/#{height}"
-      .carousel-caption
-        %h4 A Caption
-        %p Janko je gay.
+    - carousel_images.each do |image|
+      %div{class: "item #{image[:class]}"}
+        = image_tag image[:url], size: "940x300"
+        .carousel-caption
+          %h4= image[:title]
+          %p= image[:subtitle]
 
   = link_to "‹", "#carousel", class: "carousel-control left", data: {slide: "prev"}
   = link_to "›", "#carousel", class: "carousel-control right", data: {slide: "next"}
