@@ -9,10 +9,6 @@ hr:
       page_title: "Galerija"
 
   about:
-    applying:
-      page_title: "Prijava"
-    contact:
-      page_title: "Kontakt"
     index:
       page_title: "O nama"
     instructors:
@@ -52,10 +48,6 @@ hr:
     navigation:
       one_day_courses: "Jednodnevni programi"
       eight_day_courses: "Klasični 8-dnevni programi"
-
-  participants:
-    new:
-      page_title: "Prijava"
 
   contact:
     index:
