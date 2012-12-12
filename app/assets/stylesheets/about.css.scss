@@ -21,18 +21,28 @@
 
 .partner_list {
   @extend %unstyled-list;
-  @include clearfix;
-
-  li {
-    float: left;
-  }
+  @extend .cf;
 
   a {
     @include experimental(filter, grayscale(100%));
     display: inline-block;
-    padding: rhythm(.5);
+    padding: $half-spacing-unit;
     &:hover {
       @include experimental(filter, grayscale(0%));
     }
+  }
+
+  .img,
+  .name {
+    @include font-size($h3-size);
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: $light;
+  }
+
+  .img {
+    width: 120px;
+    margin-right: $half-spacing-unit;
+    line-height: 0;
   }
 }

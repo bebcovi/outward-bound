@@ -29,4 +29,6 @@
 
 %ul.partner_list
   = list_of partners do |partner|
-    = link_to image_tag("partners/#{partner[:image]}"), partner[:href], title: partner[:title]
+    %a{href: partner[:href]}
+      .img= image_tag "partners/#{partner[:image]}"
+      .name>= partner[:title]
