@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require fancybox
+//= require jquery.carouFredSel-6.1.0
 //= require_tree .

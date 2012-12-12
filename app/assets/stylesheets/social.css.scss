@@ -1,16 +1,24 @@
 .social {
-  @extend %unstyled-list;
+  ol {
+    @extend %unstyled-list;
+  }
 
   li {
     line-height: inherit;
   }
 
   a {
+    @extend %transition-all;
     $c1: rgba(white, .5);
     $c2: $c1;
     @include color-link($c1, $c2);
-    display: block;
+    @include border-radius;
+    display: inline-block;
+    padding: 0 .75rem;
     text-decoration: none;
+    &:hover {
+      background: white;
+    }
   }
 
   i, span { vertical-align: middle; }

@@ -1,14 +1,14 @@
-.navbar.navbar-static-top.navbar-inverse
-  .navbar-inner
-    .container
-      = link_to image_tag("logo.png", size: "50x50"), root_path, class: "brand"
-      %ol.nav
-        - navigation_pages.each do |page|
-          %li{class: (params[:controller] == page.path[:controller] && "active")}
-            = link_to page.title, page.path
+.navbar
+  .container
+    = link_to image_tag("logo.png", size: "50x50"), root_path, class: "brand"
 
-      %ol.lang.nav.pull-right
-        %li{class: current_page?(locale: :en) && "current"}
-          = link_to image_tag("lang/GB.png", size: "32x32"), locale: :en
-        %li{class: current_page?(locale: :hr) && "current"}
-          = link_to image_tag("lang/HR.png", size: "32x32"), locale: :hr
+    %ol.nav
+      - navigation_pages.each do |page|
+        %li{class: (params[:controller] == page.path[:controller] && "active")}
+          = link_to page.title, page.path
+
+    %ol.lang.nav
+      %li{class: current_page?(locale: :en) && "current"}
+        = link_to image_tag("lang/GB.png", size: "32x32"), locale: :en
+      %li{class: current_page?(locale: :hr) && "current"}
+        = link_to image_tag("lang/HR.png", size: "32x32"), locale: :hr

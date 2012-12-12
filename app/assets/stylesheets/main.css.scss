@@ -1,4 +1,27 @@
+.main_content {
+  overflow: hidden;
+
+  h1 + p {
+    margin-top: $half-spacing-unit;
+  }
+}
+
 .navigation_sidebar {
-  @include leader;
-  display: inline-block;
+  @extend %unstyled-list;
+  float: left;
+  width: $side-navigation-width;
+  margin-top: $half-spacing-unit;
+  margin-right: $base-spacing-unit;
+  padding-left: $half-spacing-unit;
+  border-left: 5px solid rgba(black, .1);
+
+  .nav-header {
+    margin-top: $half-spacing-unit;
+    color: rgba(black, .5);
+    &:first-child { margin-top: 0; }
+  }
+
+  .active a {
+    font-weight: $bold;
+  }
 }

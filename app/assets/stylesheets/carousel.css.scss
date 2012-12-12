@@ -1,0 +1,27 @@
+.carousel {
+  width: 940px;
+  height: 300px;
+  margin: 0 auto;
+
+  .item {
+    position: relative;
+    line-height: 0;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: $half-spacing-unit;
+    line-height: $base-line-height;
+    color: white;
+    background: rgba($primary-color, .75);
+
+    .title,
+    .desc {
+      margin-bottom: 0;
+    }
+
+    .desc { font-weight: $light; }
+  }
+}

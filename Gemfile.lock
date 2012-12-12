@@ -42,9 +42,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.2)
     arel (3.0.2)
-    bootstrap-sass-rails (2.2.1.2)
-      railties (>= 3.1.0)
-      sass-rails (>= 3.1.0)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.0.4)
@@ -219,7 +216,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-nulldb-adapter (>= 0.2.3)
-  bootstrap-sass-rails
   bootstrap-will_paginate
   capybara
   coffee-rails

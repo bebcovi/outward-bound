@@ -1,0 +1,28 @@
+.hero-unit {
+  @include padding-leader;
+  @include text-shadow(rgba(black, .25) 0 0 3px);
+  padding-bottom: $base-spacing-unit;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid $primary-color;
+  border-radius: 0;
+  background-image: image-url('hero-bg.png');
+  background-color: #535a7e;
+
+  h1 {
+    font-size: $mega-size;
+    font-weight: $bold;
+    margin-bottom: 0;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgba(white, .25);
+  }
+}
+
+.lead {
+  font-size: $h1-size;
+  font-weight: $light;
+}

@@ -10,7 +10,6 @@ group :assets do
   gem "sass-rails"
   gem "compass", github: "chriseppstein/compass", branch: "master"
   gem "compass-rails"
-  gem "bootstrap-sass-rails"
   gem "fancybox2-rails"
   gem "jquery-rails"
   gem "coffee-rails"

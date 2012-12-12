@@ -1,26 +1,60 @@
 .navbar {
+  $border-width: 1px;
+  position: relative;
+  z-index: 1;
+  height: $navbar-height;
+  font-size: $h4-size;
+  font-weight: $light;
+  line-height: $navbar-height - $border-width;
+  color: white;
+  border-bottom: $border-width solid black;
+  background: $primary-color;
+
+  .container {
+    @extend .cf;
+  }
+
+  $hover-color: white;
+  $color: rgba($hover-color, .75);
   a {
-    height: $navbarHeight / 2;
+    @include color-link($color, $hover-color);
+    height: $navbar-height - $border-width;
+    padding: 0 $half-spacing-unit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .active a {
+    @include color-link($hover-color);
+    font-weight: $semibold;
   }
 
   .brand {
-    @include square(50px);
-    @include box-shadow(rgba(black, .5) 0 0 3px);
-    margin-bottom: - rhythm(.5);
-    margin-left: 0;
-    padding: rhythm(.25);
-    font-weight: $bold;
-    border: 1px solid $navbarInverseBorder;
-    border-top: none;
-    border-bottom-left-radius: $baseBorderRadius;
-    border-bottom-right-radius: $baseBorderRadius;
+    float: left;
+    display: inline-block;
+    margin-right: $half-spacing-unit;
+    padding: 7px $half-spacing-unit/2;
+    border-left: 1px solid $primary-color;
+    border-right: 1px solid $primary-color;
     background: white;
   }
 
-  .lang {
-    > li > a {
-      padding-right: 8px;
-      padding-left: 8px;
+  .nav {
+    @extend .cf;
+    float: left;
+    margin-bottom: 0;
+
+    li {
+      float: left;
     }
+  }
+
+  .lang {
+    float: right;
+
+    a { padding-top: 5px; }
   }
 }

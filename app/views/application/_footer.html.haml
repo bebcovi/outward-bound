@@ -1,13 +1,13 @@
 %footer.site_footer
   .container
-    .row
-      .span4
+    .gw
+      %section.contact.g.one-third
         %h2 Contact us
         = render "contact"
 
-      .span4
+      %section.social.g.one-third
         %h2 We&rsquo;re social
-        %ol.social
+        %ol
           %li.facebook
             %a{href: "https://www.facebook.com/outwardboundcroatia", target: "_blank"}
               = icon("facebook")
@@ -21,9 +21,9 @@
               = icon("youtube")
               %span YouTube
 
-      .span4
+      %section.latest.g.one-third
         %h2 Our latest course
-        .latest_course
+        .course
           %a{href: "#"}
             = image_tag("http://placekitten.com/300/150")
 

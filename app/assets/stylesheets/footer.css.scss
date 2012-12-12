@@ -1,55 +1,55 @@
 html,
 .site_footer {
-  background: rgba(black, .8) image-url('footer-bg.png');
+  background: $primary-color;
+  border-top: 1px solid black;
 }
 
 .site_footer {
-  @extend %dark-design;
   @include rhythm-padding(.5);
-  @include clearfix;
+  color: white;
 
   h2 {
     font-weight: $semibold;
   }
 }
 
-.latest_course {
-  a {
-    position: relative;
-    display: inline-block;
-    &:after {
-      $size: 28px;
-      @include square($size);
-      @include adjust-font-size-to($size);
-      @include text-shadow(none);
-      content: '\e01a';
-      position: absolute;
-      top: 50%;
-      right: rhythm(.5);
-      margin-top: - $size;
-      font-family: icons;
-      color: rgba(white, .75);
-    }
-    &:hover {
+.latest {
+  .course {
+    a {
+      position: relative;
+      display: inline-block;
       &:after {
-        color: white;
+        $size: 28px;
+        @include square($size);
+        @include adjust-font-size-to($size);
+        @include text-shadow(none);
+        content: '\e01a';
+        position: absolute;
+        top: 50%;
+        right: rhythm(.5);
+        margin-top: - $size;
+        font-family: icons;
+        color: rgba(white, .75);
+      }
+      &:hover {
+        &:after {
+          color: white;
+        }
       }
     }
-  }
 
-  img {
-    @include box-shadow(black 0 0 8px);
-    display: inline-block;
-    max-width: none;
-    padding: rhythm(.1);
-    background: white;
+    img {
+      @include box-shadow(black 0 0 8px);
+      display: inline-block;
+      max-width: none;
+      padding: rhythm(.1);
+      background: white;
+    }
   }
 }
 
 .copyright {
-  @include adjust-font-size-to($baseFontSize - 2px);
-  @include leading-border(1px, .5);
+  @include font-size($milli-size);
   color: rgba(white, .25);
-  border-color: rgba(white, .1);
-  border-top-style: dashed;
+  border-top: 1px dashed rgba(white, .1);
 }

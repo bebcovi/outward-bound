@@ -1,11 +1,11 @@
-#carousel.carousel.slide
-  .carousel-inner
+.carousel
+  .inner
     - carousel_images.each do |image|
       %div{class: "item #{image[:class]}"}
         = image_tag image[:url], size: "940x300"
-        .carousel-caption
-          %h4= image[:title]
-          %p= image[:subtitle]
+        .caption
+          %h4.title= image[:title]
+          %p.desc= image[:subtitle]
 
-  = link_to "‹", "#carousel", class: "carousel-control left", data: {slide: "prev"}
-  = link_to "›", "#carousel", class: "carousel-control right", data: {slide: "next"}
+  -# = link_to "‹", "#carousel", class: "carousel-control left", data: {slide: "prev"}
+  -# = link_to "›", "#carousel", class: "carousel-control right", data: {slide: "next"}

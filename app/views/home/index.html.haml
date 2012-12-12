@@ -3,11 +3,10 @@
 - content_for :hero_unit do
   %h1= t("name")
   %p.lead Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi.
-
-  = render "carousel"
+  .video
+    %iframe{width: "620", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
 
 = render "about"
 
 - content_for :highlight do
-  .video
-    %iframe{width: "480", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
+  = render "carousel"

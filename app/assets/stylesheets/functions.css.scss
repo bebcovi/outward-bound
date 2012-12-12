@@ -1,0 +1,3 @@
+@function line-height($font-size) {
+  @return ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+}

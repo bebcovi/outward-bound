@@ -1,7 +1,7 @@
 .album_list,
 .album_photos {
   @extend %unstyled-list;
-  @include clearfix;
+  @extend .cf;
 
   li {
     position: relative;
@@ -18,17 +18,18 @@
   li {
     position: relative;
     margin: 0 $spacing $spacing 0;
+    line-height: 0;
   }
 
   a {
-    $hoverColor: $linkColor;
+    $hover-color: $link-color;
     &:hover {
       img {
-        background: rgba($hoverColor, .25);
-        border-color: rgba($hoverColor, .75);
+        background: rgba($hover-color, .25);
+        border-color: rgba($hover-color, .75);
       }
       + figcaption {
-        background: rgba($hoverColor, .75);
+        background: rgba($hover-color, .75);
         color: white;
       }
     }
@@ -36,7 +37,7 @@
 
   img {
     @extend %transition-all;
-    @extend .img-polaroid;
+    @extend %img-polaroid;
     width: 450px;
   }
 
@@ -49,6 +50,7 @@
     right: $margin;
     bottom: $margin;
     padding: rhythm(.25) rhythm(.5);
+    line-height: $base-line-height;
     color: rgba(black, .5);
     border-top: 1px solid white;
     background: rgba(white, .75);
@@ -61,7 +63,7 @@
   $spacing: 1px;
 
   li {
-    @include size($height, $width);
+    @include size($width, $height);
     margin: 0 $spacing $spacing 0;
   }
 
@@ -85,9 +87,9 @@
       background: inherit;
     }
 
-    $hoverColor: black;
+    $hover-color: black;
     &:hover {
-      background: rgba($hoverColor, .75);
+      background: rgba($hover-color, .75);
       color: white;
     }
   }

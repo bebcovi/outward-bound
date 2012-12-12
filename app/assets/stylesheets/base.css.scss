@@ -1,0 +1,46 @@
+// inuit.css
+
+$base-line-height: 26px;
+
+@import 'vars';
+@import 'inuit.css/inuit';
+
+// layout
+
+$site-width: 960px;
+$navbar-height: $base-spacing-unit * 2.5;
+$gutter-width: 25px;
+$side-navigation-width: 200px;
+
+// type
+
+$base-font-family: 'proxima-nova', sans-serif;
+
+$thin:       100;
+$light:      300;
+$regular:    400;
+$semibold:   600;
+$bold:       700;
+$extrabold:  800;
+$black:      900;
+
+// colors
+
+$blue:              hsl(230, 30%, 30%);
+$orange:            hsl(20, 95%, 50%);
+
+$primary-color:     $blue;
+$secondary-color:   $orange;
+
+$facebook:          #3b5998;
+$twitter:           #00aced;
+$youtube:           #e14d40;
+
+$body-background:   white;
+
+$link-color:        $secondary-color;
+$link-hover:        darken($secondary-color, 10%);
+
+// Compass
+
+$default-transition-duration: .2s;

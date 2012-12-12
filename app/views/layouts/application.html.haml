@@ -15,9 +15,7 @@
     = render "hero_unit"
 
     .site.container
-
-      .row
-        = render "layouts/#{controller.send(:sub_layout)}"
+      = render "layouts/#{controller.send(:sub_layout)}"
 
       %ul.tweets
         = render @tweets

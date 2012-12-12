@@ -1,3 +1,12 @@
-@mixin color-link($color1, $color2) {
+@mixin color-link($color1, $color2: $color1) {
   @include link-colors($color1, $color2, $color2, $color1, $color2);
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
 }

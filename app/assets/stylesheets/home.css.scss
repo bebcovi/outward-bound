@@ -1,32 +1,14 @@
-.hero-unit {
-  @extend %dark-design;
-  @include padding-leader;
-  @include trailing-border(1px, 1);
-  @include trailer(0);
-  border-color: $primaryColor;
-  border-radius: 0;
-  background-image: image-url('hero-bg.png');
+body.home {
 
-  h1 {
-    @include trailer(.5);
-    font-weight: $bold;
+  .navbar {
+    @include box-shadow(rgba(black, .5) 0 0 8px);
   }
-}
 
-.lead {
-  @include adjust-font-size-to(26px, 1.5);
-  font-weight: $regular;
-}
-
-.carousel {
-  @include box-shadow(rgba(black, .5) 0 0 8px);
-  border: 1px solid rgba(black, .5);
 }
 
 .about_items {
   h2 {
-    @include adjust-leading-to(1.5);
-    @include apply-side-rhythm-border(bottom, 1px, .25);
-    border-color: rgba(black, .25);
+    margin-bottom: $half-spacing-unit;
+    border-bottom: 1px solid rgba(black, .25);
   }
 }

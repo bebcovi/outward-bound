@@ -5,10 +5,14 @@
       h2 { clear: both; }
 
       img {
-        @extend .img-polaroid;
+        @extend %img-polaroid;
         float: left;
-        margin-right: rhythm(.5);
-        margin-top: rhythm(.5);
+        margin-top: $quarter-spacing-unit;
+        margin-right: $half-spacing-unit;
+
+        ~ p {
+          overflow: hidden;
+        }
       }
     }
   }
