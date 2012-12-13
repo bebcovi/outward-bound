@@ -13,7 +13,7 @@ do ($ = jQuery) ->
 
   # carousel
 
-  $carousel = $("carousel")
+  $carousel = $(".carousel")
 
   if $carousel.length
     $(".carousel").find(".inner").carouFredSel
