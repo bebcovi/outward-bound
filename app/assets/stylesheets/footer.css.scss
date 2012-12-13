@@ -1,12 +1,13 @@
 html,
 .site_footer {
-  background: $primary-color;
-  border-top: 1px solid black;
+  background: rgba(black, .8) image-url('footer-bg.png');
 }
 
 .site_footer {
-  @include rhythm-padding(.5);
+  padding-top: $base-spacing-unit;
+  padding-bottom: $half-spacing-unit;
   color: white;
+  border-top: 1px solid black;
 
   h2 {
     margin-bottom: $half-spacing-unit;

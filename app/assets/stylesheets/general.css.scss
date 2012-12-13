@@ -21,6 +21,7 @@ body {
 
 .site {
   padding-top: $base-spacing-unit;
+  padding-bottom: $half-spacing-unit;
   min-height: 400px;
 
   h1 { display: none; }
