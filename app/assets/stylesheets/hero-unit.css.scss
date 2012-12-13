@@ -1,6 +1,5 @@
 .hero-unit {
   @include padding-leader;
-  @include text-shadow(rgba(black, .25) 0 0 3px);
   padding-bottom: $base-spacing-unit;
   text-align: center;
   color: white;
@@ -19,10 +18,17 @@
     margin-bottom: $half-spacing-unit;
   }
 
+  .video {
+    $color: black;
+    border: 1px solid $color;
+    background: rgba($color, .5);
+  }
+
   iframe {
     display: block;
     margin: 0 auto;
-    border: 5px solid rgba(white, .25);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
   }
 }
 

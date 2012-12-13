@@ -1,10 +1,12 @@
 - @title = t(".page_title")
 
 - content_for :hero_unit do
-  %h1= t("name")
-  %p.lead Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi.
+  %h1
+    %span.slabtext= t("name")
+  %p.lead
+    %span.slabtext Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi.
   .video
-    %iframe{width: "620", height: "360", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
+    %iframe{width: "420", height: "315", src: "http://www.youtube.com/embed/vocg-ubKYFw", frameborder: "0", allowfullscreen: true}
 
 = render "about"
 
