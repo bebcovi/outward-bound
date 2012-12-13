@@ -2,9 +2,9 @@
 
 - content_for :hero_unit do
   %h1
-    %span.slabtext= t("name")
+    %span.slabtext= t("title")
   %p.lead
-    %span.slabtext Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi.
+    %span.slabtext= t("subtitle")
   = render "carousel"
   = link_to icon("youtube"), "http://youtu.be/vocg-ubKYFw", class: "video", target: "_blank"
 

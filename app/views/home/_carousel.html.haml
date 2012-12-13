@@ -4,7 +4,7 @@
       %div{class: "item #{image[:class]}"}
         = image_tag image[:url], size: "940x300"
         .caption
-          %h4.title= image[:title]
+          %h4.title= image[:"title_#{I18n.locale}"]
           %p.desc= image[:subtitle]
 
   -# = link_to "‹", "#carousel", class: "carousel-control left", data: {slide: "prev"}
