@@ -1,6 +1,10 @@
 // inuit.css
 
-$base-line-height: 26px;
+$base-line-height:  26px;
+
+$h1-size:           42px;
+$h2-size:           46px;
+
 
 @import 'vars';
 @import 'inuit.css/inuit';
@@ -14,15 +18,24 @@ $side-navigation-width: 200px;
 
 // type
 
-$base-font-family: 'proxima-nova', sans-serif;
+$base-font-family:  'proxima-nova', sans-serif;
+$alt-font-family:   'proxima-nova-extra-condensed', sans-serif;
 
-$thin:       100;
-$light:      300;
-$regular:    400;
-$semibold:   600;
-$bold:       700;
-$extrabold:  800;
-$black:      900;
+$base-thin:       100;
+$base-light:      300;
+$base-regular:    400;
+$base-semibold:   600;
+$base-bold:       700;
+$base-extrabold:  800;
+$base-black:      900;
+
+$alt-thin:        200;
+$alt-light:       300;
+$alt-regular:     400;
+$alt-semibold:    600;
+$alt-bold:        700;
+$alt-extrabold:   800;
+$alt-black:       900;
 
 // colors
 

@@ -4,6 +4,11 @@
   h1 + p {
     margin-top: $half-spacing-unit;
   }
+
+  h2 {
+    margin-bottom: $half-spacing-unit;
+    border-bottom: 1px solid rgba(black, .25);
+  }
 }
 
 .navigation_sidebar {
@@ -22,6 +27,6 @@
   }
 
   .active a {
-    font-weight: $bold;
+    font-weight: $base-bold;
   }
 }

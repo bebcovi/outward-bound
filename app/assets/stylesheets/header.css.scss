@@ -4,7 +4,7 @@
   z-index: 1;
   height: $navbar-height;
   font-size: $h4-size;
-  font-weight: $light;
+  font-weight: $base-light;
   line-height: $navbar-height - $border-width;
   color: white;
   border-bottom: $border-width solid black;
@@ -29,7 +29,7 @@
 
   .active a {
     @include color-link($hover-color);
-    font-weight: $semibold;
+    font-weight: $base-bold;
   }
 
   .brand {

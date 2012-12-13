@@ -10,9 +10,13 @@
   background-color: #535a7e;
 
   h1 {
-    font-size: $mega-size;
-    font-weight: $bold;
-    margin-bottom: 0;
+    @include text-shadow(rgba(black, .75) 0 0 6px);
+    @include font-size($mega-size);
+    font: {
+      family: $alt-font-family;
+      weight: $alt-bold;
+    }
+    margin-bottom: $half-spacing-unit;
   }
 
   iframe {
@@ -23,6 +27,8 @@
 }
 
 .lead {
-  font-size: $h1-size;
-  font-weight: $light;
+  font: {
+    family: $alt-font-family;
+    size: $h2-size;
+  }
 }

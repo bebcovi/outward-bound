@@ -26,12 +26,17 @@ body {
   h1 { display: none; }
 }
 
+h1,
+h2 {
+  font-family: $alt-font-family;
+}
+
 h1 {
-  font-weight: $regular;
+  font-weight: $alt-regular;
 }
 
 h2 {
-  font-weight: $light;
+  font-weight: $alt-light;
   margin-bottom: 0;
 }
 

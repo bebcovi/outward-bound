@@ -2,7 +2,13 @@
 
   &.instructors {
     .site {
-      h2 { clear: both; }
+      h2 {
+        clear: both;
+        padding-top: $half-spacing-unit;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
 
       img {
         @extend %img-polaroid;
@@ -37,7 +43,7 @@
     @include font-size($h3-size);
     display: inline-block;
     vertical-align: middle;
-    font-weight: $light;
+    font-weight: $base-light;
   }
 
   .img {
