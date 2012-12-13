@@ -3,5 +3,5 @@ class Tweet < ActiveRecord::Base
   validates_presence_of :tweet_id, :content, :author
 
   default_scope  -> { order(:created_at) }
-  scope :recent, -> { limit(5) }
+  scope :recent, -> { limit(10) }
 end

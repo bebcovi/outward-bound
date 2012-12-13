@@ -17,9 +17,6 @@
     .site.container
       = render "layouts/#{controller.send(:sub_layout)}"
 
-      %ul.tweets
-        = render @tweets
-
     - if content_for? :highlight
       .site_highlight
         .container

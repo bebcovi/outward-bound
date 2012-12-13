@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//
 //= require fancybox
 //= require jquery.carouFredSel-6.1.0
 //= require jquery.slabtext
+//
 //= require_tree .

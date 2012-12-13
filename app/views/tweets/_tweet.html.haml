@@ -1,2 +1,4 @@
-%cite= link_to "@#{tweet.author}", "https://twitter.com/#{tweet.author}"
-%blockquote= parse_tweet(tweet.content)
+%li
+  = link_to "@#{tweet.author}", "https://twitter.com/#{tweet.author}"
+  says:
+  %blockquote= parse_tweet(tweet.content)
