@@ -7,5 +7,5 @@
           %h4.title= image[:"title_#{I18n.locale}"]
           %p.desc= image[:subtitle]
 
-  -# = link_to "‹", "#carousel", class: "carousel-control left", data: {slide: "prev"}
-  -# = link_to "›", "#carousel", class: "carousel-control right", data: {slide: "next"}
+  = link_to icon("arrow-left"), "#", class: "prev"
+  = link_to icon("arrow-right"), "#", class: "next"

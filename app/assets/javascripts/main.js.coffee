@@ -18,7 +18,7 @@ do ($ = jQuery) ->
   if $carousel.length
     $carousel.find(".inner").carouFredSel
       scroll:
-        fx: "crossfade"
+        fx: "slide"
 
       items:
         visible: 1
@@ -27,6 +27,9 @@ do ($ = jQuery) ->
 
       auto:
         timeoutDuration: 5000
+
+      prev: ".prev"
+      next: ".next"
 
   # video
 
