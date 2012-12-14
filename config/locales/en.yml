@@ -1,3 +1,9 @@
 en:
   title: "Outward Bound Croatia"
   subtitle: "We lead courses of experientally learning through activities in nature."
+  misc:
+    apply: "Apply"
+    back: "Back"
+    contact: "Contact us"
+    social: "We're social"
+    tweets: "Latest mentions"

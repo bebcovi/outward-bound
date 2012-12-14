@@ -3,9 +3,7 @@ hr:
   subtitle: "Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi."
   misc:
     apply: "Prijavi se"
-    days:
-      one: "%{count} dan"
-      few: "%{count} dana"
-      many: "%{count} dana"
-      other: "%{count} dana"
     back: "Natrag"
+    contact: "Kontaktirajte nas"
+    social: "Socijalni smo"
+    tweets: "Nedavna spominjanja"

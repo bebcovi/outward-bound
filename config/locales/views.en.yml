@@ -29,31 +29,9 @@ en:
   courses:
     index:
       page_title: "Courses"
-    high_wires:
-      page_title: "High Wires"
-    sailing_adventure:
-      page_title: "Sailing adventure"
-    kayak_adventure:
-      page_title: "Sea-kayak adventure"
-    velebit_adventure:
-      page_title: "Velebit adventure"
-    multi_element_adventure:
-      page_title: "Multi-Element adventure"
-    sport_climbing:
-      page_title: "Sport climbing"
-    rock_climbing:
-      page_title: "Technical rock-climbing"
-    scuba_diving:
-      page_title: "SCUBA Diving school"
+    apply:
+      page_title: "Apply"
     navigation:
-      one_day_courses: "1-day courses"
-      eight_day_courses: "Classical 8-day courses"
-      technical_courses: "Technical courses"
-
-  participants:
-    new:
-      page_title: "Applying"
-
-  contact:
-    index:
-      page_title: "Contact"
+      one: "1-day courses"
+      eight: "Classical 8-day courses"
+      other: "Other"

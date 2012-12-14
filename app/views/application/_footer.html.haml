@@ -2,11 +2,11 @@
   .container
     .gw
       %section.contact.g.one-third
-        %h2 Contact us
+        %h2= t("misc.contact")
         = render "contact"
 
       %section.social.g.one-third
-        %h2 We&rsquo;re social
+        %h2= t("misc.social")
         %ol
           %li.facebook
             %a{href: "https://www.facebook.com/outwardboundcroatia", target: "_blank"}
@@ -22,7 +22,7 @@
               %span YouTube
 
       %section.tweets.g.one-third
-        %h2 Latest mentions
+        %h2= t("misc.tweets")
         %ol
           = render @tweets
 

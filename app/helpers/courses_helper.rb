@@ -10,6 +10,10 @@ module CoursesHelper
   end
 
   def days(value)
-    t("misc.days", count: value)
+    if croatian?
+      value == 1 ? "1 dan" : "#{value} dana"
+    else
+      value == 1 ? "1 day" : "#{value} days"
+    end
   end
 end

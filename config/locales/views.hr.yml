@@ -11,20 +11,20 @@ hr:
   about:
     index:
       page_title: "O nama"
-    instructors:
-      page_title: "Instruktori"
+    what:
+      page_title: "Što je Outward Bound?"
     international:
       page_title: "OB International"
+    instructors:
+      page_title: "Instruktori"
+    support:
+      page_title: "Podrška/Donacije"
+    safety:
+      page_title: "Sigurnost"
     locations:
       page_title: "Lokacije"
     partners:
       page_title: "Partneri"
-    safety:
-      page_title: "Sigurnost"
-    support:
-      page_title: "Podrška/Donacije"
-    what:
-      page_title: "Što je Outward Bound?"
 
   courses:
     index:
@@ -35,7 +35,3 @@ hr:
       one: "Jednodnevni programi"
       eight: "Klasični 8-dnevni programi"
       other: "Ostalo"
-
-  contact:
-    index:
-      page_title: "Kontakt"
