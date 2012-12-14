@@ -45,6 +45,8 @@ hr:
       page_title: "Alpinistički tečaj"
     scuba_diving:
       page_title: "Škola SCUBA ronjenja"
+    apply:
+      page_title: "Prijava"
     navigation:
       one_day_courses: "Jednodnevni programi"
       eight_day_courses: "Klasični 8-dnevni programi"

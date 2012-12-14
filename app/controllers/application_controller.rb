@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :set_mentions
 
+  def render(*args)
+    options = args.extract_options!.dup
+    options.update(layout: false) if request.headers["X-fancyBox"]
+    args << options
+    super(*args)
+  end
+
   private
 
   def default_url_options(options = {})
