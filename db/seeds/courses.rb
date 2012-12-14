@@ -47,3 +47,23 @@ Course.create!(
   name_en: "Velebit adventure",
   album: @velebit_adventure_album,
 )
+
+Course.create!(
+  name_hr: "Tradicionalno jedrenje",
+  name_en: "Traditional sailing",
+)
+
+Course.create!(
+  name_hr: "Visinski izazov",
+  name_en: "High ropes",
+)
+
+Course.create!(
+  name_hr: "Team-building",
+  name_en: "Team-building",
+)
+
+Course.create!(
+  name_hr: "Custom made",
+  name_en: "Custom made",
+)
