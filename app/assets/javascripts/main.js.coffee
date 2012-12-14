@@ -9,14 +9,14 @@ do ($ = jQuery) ->
   $heroUnit = $(".hero-unit")
 
   if $heroUnit.length
-    $(".hero-unit").find("h1, .lead").slabText()
+    $heroUnit.find("h1, .lead").slabText()
 
   # carousel
 
   $carousel = $(".carousel")
 
   if $carousel.length
-    $(".carousel").find(".inner").carouFredSel
+    $carousel.find(".inner").carouFredSel
       scroll:
         fx: "crossfade"
 
@@ -24,6 +24,18 @@ do ($ = jQuery) ->
         visible: 1
         height: 300
         width: 940
+
+      auto:
+        timeoutDuration: 5000
+
+  # video
+
+  $video = $(".video")
+
+  if $video.length
+    $video.fancybox
+      helpers:
+        media: {}
 
   # tweets
 

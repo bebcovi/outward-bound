@@ -1,12 +1,13 @@
 .hero-unit {
   @include padding-leader;
-  padding-bottom: $base-spacing-unit;
+  position: relative;
+  padding-bottom: $base-spacing-unit * 2;
   text-align: center;
   color: white;
   border-bottom: 1px solid $primary-color;
   border-radius: 0;
   background-image: image-url('hero-bg.png');
-  background-color: #535a7e;
+  background-color: $hero-background;
 
   h1 {
     @include text-shadow(rgba(black, .75) 0 0 6px);
@@ -18,17 +19,35 @@
     margin-bottom: $half-spacing-unit;
   }
 
-  .video {
-    $color: black;
-    border: 1px solid $color;
-    background: rgba($color, .5);
+  .carousel {
+    border: 10px solid rgba(white, .1);
   }
 
-  iframe {
-    display: block;
-    margin: 0 auto;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  .video {
+    $icon-size: 72px;
+    $padding-vertical: 3px;
+    $padding-horizontal: 3px;
+    $color: $youtube;
+    @include color-link($color, darken($color, 10%));
+    @include border-radius(16px);
+    position: absolute;
+    bottom: - $icon-size/2 + $icon-size * 0.125;
+    left: 50%;
+    display: inline-block;
+    margin-left: - $icon-size/2 - $padding-horizontal;
+    padding: $padding-vertical $padding-horizontal;
+    font-family: icons;
+    font-size: $icon-size;
+    line-height: $base-line-height * 2;
+    background: white;
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      position: relative;
+      top: 3px;
+    }
   }
 }
 

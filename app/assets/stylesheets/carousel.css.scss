@@ -1,6 +1,4 @@
 .carousel {
-  width: 940px;
-  height: 300px;
   margin: 0 auto;
 
   .item {
@@ -15,7 +13,7 @@
     padding: $half-spacing-unit;
     line-height: $base-line-height;
     color: white;
-    background: rgba($primary-color, .75);
+    background: rgba(black, .75);
 
     .title,
     .desc {
