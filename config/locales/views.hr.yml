@@ -29,27 +29,12 @@ hr:
   courses:
     index:
       page_title: "Programi"
-    high_wires:
-      page_title: "Visinski izazov"
-    sailing_adventure:
-      page_title: "Punim jedrima"
-    kayak_adventure:
-      page_title: "Morska pustolovina"
-    velebit_adventure:
-      page_title: "Velebitska pustolovina"
-    multi_element_adventure:
-      page_title: "Multi-Element pustolovina"
-    sport_climbing:
-      page_title: "Sportsko penjanje"
-    rock_climbing:
-      page_title: "Alpinistički tečaj"
-    scuba_diving:
-      page_title: "Škola SCUBA ronjenja"
     apply:
       page_title: "Prijava"
     navigation:
-      one_day_courses: "Jednodnevni programi"
-      eight_day_courses: "Klasični 8-dnevni programi"
+      one: "Jednodnevni programi"
+      eight: "Klasični 8-dnevni programi"
+      other: "Ostalo"
 
   contact:
     index:

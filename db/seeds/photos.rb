@@ -11,6 +11,8 @@ end
 
 @velebit_adventure_album = Album.create!
 @kayak_adventure_album = Album.create!
+@sailing_adventure_album = Album.create!
+@high_wires_album = Album.create!
 
 flickr_photos = Flickr.people.find(ENV["FLICKR_USER_ID"]).get_photos(sizes: :all).
   group_by { |photo|
@@ -23,6 +25,10 @@ flickr_photos = Flickr.people.find(ENV["FLICKR_USER_ID"]).get_photos(sizes: :all
       [@velebit_adventure_album, "8217540609"]
     elsif photo.id.in?(["8263610773"])
       [@kayak_adventure_album, "8263610773"]
+    elsif photo.id.in?(["8272335149"])
+      [@sailing_adventure_album, "8272335149"]
+    elsif photo.id.in?(["8273400766"])
+      [@high_wires_album, "8273400766"]
     end
   }.
   reject { |album, photos| album.nil? }

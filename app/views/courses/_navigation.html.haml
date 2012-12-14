@@ -1,13 +1,6 @@
 = navigation_sidebar do
-  %li.nav-header
-    = t(".one_day_courses")
-    %li= link_to Course.find("high-ropes"), course_path(Course.find("high-ropes"))
-  %li.nav-header
-    = t(".eight_day_courses")
-    %li= link_to @kayak_adventure, course_path(@kayak_adventure)
-    %li= link_to Course.find("velebit-adventure"), course_path(Course.find("velebit-adventure"))
-    %li= link_to Course.find("traditional-sailing"), course_path(Course.find("traditional-sailing"))
-  %li.nav-header
-    Ostalo
-    %li= link_to Course.find("team-building"), course_path(Course.find("team-building"))
-    %li= link_to Course.find("custom-made"), course_path(Course.find("custom-made"))
+  - @courses.each do |category, courses|
+    %li.nav-header
+      = t(".#{category}")
+      - courses.each do |course|
+        %li= link_to course, course_path(course)

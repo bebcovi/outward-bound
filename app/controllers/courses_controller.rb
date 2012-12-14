@@ -18,11 +18,13 @@ class CoursesController < ApplicationController
 
   private
 
-  def sub_layout
-    "courses"
+  def set_courses
+    @courses = ["one", "eight", "other"].inject({}) do |hash, category|
+      hash.update(category => Course.where(category: category))
+    end
   end
 
-  def set_courses
-    @kayak_adventure = Course.find("sea-kayak-adventure")
+  def sub_layout
+    "courses"
   end
 end
