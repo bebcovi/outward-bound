@@ -1,12 +1,12 @@
-%h1= smarty_pants @course.name
+%h1= smarty_pants course.name
 
-= content_tag(:p) { link_to image_tag(@course.cover_photo.url(:original), alt: @course.cover_photo.title), @course.cover_photo.url } if @course.album
+= content_tag(:p) { link_to image_tag(course.cover_photo.url(:original), alt: course.cover_photo.title), course.cover_photo.url } if course.album
 
-= markdown @course.description
+= markdown course.description
 
-= content_tag(:p) { link_to t("misc.apply"), apply_courses_path } if @course.applyable?
+= content_tag(:p) { link_to t("misc.apply"), apply_courses_path } if course.applyable?
 
-= content_tag(:div, class: "dates")    { markdown @course.dates }                          if @course.dates?
-= content_tag(:div, class: "price")    { money @course.price }                             if @course.price?
-= content_tag(:div, class: "people")   { "#{@course.min_people} - #{@course.max_people}" } if @course.min_people? or @course.max_people?
-= content_tag(:div, class: "duration") { days @course.duration }                           if @course.duration?
+= content_tag(:div, class: "dates")    { markdown course.dates }                         if course.dates?
+= content_tag(:div, class: "price")    { money course.price }                            if course.price?
+= content_tag(:div, class: "people")   { "#{course.min_people} - #{course.max_people}" } if course.min_people? or course.max_people?
+= content_tag(:div, class: "duration") { days course.duration }                          if course.duration?
