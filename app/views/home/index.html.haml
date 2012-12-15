@@ -9,3 +9,10 @@
   = link_to icon("play"), "http://youtu.be/vocg-ubKYFw", class: "video", target: "_blank"
 
 = render "about"
+
+.partners
+  %ul
+    = list_of important_partners do |partner|
+      %a{href: partner[:href]}
+        .img= image_tag "partners/#{partner[:image]}"
+        .name>= raw(partner[:"title_#{I18n.locale}"])

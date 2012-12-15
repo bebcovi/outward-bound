@@ -27,9 +27,11 @@
 .partner_list {
   @extend %unstyled-list;
   @extend .cf;
+  font-family: $alt-font-family;
 
   a {
     @include experimental(filter, grayscale(100%));
+    @include color-link(rgba(black, .35), $link-hover);
     display: inline-block;
     padding: $half-spacing-unit;
     &:hover {

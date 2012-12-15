@@ -4,4 +4,43 @@ body.home {
     @include box-shadow(rgba(black, .5) 0 0 8px);
   }
 
+  .partners {
+    text-align: center;
+    height: $base-spacing-unit * 4;
+
+    ul {
+      @extend %unstyled-list;
+      @include clearfix;
+      display: inline-block;
+      margin-bottom: 0;
+      font-family: $alt-font-family;
+      font-size: $h4-size;
+      line-height: $base-line-height;
+
+      li {
+        float: left;
+        text-align: left;
+      }
+
+      a {
+        @include color-link(rgba(black, .35), $link-hover);
+        display: inline-block;
+        padding: $base-spacing-unit;
+      }
+
+      .img,
+      .name {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .img {
+        margin-right: $half-spacing-unit;
+        line-height: 0;
+      }
+
+      img { height: $base-spacing-unit * 2; }
+    }
+  }
+
 }
