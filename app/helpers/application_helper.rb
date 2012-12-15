@@ -43,4 +43,22 @@ module ApplicationHelper
   def back_button(string, path, options = {})
     link_to string, path, options = {}
   end
+
+  def TranslationHash(value)
+    TranslationHash.new(value)
+  end
+
+  class TranslationHash
+    def initialize(hash)
+      @hash = hash
+    end
+
+    def [](key)
+      if @hash.has_key?(key)
+        @hash[key]
+      else
+        @hash[:"#{key}_#{I18n.locale}"]
+      end
+    end
+  end
 end
