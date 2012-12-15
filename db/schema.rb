@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214203545) do
+ActiveRecord::Schema.define(:version => 20121215114310) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(:version => 20121214203545) do
     t.integer  "min_people"
     t.integer  "max_people"
     t.integer  "album_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "category"
     t.integer  "duration"
+    t.boolean  "applyable",      :default => true
   end
 
   create_table "photos", :force => true do |t|
