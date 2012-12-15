@@ -4,6 +4,18 @@ module AboutHelper
   def partners
     [
       {
+        image: "national-foundation-for-civil-society-development.png",
+        href: "http://zaklada.civilnodrustvo.hr",
+        title_hr: "Nacionalna zaklada<br>za razvoj civilnog društva",
+        title_en: "National Foundation<br>for Civil Society Development",
+      },
+      {
+        image: "vmd.png",
+        href: "http://vmd.hr/en/",
+        title_hr: "Putnička agencija VMD",
+        title_en: "Travel agency VMD",
+      },
+      {
         image: "outward-bound-international.png",
         href: "http://www.outwardbound.net/",
         title_hr: "Outward Bound International",

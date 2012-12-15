@@ -30,13 +30,9 @@
   font-family: $alt-font-family;
 
   a {
-    @include experimental(filter, grayscale(100%));
     @include color-link(rgba(black, .35), $link-hover);
     display: inline-block;
     padding: $half-spacing-unit;
-    &:hover {
-      @include experimental(filter, grayscale(0%));
-    }
   }
 
   .img,
@@ -50,6 +46,7 @@
   .img {
     width: 120px;
     margin-right: $half-spacing-unit;
+    text-align: center;
     line-height: 0;
   }
 }
