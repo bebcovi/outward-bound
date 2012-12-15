@@ -7,5 +7,5 @@
           %h4.title= image[:title]
           %p.desc= image[:subtitle]
 
-  = link_to icon("arrow-left"), "#", class: "prev"
-  = link_to icon("arrow-right"), "#", class: "next"
+  = link_to content_tag(:span, ""), "#", class: "prev"
+  = link_to content_tag(:span, ""), "#", class: "next"

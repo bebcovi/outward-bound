@@ -1,8 +1,18 @@
 .carousel {
+  $height: 300px;
+  $border-width: 10px;
+  @include clearfix;
+  position: relative;
+  height: $height + 2 * $border-width;
   margin: 0 auto;
+  border: $border-width solid rgba(white, .1);
+
+  .inner { background: white; }
 
   .item {
     position: relative;
+    float: left;
+    margin-right: 1px;
     line-height: 0;
   }
 
@@ -21,5 +31,40 @@
     }
 
     .desc { font-weight: $base-light; }
+  }
+
+  .prev,
+  .next {
+    @include color-link(rgba(white, .5), white);
+    @include text-shadow(rgba(black, .75) 0 0 5px);
+    opacity: .5;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    height: $height;
+    padding: 0 $base-spacing-unit;
+    font-size: 42px;
+    line-height: $height - $base-spacing-unit;
+    &:hover,
+    &:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    span {
+      @include size(36px, 34px);
+      display: inline-block;
+      background: image-url('fancybox_sprite.png');
+    }
+  }
+
+  .prev {
+    left: 0;
+    span { background-position: 0 -36px; }
+  }
+
+  .next {
+    right: 0;
+    span { background-position: 0 -72px; }
   }
 }

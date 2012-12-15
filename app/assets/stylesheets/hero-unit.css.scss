@@ -19,42 +19,6 @@
     margin-bottom: $half-spacing-unit;
   }
 
-  .carousel {
-    $height: 300px;
-    $border-width: 10px;
-    @include clearfix;
-    position: relative;
-    height: $height + 2 * $border-width;
-    border: $border-width solid rgba(white, .1);
-
-    .inner { background: white; }
-
-    .item {
-      float: left;
-      margin-right: 1px;
-    }
-
-    .prev,
-    .next {
-      @include color-link(rgba(white, .5), white);
-      @include text-shadow(rgba(black, .75) 0 0 5px);
-      position: absolute;
-      z-index: 20;
-      top: 0;
-      height: $height;
-      padding: 0 $base-spacing-unit;
-      font-size: 42px;
-      line-height: $height - $base-spacing-unit;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-
-    .prev { left: 0; }
-    .next { right: 0; }
-  }
-
   .video {
     $bg-color: $youtube;
     $width: $base-spacing-unit * 3.5;
