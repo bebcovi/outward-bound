@@ -1,0 +1,5 @@
+%ul.partner_list
+  = list_of partners do |partner|
+    %a{href: partner[:href]}
+      .img= image_tag "partners/#{partner[:image]}"
+      .name>= partner[:"title_#{I18n.locale}"]
