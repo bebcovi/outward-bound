@@ -4,6 +4,37 @@ body.home {
     @include box-shadow(rgba(black, .5) 0 0 8px);
   }
 
+  .hero-unit {
+    margin-bottom: $base-spacing-unit;
+  }
+
+  .about_items {
+    text-align: center;
+
+    h2 {
+      @include font-size($h1-size);
+      display: inline-block;
+      padding: 0 $half-spacing-unit;
+      border-bottom: none;
+      background: white;
+
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        margin-top: - $base-spacing-unit;
+        left: 0;
+        right: 0;
+        display: block;
+        border-top: 1px solid rgba(black, .25);
+      }
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
   .partners {
     text-align: center;
     height: $base-spacing-unit * 4;
