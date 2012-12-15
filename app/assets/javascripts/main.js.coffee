@@ -33,10 +33,10 @@ do ($ = jQuery) ->
 
   # video
 
-  $video = $(".video")
+  $playVideo = $(".play_video")
 
-  if $video.length
-    $video.fancybox
+  if $playVideo.length
+    $playVideo.fancybox
       helpers:
         media: {}
 

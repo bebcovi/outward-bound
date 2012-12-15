@@ -18,36 +18,6 @@
     }
     margin-bottom: $half-spacing-unit;
   }
-
-  .video {
-    $bg-color: $youtube;
-    $width: $base-spacing-unit * 3.5;
-    $height: $base-spacing-unit * 2.5;
-    $border-width: 3px;
-    @include size($width, $height);
-    @include border-radius(12px);
-    @include color-link(white);
-    position: absolute;
-    bottom: - $height/2;
-    left: 50%;
-    display: inline-block;
-    margin-left: - $width/2;
-    font-size: 52px;
-    font-family: icons;
-    line-height: $height - 2*$border-width;
-    border: $border-width solid white;
-    background: $bg-color;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      background: darken($bg-color, 10%);
-    }
-
-    i {
-      position: relative;
-      top: 1px;
-    }
-  }
 }
 
 .lead {
