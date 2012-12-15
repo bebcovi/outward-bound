@@ -3,6 +3,7 @@
   %head
     %title Outward Bound &middot; #{@title}
     %meta{charset: "utf-8"}
+    %meta{content: "noindex", name: "robots"}
     %link{rel: "authors", href: "humans.txt"}
     = favicon_link_tag
     = stylesheet_link_tag "application"
@@ -22,5 +23,6 @@
           = content_for :highlight
 
     = render "footer"
+    <a href="http://www.freedomain.co.nr/" target="_blank" title="Free Domain Name .co.nr"><img src="http://mcarara.imdrv.net/soof62.gif" width="88" height="31" border="0" alt="Free Domain Name .co.nr" /></a>
 
     = javascript_include_tag "application"
