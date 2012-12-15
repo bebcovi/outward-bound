@@ -18,7 +18,7 @@ Course.create!(
   price_hr: nil,
   contact_hr: "<visina@outwardbound.hr>",
 
-  name_en: "Sailing adventure",
+  name_en: "High wires",
   description_en: <<-EOS.strip_heredoc,
     This exciting one-day program is for real adventure seekers. High ropes adrenalin park is the perfect setting for exploring own self-imposed limits. It is composed from various obstacles placed 10 meters high which you can undertake alone or with assistance from other members of the group.
 
