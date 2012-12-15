@@ -55,6 +55,22 @@
   .lang {
     float: right;
 
-    a { padding-top: 5px; }
+    a {
+      padding-top: 5px;
+      padding: 5px 8px;
+    }
+
+    .current {
+      a {
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+      }
+
+      img {
+        @include box-shadow(rgba(white, .75) 0 0 8px);
+      }
+    }
   }
 }
