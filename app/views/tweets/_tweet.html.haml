@@ -1,5 +1,6 @@
 %li
   = icon("twitter")
-  = link_to "@#{tweet.author}", "https://twitter.com/#{tweet.author}", class: "author"
-  says:
+  .says
+    = link_to "@#{tweet.author}", "https://twitter.com/#{tweet.author}", class: "author"
+    says:
   %blockquote= parse_tweet(tweet.content)

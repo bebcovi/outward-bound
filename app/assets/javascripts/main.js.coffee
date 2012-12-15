@@ -4,13 +4,6 @@ do ($ = jQuery) ->
 
   $.fx.speeds["_default"] = 200
 
-  # slabtext
-
-  $heroUnit = $(".hero-unit")
-
-  if $heroUnit.length
-    $heroUnit.find("h1, .lead").slabText()
-
   # carousel
 
   $carousel = $(".carousel")

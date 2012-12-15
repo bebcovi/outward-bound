@@ -1,0 +1,44 @@
+.wf-loading {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul,
+  dl,
+  .main.nav,
+  figcaption,
+  .name,
+  .value,
+  .adr,
+  .tweets .says {
+    visibility: hidden;
+  }
+
+  .navigation_sidebar,
+  .album_list,
+  .album_photos,
+  .contact_info,
+  .social ol,
+  .tweets ol {
+    visibility: visible;
+  }
+
+  blockquote,
+  blockquote a {
+    color: transparent;
+  }
+
+  .about_items h2,
+  .navigation_sidebar .nav-header,
+  .navigation_sidebar a,
+  .copyright {
+    visibility: visible;
+    color: transparent;
+  }
+
+}

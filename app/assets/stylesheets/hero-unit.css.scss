@@ -8,21 +8,19 @@
   border-radius: 0;
   background-image: image-url('hero-bg.png');
   background-color: $hero-background;
+}
 
-  h1 {
-    @include text-shadow(rgba(black, .75) 0 0 6px);
-    @include font-size($mega-size);
-    font: {
-      family: $alt-font-family;
-      weight: $alt-bold;
-    }
-    margin-bottom: $half-spacing-unit;
+.main_title {
+  @include text-shadow(rgba(black, .75) 0 0 6px);
+  @include font-size(62px);
+  font: {
+    family: $alt-font-family;
+    weight: $alt-bold;
   }
+  margin-bottom: $half-spacing-unit;
 }
 
 .lead {
-  font: {
-    family: $alt-font-family;
-    size: $h2-size;
-  }
+  @include font-size(26px);
+  font-family: $alt-font-family;
 }
