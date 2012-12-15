@@ -19,16 +19,12 @@ end
 # Views
 gem "haml-rails"
 gem "redcarpet"
-gem "simple_form"
-gem "rails-i18n"
-gem "will_paginate"
-gem "bootstrap-will_paginate"
 
 # External APIs
 gem "twitter", require: false
 gem "flickr-objects", require: false
 
-# Other
+# Database
 gem "friendly_id"
 
 group :development, :test do

@@ -42,8 +42,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.2)
     arel (3.0.2)
-    bootstrap-will_paginate (0.0.9)
-      will_paginate
     builder (3.0.4)
     capybara (1.1.3)
       mime-types (>= 1.16)
@@ -144,8 +142,6 @@ GEM
       activesupport (= 3.2.8)
       bundler (~> 1.0)
       railties (= 3.2.8)
-    rails-i18n (0.7.0)
-      i18n (~> 0.5)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -181,9 +177,6 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    simple_form (2.0.4)
-      actionpack (~> 3.0)
-      activemodel (~> 3.0)
     simple_oauth (0.1.9)
     slop (3.3.3)
     sprockets (2.1.3)
@@ -207,7 +200,6 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    will_paginate (3.0.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -216,7 +208,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-nulldb-adapter (>= 0.2.3)
-  bootstrap-will_paginate
   capybara
   coffee-rails
   compass!
@@ -232,12 +223,9 @@ DEPENDENCIES
   pg
   pry-rails
   rails (~> 3.2.0)
-  rails-i18n
   redcarpet
   rspec-rails
   sass-rails
-  simple_form
   thin
   twitter
   uglifier
-  will_paginate
