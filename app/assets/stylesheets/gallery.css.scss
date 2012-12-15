@@ -1,24 +1,25 @@
 .album_list,
 .album_photos {
   @extend %unstyled-list;
-  @extend .cf;
 
-  li {
-    position: relative;
-    float: left;
-    overflow: hidden;
-  }
-
-  a { display: inline-block; }
+  li  { position: relative; }
+  a   { display: inline-block; }
 }
 
 .album_list {
   $spacing: 5px;
+  text-align: center;
 
   li {
-    position: relative;
-    margin: 0 $spacing $spacing 0;
+    margin-bottom: $base-spacing-unit;
     line-height: 0;
+  }
+
+  figure {
+    @include box-shadow(rgba(black, .25) 1px 1px 0);
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba($primary-color, .75);
   }
 
   a {
@@ -35,20 +36,14 @@
     }
   }
 
-  img {
-    @extend %transition-all;
-    @extend %img-polaroid;
-    width: 450px;
-  }
-
   figcaption {
     @extend %transition-all;
     $margin: 5px;
     pointer-events: none;
     position: absolute;
-    left: $margin;
-    right: $margin;
-    bottom: $margin;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: rhythm(.25) rhythm(.5);
     line-height: $base-line-height;
     color: rgba(black, .5);
@@ -58,12 +53,15 @@
 }
 
 .album_photos {
+  @extend .cf;
   $width: 180px;
   $height: 180px;
   $spacing: 1px;
 
   li {
     @include size($width, $height);
+    float: left;
+    overflow: hidden;
     margin: 0 $spacing $spacing 0;
   }
 

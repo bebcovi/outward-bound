@@ -41,7 +41,7 @@ module ApplicationHelper
   end
 
   def back_button(string, path, options = {})
-    link_to string, path, options = {}
+    link_to string.prepend_icon("chevron-left"), path, options = {}
   end
 
   def TranslationHash(value)
