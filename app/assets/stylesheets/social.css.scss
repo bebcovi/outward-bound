@@ -1,12 +1,12 @@
 .social {
-  ol {
-    @extend %unstyled-list;
-  }
+  font-family: $alt-font-family;
+  font-weight: $alt-bold;
 
-  li {
-    line-height: inherit;
-  }
+  ol { @extend %unstyled-list; }
 
+  li { line-height: inherit; }
+
+  $padding: .75rem;
   a {
     @extend %transition-all;
     $c1: rgba(white, .5);
@@ -14,7 +14,7 @@
     @include color-link($c1, $c2);
     @include border-radius;
     display: inline-block;
-    padding: 0 .75rem;
+    padding: 0 $padding;
     text-decoration: none;
     &:hover {
       background: white;
@@ -24,8 +24,8 @@
   i, span { vertical-align: middle; }
 
   i {
-    @include adjust-font-size-to(32px);
-    padding-right: rhythm(.25);
+    @include font-size(32px);
+    padding-right: $padding;
   }
 
   span {
