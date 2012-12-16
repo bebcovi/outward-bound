@@ -4,9 +4,34 @@
 
 = markdown course.description
 
-= content_tag(:p) { link_to t("misc.apply"), apply_courses_path } if course.applyable?
+.course_info.gw
+  - if course.dates?
+    .dates.g.one-whole.lap-one-half.desk-one-quarter
+      = icon("calendar")
+      .name= t(".dates")
+      .value= markdown course.dates
 
-= content_tag(:div, class: "dates")    { markdown course.dates }                         if course.dates?
-= content_tag(:div, class: "price")    { money course.price }                            if course.price?
-= content_tag(:div, class: "people")   { "#{course.min_people} - #{course.max_people}" } if course.min_people? or course.max_people?
-= content_tag(:div, class: "duration") { days course.duration }                          if course.duration?
+  - if course.duration?
+    .duration.g.one-whole.lap-one-half.desk-one-quarter
+      = icon("clock")
+      .name= t(".duration")
+      .value= days course.duration
+
+  - if course.min_people? or course.max_people?
+    .people.g.one-whole.lap-one-half.desk-one-quarter
+      = icon("users")
+      .name= t(".people")
+      .value= "#{course.min_people}–#{course.max_people} #{t("misc.people")}"
+
+  - if course.price?
+    .price.g.one-whole.lap-one-half.desk-one-quarter
+      = icon("coins")
+      .name= t(".price")
+      .value= money course.price
+
+- if course.applyable?
+  .apply_for_course
+    = link_to t("misc.apply").append_icon("file-download"), apply_courses_path, class: "application_form"
+    %p.send_application_form
+      = t(".send_application_form")
+      = mail_to("apply@outwardbound.hr") + "."

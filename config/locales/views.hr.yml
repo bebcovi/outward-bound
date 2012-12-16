@@ -36,3 +36,9 @@ hr:
       one: "Jednodnevni programi"
       eight: "Klasični 8-dnevni programi"
       other: "Ostali programi"
+    course:
+      dates: "Termini"
+      duration: "Trajanje"
+      people: "Broj osoba"
+      price: "Cijena"
+      send_application_form: "Prijavnicu je potrebno poslati na"

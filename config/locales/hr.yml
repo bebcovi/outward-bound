@@ -2,8 +2,9 @@ hr:
   title: "Hrvatska škola Outward Bound"
   subtitle: "Provodimo programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi."
   misc:
-    apply: "Prijavi se"
+    apply: "Prijavi se na program"
     back: "Natrag"
     contact: "Kontaktirajte nas"
     social: "Socijalni smo"
     tweets: "Što drugi kažu..."
+    people: "osoba"
