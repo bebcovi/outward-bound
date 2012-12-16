@@ -22,6 +22,11 @@
   padding-left: $half-spacing-unit;
   border-left: 5px solid rgba(black, .1);
 
+  @include media-query(portable) {
+    float: none;
+    margin-bottom: $base-spacing-unit;
+  }
+
   .nav-header {
     margin-top: $half-spacing-unit;
     color: rgba(black, .5);

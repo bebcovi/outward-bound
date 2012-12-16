@@ -47,30 +47,42 @@ body.home {
       font-family: $alt-font-family;
       font-size: $h4-size;
       line-height: $base-line-height;
+    }
 
-      li {
-        float: left;
-        text-align: left;
+    li {
+      float: left;
+      text-align: left;
+    }
+
+    a {
+      @include color-link(rgba(black, .35), $link-hover);
+      display: inline-block;
+      padding: $base-spacing-unit;
+    }
+
+    .img,
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .img {
+      margin-right: $half-spacing-unit;
+      line-height: 0;
+    }
+
+    img { height: $base-spacing-unit * 2; }
+
+    @include media-query(palm) {
+      height: auto;
+
+      ul {
+        float: none;
+        display: block;
       }
 
-      a {
-        @include color-link(rgba(black, .35), $link-hover);
-        display: inline-block;
-        padding: $base-spacing-unit;
-      }
-
-      .img,
-      .name {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      .img {
-        margin-right: $half-spacing-unit;
-        line-height: 0;
-      }
-
-      img { height: $base-spacing-unit * 2; }
+      li  { float: none; }
+      a   { padding: $half-spacing-unit; }
     }
   }
 

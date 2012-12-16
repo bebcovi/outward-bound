@@ -50,6 +50,18 @@ html,
     border: 1px solid black;
     background: rgba(black, .5);
   }
+
+  @include media-query(portable) {
+    ol { height: $base-spacing-unit * 5.5; }
+
+    $icon-size: 26px;
+    i {
+      font-size: $icon-size;
+      top: 7px;
+      left: -8px;
+    }
+    .author { margin-left: $icon-size; }
+  }
 }
 
 .copyright {

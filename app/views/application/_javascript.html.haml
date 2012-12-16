@@ -14,7 +14,9 @@
         jQuery(function($) {
           $heroUnit = $(".hero-unit");
           if ($heroUnit.length)
-            $heroUnit.find("h1, .lead").slabText();
+            $heroUnit.find("h1, .lead").slabText({
+              viewportBreakpoint: 600
+            });
         });
 
       }

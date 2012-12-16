@@ -10,9 +10,7 @@
   border-bottom: $border-width solid black;
   background: $primary-color;
 
-  .container {
-    @extend .cf;
-  }
+  .container { @extend .cf; }
 
   $hover-color: white;
   $color: rgba($hover-color, .75);
@@ -47,9 +45,7 @@
     float: left;
     margin-bottom: 0;
 
-    li {
-      float: left;
-    }
+    li { float: left; }
   }
 
   .lang {
@@ -71,6 +67,41 @@
       img {
         @include box-shadow(rgba(white, .75) 0 0 8px);
       }
+    }
+  }
+
+  @include media-query(palm) {
+    $link-height: $base-spacing-unit * 2;
+    height: auto;
+
+    a {
+      height: $link-height;
+      display: block;
+      padding: 0;
+      line-height: $link-height;
+    }
+
+    .brand {
+      @include border-radius;
+      float: none;
+      height: auto;
+      margin-top: $half-spacing-unit;
+      line-height: 0;
+    }
+
+    .nav {
+      float: none;
+
+      li {
+        float: none;
+        display: block;
+      }
+    }
+
+    .lang {
+      margin-bottom: $half-spacing-unit;
+
+      li { line-height: 0; }
     }
   }
 }

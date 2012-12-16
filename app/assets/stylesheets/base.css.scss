@@ -5,14 +5,18 @@ $base-line-height:  26px;
 $h1-size:           46px;
 $h2-size:           38px;
 
+$lap-start:         600px;
+$desk-start:        960px;
+
 @import 'vars';
 @import 'inuit.css/inuit';
 
 // layout
 
-$site-width: 960px;
-$navbar-height: $base-spacing-unit * 2.5;
-$gutter-width: 25px;
+$site-width:            $desk-start;
+$navbar-height:         $base-spacing-unit * 2.5;
+$gutter-width:          24px;
+$site-padding:          $gutter-width / 2;
 $side-navigation-width: 220px;
 
 // type
