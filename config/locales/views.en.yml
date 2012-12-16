@@ -3,6 +3,7 @@ en:
   home:
     index:
       page_title: "Home"
+      play_video: "Play video"
 
   albums:
     index:

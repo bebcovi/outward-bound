@@ -3,6 +3,7 @@ hr:
   home:
     index:
       page_title: "Početna"
+      play_video: "Pogledaj video"
 
   albums:
     index:
