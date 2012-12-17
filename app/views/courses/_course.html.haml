@@ -1,6 +1,6 @@
-%h1= smarty_pants course.name
+%h1.course_title= smarty_pants course.name
 
-= content_tag(:p) { link_to image_tag(course.cover_photo.url(:original), alt: course.cover_photo.title), course.cover_photo.url } if course.album
+= link_to(image_tag(course.cover_photo.url(:original), alt: course.cover_photo.title), course.album, class: "course_cover") if course.album
 
 = markdown course.description
 
