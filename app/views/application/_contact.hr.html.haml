@@ -1,10 +1,12 @@
 %ol.contact_info
   %li.phone
-    #{icon("phone")} +385 91 56 26 744<br>
+    = icon("phone")
+    %span.value +385 91 56 26 744
   %li.email
-    #{icon("mail")} #{mail_to "info@outwardbound.hr"}
+    = icon("mail")
+    %span.value= mail_to "info@outwardbound.hr"
   %li.address
-    #{icon("home")}
+    = icon("home")
     .adr
       .name Hrvatska škola Outward Bound
       .street-adress 3. Cvjetno naselje 20

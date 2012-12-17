@@ -11,35 +11,40 @@
   ul,
   dl,
   .main.nav,
-  figcaption,
   .name,
   .value,
   .adr,
   .tweets .says {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
   .lang.nav,
   .navigation_sidebar,
+  .partners ul,
   .album_list,
   .album_photos,
+  .partner_list,
   .contact_info,
   .social ol,
   .tweets ol {
-    visibility: visible;
+    visibility: visible !important;
   }
 
+  figcaption,
   blockquote,
-  blockquote a {
-    color: transparent;
+  blockquote a,
+  .application_form {
+    @include color-link(transparent !important);
+    @include text-shadow(none !important);
   }
 
-  .about_items h2,
+  h2,
   .navigation_sidebar .nav-header,
   .navigation_sidebar a,
+  .course_title,
   .copyright {
-    visibility: visible;
-    color: transparent;
+    @include color-link(transparent !important);
+    visibility: visible !important;
   }
 
 }
