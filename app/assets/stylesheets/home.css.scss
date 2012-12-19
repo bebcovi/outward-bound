@@ -22,7 +22,7 @@ body.home {
         content: '';
         position: absolute;
         z-index: -1;
-        margin-top: - $base-spacing-unit;
+        margin-top: - $base-spacing-unit * 1.5;
         left: 0;
         right: 0;
         display: block;
