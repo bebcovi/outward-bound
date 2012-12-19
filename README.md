@@ -3,7 +3,7 @@ If it's your first time, run:
 $ git submodule init
 ```
 
-Then run:
+Then:
 ```sh
 $ git submodule update
 ```
