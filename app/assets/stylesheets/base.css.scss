@@ -8,8 +8,8 @@ $h2-size:           38px;
 $lap-start:         600px;
 $desk-start:        960px;
 
-@import 'vars';
-@import 'inuit.css/inuit';
+@import 'inuit.css/vars';
+@import 'inuit.css/inuit.css/inuit';
 
 // layout
 
@@ -18,6 +18,8 @@ $navbar-height:         $base-spacing-unit * 2.5;
 $gutter-width:          24px;
 $site-padding:          $gutter-width / 2;
 $side-navigation-width: 220px;
+
+$quarter-spacing-unit:  $half-spacing-unit / 2;
 
 // type
 
