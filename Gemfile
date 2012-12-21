@@ -27,6 +27,9 @@ gem "flickr-objects", require: false
 # Database
 gem "friendly_id"
 
+# Other
+gem "sendgrid_email_forwarder", github: "janko-m/sendgrid_email_forwarder"
+
 group :development, :test do
   gem "debugger"
   gem "pry-rails"
