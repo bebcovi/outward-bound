@@ -1,3 +1,4 @@
 %figure
-  = link_to image_tag(album.cover_photo.url(:medium)), album_path(album)
+  - photo = album.cover_photo
+  = link_to image_tag(photo.url(:medium), size: "#{photo.width(:medium)}x#{photo.height(:medium)}"), album_path(album)
   %figcaption= album.name

@@ -36,13 +36,23 @@ flickr_photos = Flickr.people.find(ENV["FLICKR_USER_ID"]).get_photos(sizes: :all
 flickr_photos.each do |(album, cover_photo_uid), photos|
   album.photos.create(photos.map do |photo|
     {
-      uid:                photo.id,
-      url:                photo.url,
-      original_size_url:  photo.largest!.source_url,
-      medium_size_url:    photo.medium!(500).source_url,
-      thumbnail_size_url: photo.small!(240).source_url,
-      title:              photo.title,
-      stored_on:          "flickr",
+      uid:              photo.id,
+      url:              photo.url,
+
+      original_url:     photo.largest.source_url,
+      original_width:   photo.largest.width,
+      original_height:  photo.largest.height,
+
+      medium_url:       photo.medium(500).source_url,
+      medium_width:     photo.medium(500).width,
+      medium_height:    photo.medium(500).height,
+
+      thumbnail_url:    photo.small(240).source_url,
+      thumbnail_width:  photo.small(240).width,
+      thumbnail_height: photo.small(240).height,
+
+      title:            photo.title,
+      stored_on:        "flickr",
     }
   end)
   album.update_attributes(cover_photo: album.photos.find_by_uid(cover_photo_uid))
