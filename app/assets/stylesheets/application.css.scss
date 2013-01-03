@@ -1,15 +1,17 @@
 @charset "UTF-8";
 
-@import 'base';
+@import 'config';
 
+@import 'inuit';
 @import 'fancybox';
 @import 'slabtext';
 @import 'compass';
 @import 'icons';
 
-@import 'extends';
-@import 'mixins';
+@import 'variables';
 @import 'functions';
+@import 'mixins';
+@import 'extends';
 
 @import 'reset';
 @import 'overrides';
