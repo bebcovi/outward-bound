@@ -1,3 +1,5 @@
+require "friendly_id"
+
 class Course < ActiveRecord::Base
   belongs_to :album
 

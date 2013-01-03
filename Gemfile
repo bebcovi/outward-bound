@@ -21,8 +21,8 @@ gem "haml-rails"
 gem "redcarpet"
 
 # External APIs
-gem "twitter", require: false
-gem "flickr-objects", require: false
+gem "twitter"
+gem "flickr-objects"
 
 # Database
 gem "friendly_id"
