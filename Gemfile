@@ -29,6 +29,7 @@ gem "friendly_id"
 
 # Other
 gem "sendgrid_email_forwarder", github: "janko-m/sendgrid_email_forwarder"
+gem "exception_notification"
 
 group :development, :test do
   gem "debugger"
