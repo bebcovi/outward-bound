@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
-  before_filter :set_title
+  before_filter :set_about_pages
 
   def index
   end
@@ -31,7 +31,7 @@ class AboutController < ApplicationController
     "about"
   end
 
-  def set_title
-    @title = t("about.#{params[:action]}.page_title")
+  def set_about_pages
+    @about_pages = self.class.action_methods
   end
 end

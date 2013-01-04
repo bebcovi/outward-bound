@@ -1,4 +1,4 @@
 = navigation_sidebar do
-  - AboutController.action_methods.each do |action|
-    %li{class: current_page?(controller: "about", action: action) && "active"}
+  - @about_pages.each do |action|
+    %li{class: (params[:action] == action && "active")}
       = link_to t("about.#{action}.page_title"), action: action
