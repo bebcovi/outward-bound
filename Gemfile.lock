@@ -8,15 +8,6 @@ GIT
       listen (~> 0.5.3)
       sass (~> 3.2.0.alpha.93)
 
-GIT
-  remote: git://github.com/janko-m/sendgrid_email_forwarder.git
-  revision: b164f8f20daedf94107f47b9162896172090d861
-  specs:
-    sendgrid_email_forwarder (0.0.1)
-      json (>= 1.7)
-      nokogiri (>= 1.5)
-      rails (>= 3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -255,7 +246,6 @@ DEPENDENCIES
   redcarpet
   rspec-rails
   sass-rails
-  sendgrid_email_forwarder!
   thin
   twitter
   uglifier
