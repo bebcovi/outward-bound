@@ -12,5 +12,5 @@ Course.create!(
 
   category: "other",
   applyable: false,
-  album: nil,
+  album: @custom_made_album,
 )

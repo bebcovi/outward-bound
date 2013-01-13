@@ -9,31 +9,17 @@ Flickr.configure do |config|
   config.access_token_secret = ENV["FLICKR_ACCESS_TOKEN_SECRET"]
 end
 
-@velebit_adventure_album = Album.create!
-@kayak_adventure_album = Album.create!
-@sailing_adventure_album = Album.create!
-@high_wires_album = Album.create!
+sets = {
+  "72157632508808225" => "@velebit_adventure_album",
+  "72157632224161752" => "@kayak_adventure_album",
+  "72157632248688104" => "@sailing_adventure_album",
+  "72157632513521510" => "@team_building_album",
+}
 
-flickr_photos = Flickr.people.find(ENV["FLICKR_USER_ID"]).get_photos(sizes: :all).
-  group_by { |photo|
-    if photo.id.in?(["8217540609", "8218624036", "8218624174", "8218624304", "8217541763", "8218624700",
-                     "8218624858", "8217542215", "8218625074", "8217542465", "8218625342", "8218625492",
-                     "8218625608", "8218625722", "8217543033", "8217543145", "8217543275", "8217543401",
-                     "8218626302", "8217543769", "8217544063", "8218626898", "8218627018", "8217544449",
-                     "8218627316", "8218627490", "8217544833", "8218627772", "8218627946", "8218628058",
-                     "8218623500", "8218623708", "8218623880"])
-      [@velebit_adventure_album, "8217540609"]
-    elsif photo.id.in?(["8263610773"])
-      [@kayak_adventure_album, "8263610773"]
-    elsif photo.id.in?(["8272335149"])
-      [@sailing_adventure_album, "8272335149"]
-    elsif photo.id.in?(["8273400766"])
-      [@high_wires_album, "8273400766"]
-    end
-  }.
-  reject { |album, photos| album.nil? }
-
-flickr_photos.each do |(album, cover_photo_uid), photos|
+sets.each do |set_id, album_variable|
+  set = Flickr.sets.find(set_id).get_info!
+  photos = set.get_photos(sizes: :all)
+  album = Album.create!
   album.photos.create(photos.map do |photo|
     {
       uid:              photo.id,
@@ -55,5 +41,7 @@ flickr_photos.each do |(album, cover_photo_uid), photos|
       stored_on:        "flickr",
     }
   end)
-  album.update_attributes(cover_photo: album.photos.find_by_uid(cover_photo_uid))
+  primary_photo = photos.find(set.primary_photo.id)
+  album.update_attributes(cover_photo: album.photos.find_by_uid(primary_photo.id))
+  instance_variable_set(album_variable, album)
 end

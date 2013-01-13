@@ -94,5 +94,5 @@ Course.create!(
 
   category: "other",
   applyable: false,
-  album: nil,
+  album: @team_building_album,
 )
