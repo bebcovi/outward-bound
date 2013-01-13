@@ -10,7 +10,7 @@ Course.create!(
 
     Pomorska škola Outward Bound promiče pomorsku tradiciju Hrvatske kao način kojim mladi ljudi mogu upoznati vrijednosti moreplovstva koje se prenose naraštajima: predvodništvo, hrabrost, osobna odgovornost, suradnja, dobronamjenost i odnos prema prirodi s poštovanjem.
 
-    Nudimo priliku budućim i iskusnim moreplovcima da provedu nezaboravih osam dana ploveći na brodu Bente Dorte, tradicionalnom jedrenjaku, te da upoznaju hrvatsku obalu na jedan posve novi način. Polaznici će imati priliku naučiti tradicionalne metode navigacije, rukovanje jedrima, sigurnosti na moru, posjetiti nenaseljene otoke, kampirati na otvorenom.
+    Polaznicima nudimo priliku da provedu osam nezaboravih dana ploveći na brodu Bente Dorte, tradicionalnom jedrenjaku, te da upoznaju hrvatsku obalu na jedan posve novi način. Polaznici će imati priliku naučiti tradicionalne metode navigacije, rukovanje jedrima, sigurnosti na moru, posjetiti nenaseljene otoke, kampirati na otvorenom.
 
     OB pomorska škola nudi ovo uzbudljivo putovanje te iskustvo jedrenja na ovom prekrasnom tradicionalnom plovilu, iskustvo koje rijetki u svijetu imaju prilike doživjeti.
   EOS
@@ -27,7 +27,7 @@ Course.create!(
 
     The Outward Bound Sea School promotes the Maritime traditions of Croatia as a means for young people to learn the values that seafaring has taught for generations; Leadership, Courage, Responsibility, Cooperation, Generosity, Environmental Stewardship and Respect.
 
-    We have opportunities for sailors young and old to discover their roots and sail on the beautiful Bente Dorte, a traditionally rigged sailboat, and to discover the Croatian coast in a new way. Participants will have the opportunity to learn traditional navigation, sail handling, safety at sea, come visit uninhabited islands, camp in the open air.
+    Attendees will have the opportunity to sail on the beautiful Bente Dorte, a traditionally rigged sailboat, and to discover the Croatian coast in a new way. Participants will have the opportunity to learn traditional navigation, sail handling, safety at sea, come visit uninhabited islands, camp in the open air.
 
     Outward Bound Sea School offers this exciting new trip to experience sailing on this magnificent traditional vessel. You may be one of a very few people in the world to have this truly unique experience.
   EOS
