@@ -15,6 +15,10 @@ unless Rails.env.production?
   require "sass-rails"
 end
 
+if Rails.env.development?
+  require "pry-rails"
+end
+
 module OutwardBound
   class Application < Rails::Application
     # Don't initialize application when precompiling assets (for Heroku)
