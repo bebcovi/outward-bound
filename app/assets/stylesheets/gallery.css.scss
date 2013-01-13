@@ -1,6 +1,7 @@
 .album_list,
 .album_photos {
   @extend %unstyled-list;
+  @extend .cf;
 
   li  { position: relative; }
   a   { display: inline-block; }
@@ -12,7 +13,14 @@
 
   li {
     margin-bottom: $base-spacing-unit;
+    margin-right: $half-spacing-unit;
+    width: 50% - 3%;
     line-height: 0;
+    float: left;
+
+    @include media-query(palm) {
+      width: auto;
+    }
   }
 
   figure {
@@ -50,10 +58,13 @@
     border-top: 1px solid white;
     background: rgba(white, .75);
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .album_photos {
-  @extend .cf;
   $width: 180px;
   $height: 180px;
   $spacing: 1px;
