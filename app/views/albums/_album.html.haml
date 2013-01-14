@@ -1,4 +1,3 @@
-%figure
-  - photo = album.cover_photo
-  = link_to image_tag(photo.url(:medium), size: "#{photo.width(:medium)}x#{photo.height(:medium)}"), album_path(album)
-  %figcaption= album.name
+- photo = album.cover_photo
+= link_to "", album_path(album), style: "background-image: url(#{photo.url(:medium)})"
+.album_title= album.name
