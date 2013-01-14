@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
   before_filter :set_mentions
+  after_filter :cache_page
 
   def render(*args)
     options = args.extract_options!.dup
