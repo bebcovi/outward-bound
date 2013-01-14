@@ -9,28 +9,33 @@
 
 .course_info.gw
   - if course.dates?
-    .dates.g.one-whole.lap-one-half.desk-one-quarter
+    .dates.g.one-whole.lap-one-half.desk-one-fifth
       = icon("calendar")
       .name= t(".dates")
       .value= markdown course.dates
 
   - if course.duration?
-    .duration.g.one-whole.lap-one-half.desk-one-quarter
+    .duration.g.one-whole.lap-one-half.desk-one-fifth
       = icon("clock")
       .name= t(".duration")
       .value= days course.duration
 
   - if course.min_people? or course.max_people?
-    .people.g.one-whole.lap-one-half.desk-one-quarter
+    .people.g.one-whole.lap-one-half.desk-one-fifth
       = icon("users")
       .name= t(".people")
       .value= "#{course.min_people}–#{course.max_people} #{t("misc.people")}"
 
   - if course.price?
-    .price.g.one-whole.lap-one-half.desk-one-quarter
+    .price.g.one-whole.lap-one-half.desk-one-fifth
       = icon("coins")
       .name= t(".price")
       .value= money course.price
+
+  - if course.contact?
+    .price.g.one-whole.lap-one-half.desk-one-fifth
+    .name= t(".contact")
+    .value= markdown course.contact
 
 - if course.applyable?
   .apply_for_course
