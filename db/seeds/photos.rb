@@ -29,13 +29,13 @@ sets.each do |set_id, album_variable|
       large_width:   photo.large1024_or_smaller.width,
       large_height:  photo.large1024_or_smaller.height,
 
-      medium_url:    photo.medium500.source_url,
-      medium_width:  photo.medium500.width,
-      medium_height: photo.medium500.height,
+      medium_url:    photo.medium640_or_smaller.source_url,
+      medium_width:  photo.medium640_or_smaller.width,
+      medium_height: photo.medium640_or_smaller.height,
 
-      small_url:     photo.small240.source_url,
-      small_width:   photo.small240.width,
-      small_height:  photo.small240.height,
+      small_url:     photo.small240_or_smaller.source_url,
+      small_width:   photo.small240_or_smaller.width,
+      small_height:  photo.small240_or_smaller.height,
 
       title:         photo.title,
       stored_on:     "flickr",

@@ -4,7 +4,7 @@ OutwardBound::Application.routes.draw do
     get "", to: "home#index"
 
     controller :about do
-      get "about", to: "index"
+      get "about", to: :index
       get "about/:action"
     end
 

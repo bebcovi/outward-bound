@@ -2,8 +2,8 @@
 
 - if course.album
   .course_cover
-    = link_to(course.album) do
-      = image_tag(course.cover_photo.url(:medium), alt: course.cover_photo.title)
+    = link_to course.album do
+      = image_tag course.cover_photo.url(:medium), alt: course.cover_photo.title
 
 = markdown course.description
 
