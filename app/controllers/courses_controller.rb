@@ -3,13 +3,16 @@ class CoursesController < ApplicationController
 
   def index
   end
+  caches_action :index
 
   def show
     @course = Course.find(params[:id])
   end
+  caches_action :show
 
   def apply
   end
+  caches_action :apply
 
   def application
     send_file "#{Rails.root}/public/files/Application_form_#{I18n.locale}.doc",

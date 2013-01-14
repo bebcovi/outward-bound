@@ -65,6 +65,7 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
+    dalli (2.6.0)
     database_cleaner (0.9.1)
     debugger (1.2.1)
       columnize (>= 0.3.1)
@@ -232,6 +233,7 @@ DEPENDENCIES
   coffee-rails
   compass!
   compass-rails
+  dalli (>= 2.6)
   database_cleaner
   debugger
   exception_notification

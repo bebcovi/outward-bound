@@ -30,6 +30,9 @@ gem "friendly_id"
 # Other
 gem "exception_notification"
 
+# Caching
+gem "dalli", ">= 2.6"
+
 group :development, :test do
   gem "debugger"
   gem "pry-rails"
