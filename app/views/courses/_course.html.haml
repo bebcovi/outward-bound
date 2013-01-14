@@ -33,10 +33,10 @@
       .value= money course.price
 
 - if course.contact?
-  .contact
-    = icon("contact")
-    .name= t(".contact")
-    = mail_to course.contact
+  .course_contact
+    = icon("mail")
+    = t(".contact")
+    = mail_to(course.contact) + "."
 
 - if course.applyable?
   .apply_for_course
