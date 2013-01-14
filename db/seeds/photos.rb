@@ -25,9 +25,9 @@ sets.each do |set_id, album_variable|
       uid:           photo.id,
       url:           photo.url,
 
-      large_url:     photo.medium800_or_smaller.source_url,
-      large_width:   photo.medium800_or_smaller.width,
-      large_height:  photo.medium800_or_smaller.height,
+      large_url:     photo.large1024_or_smaller.source_url,
+      large_width:   photo.large1024_or_smaller.width,
+      large_height:  photo.large1024_or_smaller.height,
 
       medium_url:    photo.medium500.source_url,
       medium_width:  photo.medium500.width,
