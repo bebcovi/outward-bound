@@ -90,7 +90,7 @@ GEM
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.1.5)
-    flickr-objects (0.0.1)
+    flickr-objects (0.2.0)
       faraday (>= 0.7.6)
       faraday_middleware (>= 0.8)
       multi_xml (~> 0.4)
@@ -121,7 +121,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.3.7)
-    multi_xml (0.5.1)
+    multi_xml (0.5.2)
     multipart-post (1.1.5)
     nokogiri (1.5.5)
     pg (0.14.1)
@@ -236,7 +236,7 @@ DEPENDENCIES
   exception_notification
   factory_girl
   fancybox2-rails
-  flickr-objects
+  flickr-objects (>= 0.2)
   friendly_id
   haml-rails
   jquery-rails

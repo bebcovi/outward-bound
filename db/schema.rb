@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130103163055) do
+ActiveRecord::Schema.define(:version => 20130114014203) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -42,18 +42,18 @@ ActiveRecord::Schema.define(:version => 20130103163055) do
   create_table "photos", :force => true do |t|
     t.string  "uid"
     t.string  "url"
-    t.string  "original_url"
+    t.string  "large_url"
     t.string  "title"
     t.string  "stored_on"
     t.integer "album_id"
-    t.string  "thumbnail_url"
+    t.string  "small_url"
     t.string  "medium_url"
-    t.integer "original_width"
-    t.integer "original_height"
+    t.integer "large_width"
+    t.integer "large_height"
     t.integer "medium_width"
     t.integer "medium_height"
-    t.integer "thumbnail_width"
-    t.integer "thumbnail_height"
+    t.integer "small_width"
+    t.integer "small_height"
   end
 
   create_table "tweets", :force => true do |t|

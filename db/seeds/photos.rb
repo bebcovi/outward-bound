@@ -22,23 +22,23 @@ sets.each do |set_id, album_variable|
   album = Album.create!
   album.photos.create(photos.map do |photo|
     {
-      uid:              photo.id,
-      url:              photo.url,
+      uid:           photo.id,
+      url:           photo.url,
 
-      original_url:     photo.largest.source_url,
-      original_width:   photo.largest.width,
-      original_height:  photo.largest.height,
+      large_url:     photo.medium800_or_smaller.source_url,
+      large_width:   photo.medium800_or_smaller.width,
+      large_height:  photo.medium800_or_smaller.height,
 
-      medium_url:       photo.medium(500).source_url,
-      medium_width:     photo.medium(500).width,
-      medium_height:    photo.medium(500).height,
+      medium_url:    photo.medium500.source_url,
+      medium_width:  photo.medium500.width,
+      medium_height: photo.medium500.height,
 
-      thumbnail_url:    photo.small(240).source_url,
-      thumbnail_width:  photo.small(240).width,
-      thumbnail_height: photo.small(240).height,
+      small_url:     photo.small240.source_url,
+      small_width:   photo.small240.width,
+      small_height:  photo.small240.height,
 
-      title:            photo.title,
-      stored_on:        "flickr",
+      title:         photo.title,
+      stored_on:     "flickr",
     }
   end)
   primary_photo = photos.find(set.primary_photo.id)

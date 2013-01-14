@@ -22,7 +22,7 @@ gem "redcarpet"
 
 # External APIs
 gem "twitter"
-gem "flickr-objects"
+gem "flickr-objects", ">= 0.2"
 
 # Database
 gem "friendly_id"
