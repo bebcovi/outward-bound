@@ -7,33 +7,34 @@
 
 = markdown course.description
 
-.course_info.gw
+.course_info
   - if course.dates?
-    .dates.g.one-whole.lap-one-half.desk-one-fifth
+    .dates
       = icon("calendar")
       .name= t(".dates")
       .value= markdown course.dates
 
   - if course.duration?
-    .duration.g.one-whole.lap-one-half.desk-one-fifth
+    .duration
       = icon("clock")
       .name= t(".duration")
       .value= days course.duration
 
   - if course.min_people? or course.max_people?
-    .people.g.one-whole.lap-one-half.desk-one-fifth
+    .people
       = icon("users")
       .name= t(".people")
       .value= "#{course.min_people}–#{course.max_people} #{t("misc.people")}"
 
   - if course.price?
-    .price.g.one-whole.lap-one-half.desk-one-fifth
+    .price
       = icon("coins")
       .name= t(".price")
       .value= money course.price
 
-  - if course.contact?
-    .price.g.one-whole.lap-one-half.desk-one-fifth
+- if course.contact?
+  .contact
+    = icon("contact")
     .name= t(".contact")
     .value= markdown course.contact
 

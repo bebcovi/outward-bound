@@ -1,11 +1,11 @@
 %footer.site_footer
   .container
-    .gw
-      %section.contact.g.one-whole.lap-one-half.desk-one-third
+    .sections
+      %section.contact
         %h2= t("misc.contact")
         = render "contact"
 
-      %section.social.g.one-whole.lap-one-half.desk-one-third
+      %section.social
         %h2= t("misc.social")
         %ol
           %li.facebook
@@ -21,7 +21,7 @@
               = icon("youtube")
               %span.name YouTube
 
-      %section.tweets.g.one-whole.lap-one-whole.desk-one-third
+      %section.tweets
         %h2= t("misc.tweets")
         %ol
           = render @tweets

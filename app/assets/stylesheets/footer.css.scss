@@ -12,6 +12,25 @@ html,
   h2 {
     margin-bottom: $half-spacing-unit;
   }
+
+  .sections {
+    @extend .grid-wrapper;
+  }
+
+  section {
+    @extend .grid;
+    @extend .one-whole;
+    @extend .desk-one-third;
+  }
+
+  .contact,
+  .social {
+    @extend .lap-one-half;
+  }
+
+  .tweets {
+    @extend .lap-one-whole;
+  }
 }
 
 .tweets {

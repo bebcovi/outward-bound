@@ -25,14 +25,21 @@ h1.course_title {
 }
 
 .course_info {
+  @extend .grid-wrapper;
   margin-bottom: $base-spacing-unit;
   text-align: center;
 
   @include media-query(palm) {
-    text-align: left;
     > div {
       margin-bottom: $half-spacing-unit;
     }
+  }
+
+  > div {
+    @extend .grid;
+    @extend .one-whole;
+    @extend .lap-one-half;
+    @extend .desk-one-quarter;
   }
 
   ul, ol {
