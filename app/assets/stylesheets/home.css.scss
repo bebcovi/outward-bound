@@ -6,6 +6,21 @@ body.home {
 
   .hero-unit {
     margin-bottom: $base-spacing-unit;
+
+    h1 {
+      $height: 3.5 * $base-spacing-unit;
+      @include font-size(86px);
+      height: $height;
+      margin-bottom: 0;
+      line-height: $height;
+    }
+
+    .lead {
+      $height: 2 * $base-spacing-unit;
+      @include font-size(36px);
+      height: $height;
+      margin-bottom: $half-spacing-unit;
+    }
   }
 
   .about_items {
