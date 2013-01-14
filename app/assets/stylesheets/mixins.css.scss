@@ -1,12 +1,18 @@
-@mixin color-link($color1, $color2: $color1) {
-  @include link-colors($color1, $color2, $color2, $color1, $color2);
+@mixin on-interact {
+  &:hover,
+  &:focus {
+    @content;
+  }
 }
 
-@mixin size($width, $height) {
+@mixin color-link($color1, $color2: $color1) {
+  color: $color1;
+  @include on-interact {
+    color: $color2;
+  }
+}
+
+@mixin size($width, $height: $width) {
   width: $width;
   height: $height;
-}
-
-@mixin square($size) {
-  @include size($size, $size);
 }

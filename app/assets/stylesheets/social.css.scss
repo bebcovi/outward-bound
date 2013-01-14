@@ -12,10 +12,10 @@
     $c1: rgba(white, .5);
     $c2: $c1;
     @include color-link($c1, $c2);
-    @include border-radius;
     display: inline-block;
     padding: 0 $padding;
     text-decoration: none;
+    border-radius: 5px;
     &:hover {
       background: white;
     }
@@ -29,7 +29,7 @@
   }
 
   span {
-    @include adjust-font-size-to(24px);
+    @include font-size(24px); // FIXME: pick a number from the scale
   }
 
   .facebook a {

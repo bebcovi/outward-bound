@@ -1,19 +1,12 @@
-$path: 'icons/icons';
+@include font-face(icons, "icons/icons", normal, $asset-pipeline: true);
 
-@include font-face('icons', font-files('#{$path}.woff', '#{$path}.ttf', '#{$path}.svg'), '#{$path}.eot');
-
-[class^="icon-"], [class*=" icon-"] {
-  @include experimental(
-    'font-smoothing',
-    antialiased
-  );
+[class*="icon-"] {
+  font-family: icons;
   speak: none;
-  display: inline-block;
-  font: {
-    family: icons;
-    weight: normal;
-    style: normal;
-  }
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-pencil:before {

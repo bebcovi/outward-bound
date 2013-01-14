@@ -1,13 +1,3 @@
-GIT
-  remote: git://github.com/chriseppstein/compass.git
-  revision: 7ff38d178cdfd167227dd7ed6bdbc028e9626a0e
-  branch: master
-  specs:
-    compass (0.13.alpha.0.7ff38d1)
-      chunky_png (~> 1.2)
-      listen (~> 0.5.3)
-      sass (~> 3.2.0.alpha.93)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -42,6 +32,9 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.2)
     arel (3.0.2)
+    bourbon (3.0.1)
+      sass (>= 3.2.0)
+      thor
     builder (3.0.4)
     capybara (1.1.3)
       mime-types (>= 1.16)
@@ -52,7 +45,6 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
-    chunky_png (1.2.6)
     coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -62,8 +54,6 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     columnize (0.3.6)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
     dalli (2.6.0)
     database_cleaner (0.9.1)
@@ -114,7 +104,6 @@ GEM
     json (1.7.6)
     libwebsocket (0.1.5)
       addressable
-    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -229,10 +218,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-nulldb-adapter (>= 0.2.3)
+  bourbon
   capybara
   coffee-rails
-  compass!
-  compass-rails
   dalli (>= 2.6)
   database_cleaner
   debugger

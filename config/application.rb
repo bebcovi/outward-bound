@@ -7,8 +7,8 @@ require "rails/test_unit/railtie" if Rails.env.test?
 
 require "sprockets/railtie"
 require "jquery-rails"
+require "bourbon"
 require "fancybox2-rails"
-require "compass-rails"
 require "sass-rails"
 
 if Rails.env.development?

@@ -35,7 +35,7 @@
   blockquote a,
   .application_form {
     @include color-link(transparent !important);
-    @include text-shadow(none !important);
+    text-shadow: none !important;
   }
 
   h2,

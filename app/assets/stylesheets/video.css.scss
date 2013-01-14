@@ -4,7 +4,6 @@
   $height: $base-spacing-unit * 2.5;
   $border-width: 3px;
   @include size($width, $height);
-  @include border-radius(12px);
   @include color-link(white);
   position: absolute;
   bottom: - $height/2;
@@ -15,6 +14,7 @@
   font-family: icons;
   line-height: $height - 2*$border-width;
   border: $border-width solid white;
+  border-radius: 12px;
   background: $bg-color;
   &:hover,
   &:focus {

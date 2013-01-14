@@ -8,6 +8,7 @@ h1.course_title {
 
 .course_cover {
   height: 8 * $base-spacing-unit;
+  margin-right: 1px;
   margin-bottom: $half-spacing-unit;
 
   a {
@@ -106,9 +107,7 @@ h1.course_title {
 .application_form {
   $font-size: $h2-size;
   @include font-size($font-size);
-  @include border-radius;
   @include color-link(rgba(white, .75), white);
-  @include text-shadow(rgba(black, 1) 1px 1px 1px);
   @include background(
     $primary-color linear-gradient(
       lighten($primary-color, 5%),
@@ -125,6 +124,8 @@ h1.course_title {
   padding: $half-spacing-unit $base-spacing-unit * 2;
   font-family: $alt-font-family;
   font-weight: $base-bold;
+  text-shadow: 1px 1px 1px rgba(black, 1);
+  border-radius: 5px;
   &:hover {
     @include background(
       lighten($primary-color, 5%) linear-gradient(

@@ -2,9 +2,9 @@
 
 @import 'config';
 
+@import 'bourbon';
 @import 'inuit';
 @import 'fancybox';
-@import 'compass';
 @import 'icons';
 
 @import 'variables';
@@ -23,7 +23,6 @@
 @import 'carousel';
 @import 'video';
 @import 'main';
-@import 'highlight';
 @import 'footer';
 @import 'contact';
 @import 'social';

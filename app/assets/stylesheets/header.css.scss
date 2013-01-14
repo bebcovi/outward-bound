@@ -82,11 +82,11 @@
     }
 
     .brand {
-      @include border-radius;
       float: none;
       height: auto;
       margin-top: $half-spacing-unit;
       line-height: 0;
+      border-radius: 5px;
     }
 
     .nav {

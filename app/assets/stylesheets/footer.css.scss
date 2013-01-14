@@ -50,12 +50,12 @@ html,
 
   $icon-size: 38px;
   i {
-    @include text-shadow(rgba(black, .5) 1px 1px 1px);
     position: absolute;
     top: 0;
     left: -15px;
     font-size: $icon-size;
     color: darken(white, 60%);
+    text-shadow: 1px 1px 1px rgba(black, .5);
   }
 
   .author {

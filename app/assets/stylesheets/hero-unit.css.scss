@@ -1,6 +1,6 @@
 .hero-unit {
-  @include padding-leader;
   position: relative;
+  padding-top: $base-spacing-unit;
   padding-bottom: $base-spacing-unit * 2;
   text-align: center;
   color: white;
@@ -11,8 +11,8 @@
 }
 
 .main_title {
-  @include text-shadow(rgba(black, .75) 0 0 6px);
   @include font-size(62px);
+  text-shadow: 0 0 6px rgba(black, .75);
   font: {
     family: $alt-font-family;
     weight: $alt-bold;

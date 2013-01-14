@@ -2,7 +2,7 @@
   @extend %unstyled-list;
 
   i {
-    padding-right: rhythm(.25);
+    padding-right: $half-spacing-unit/2;
     color: rgba(white, .5);
   }
 
