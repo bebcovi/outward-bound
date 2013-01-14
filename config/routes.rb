@@ -18,7 +18,5 @@ OutwardBound::Application.routes.draw do
     end
 
     resources :albums
-
-    mount SendgridEmailForwarder::Engine, at: ""
   end
 end
