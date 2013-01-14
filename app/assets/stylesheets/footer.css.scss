@@ -66,6 +66,7 @@ html,
 
 .copyright {
   @include font-size($milli-size);
+  margin-bottom: $half-spacing-unit;
   color: rgba(white, .25);
   border-top: 1px dashed rgba(white, .1);
 }
