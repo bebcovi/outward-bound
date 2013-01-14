@@ -40,6 +40,6 @@ class AboutController < ApplicationController
   end
 
   def set_about_pages
-    @about_pages = self.class.action_methods
+    @about_pages = [:index, :what, :international, :instructors, :support, :safety, :locations, :partners]
   end
 end
