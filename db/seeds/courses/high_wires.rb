@@ -16,7 +16,7 @@ Course.create!(
   EOS
   dates_hr: "Po dogovoru",
   price_hr: nil,
-  contact_hr: "<visina@outwardbound.hr>",
+  contact_hr: "visina@outwardbound.hr",
 
   name_en: "High wires",
   description_en: <<-EOS.strip_heredoc,
@@ -32,7 +32,7 @@ Course.create!(
   EOS
   dates_en: "On arrangement",
   price_en: nil,
-  contact_en: "<height@outwardbound.hr>",
+  contact_en: "height@outwardbound.hr",
 
   category: "one",
   duration: 1,

@@ -31,7 +31,7 @@ Course.create!(
   dates_hr: <<-EOS.strip_heredoc,
   EOS
   price_hr: 4400,
-  contact_hr: "<kontakt@outwardbound.hr>",
+  contact_hr: "kontakt@outwardbound.hr",
 
   name_en: "Velebit adventure",
   description_en: <<-EOS.strip_heredoc,
@@ -60,7 +60,7 @@ Course.create!(
   dates_en: <<-EOS.strip_heredoc,
   EOS
   price_en: 590,
-  contact_en: "<contact@outwardbound.hr>",
+  contact_en: "contact@outwardbound.hr",
 
   category: "eight",
   duration: 8,

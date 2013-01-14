@@ -17,7 +17,7 @@ Course.create!(
   dates_hr: <<-EOS.strip_heredoc,
   EOS
   price_hr: nil,
-  contact_hr: "<kontakt@outwardbound.hr>",
+  contact_hr: "kontakt@outwardbound.hr",
 
   name_en: "Sailing adventure",
   description_en: <<-EOS.strip_heredoc,
@@ -34,7 +34,7 @@ Course.create!(
   dates_en: <<-EOS.strip_heredoc,
   EOS
   price_en: nil,
-  contact_en: "<contact@outwardbound.hr>",
+  contact_en: "contact@outwardbound.hr",
 
   category: "eight",
   duration: 8,
