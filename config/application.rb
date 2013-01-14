@@ -6,8 +6,6 @@ require "action_mailer/railtie"
 require "rails/test_unit/railtie" if Rails.env.test?
 require "sprockets/railtie"
 
-require "sendgrid_email_forwarder"
-
 unless Rails.env.production?
   require "jquery-rails"
   require "fancybox2-rails"
