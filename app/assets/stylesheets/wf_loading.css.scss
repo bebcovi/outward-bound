@@ -47,4 +47,14 @@
     visibility: visible !important;
   }
 
+  .hero-unit {
+    h1 {
+      height: 3.5 * $base-spacing-unit;
+    }
+
+    .lead {
+      height: 2 * $base-spacing-unit;
+    }
+  }
+
 }

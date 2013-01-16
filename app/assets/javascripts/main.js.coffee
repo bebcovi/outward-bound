@@ -10,13 +10,15 @@ do ($ = jQuery) ->
 
   if $carousel.length
     $carousel.find(".inner").carouFredSel
+      responsive: true
+
       scroll:
         fx: "slide"
 
       items:
         visible: 1
         height: 300
-        width: 940
+        width: 960 - 2*12 - 2*12
 
       auto:
         timeoutDuration: 5000

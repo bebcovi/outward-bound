@@ -1,8 +1,8 @@
 .carousel {
   $height: 300px;
-  $border-width: 10px;
-  @include clearfix;
+  $border-width: $site-padding;
   position: relative;
+  overflow: hidden;
   height: $height + 2 * $border-width;
   margin: 0 auto;
   border: $border-width solid rgba(white, .1);

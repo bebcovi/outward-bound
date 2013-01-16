@@ -10,7 +10,10 @@
   border-bottom: $border-width solid black;
   background: $primary-color;
 
-  .container { @extend .cf; }
+  .container {
+    @extend .cf;
+    height: 100%;
+  }
 
   $hover-color: white;
   $color: rgba($hover-color, .75);
@@ -31,8 +34,8 @@
   }
 
   .brand {
-    float: left;
     display: inline-block;
+    height: auto;
     margin-right: $half-spacing-unit;
     padding: 7px $half-spacing-unit/2;
     border-left: 1px solid black;
@@ -42,14 +45,15 @@
 
   .nav {
     @extend .cf;
-    float: left;
     margin-bottom: 0;
 
-    li { float: left; }
+    li {
+      display: block;
+    }
   }
 
   .lang {
-    float: right;
+    li { float: left; }
 
     a {
       padding-top: 5px;
@@ -82,26 +86,32 @@
     }
 
     .brand {
-      float: none;
-      height: auto;
       margin-top: $half-spacing-unit;
       line-height: 0;
       border-radius: 5px;
-    }
-
-    .nav {
-      float: none;
-
-      li {
-        float: none;
-        display: block;
-      }
     }
 
     .lang {
       margin-bottom: $half-spacing-unit;
 
       li { line-height: 0; }
+    }
+  }
+
+  @include media-query(lap-and-up) {
+    .brand {
+      float: left;
+      height: 100%;
+    }
+
+    .nav {
+      &, li {
+        float: left;
+      }
+    }
+
+    .lang {
+      float: right;
     }
   }
 }
