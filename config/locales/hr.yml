@@ -4,6 +4,8 @@ hr:
   misc:
     apply: "Prijavi se na ovaj program"
     back: "Natrag"
+    albums: "Albumi"
+    view_gallery: "Pogledaj galeriju"
     contact: "Kontaktirajte nas"
     social: "Volimo se družiti"
     tweets: "Što drugi kažu..."

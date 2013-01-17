@@ -2,9 +2,10 @@
 
 - if course.album
   .course_cover
-    = link_to(course.album, target: "_blank") do
+    .inner
       = image_tag course.cover_photo.url(:medium), alt: course.cover_photo.title
-      = icon("pictures")
+
+  %p= link_to t("misc.view_gallery").prepend_icon("pictures"), course.album
 
 = markdown course.description
 

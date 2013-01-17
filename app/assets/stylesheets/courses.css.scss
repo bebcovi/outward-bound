@@ -10,11 +10,10 @@ h1.course_title {
   margin-right: 1px;
   margin-bottom: $half-spacing-unit;
 
-  a {
-    position: relative;
+  .inner {
     display: inline-block;
-    max-height: 8 * $base-spacing-unit;
     overflow: hidden;
+    max-height: 8 * $base-spacing-unit;
     margin-left: 1px;
     line-height: 0;
     border: 4px solid white;
@@ -23,17 +22,6 @@ h1.course_title {
 
   img {
     max-width: 100%;
-  }
-
-  i {
-    $border: 1px solid white;
-    @include position(absolute, 0 0px 0px 0);
-    @include font-size(32px);
-    padding: 0 $half-spacing-unit;
-    color: rgba(black, .75);
-    border-top: $border;
-    border-left: $border;
-    background: rgba(white, .5);
   }
 }
 
