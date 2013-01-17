@@ -37,7 +37,7 @@
 - if course.contact?
   .course_contact
     = icon("mail")
-    = t(".contact")
+    = t(".contact") + ":"
     = mail_to(course.contact) + "."
 
 - if course.applyable?
