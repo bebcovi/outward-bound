@@ -5,9 +5,9 @@ class PostPresenter < BasePresenter
 
   def title
     if date_range?
-      "#{post.title} (#{date_range})"
+      smarty_pants "#{post.title} (#{date_range})"
     else
-      post.title
+      smarty_pants post.title
     end
   end
 
@@ -31,7 +31,7 @@ class PostPresenter < BasePresenter
   end
 
   def short_body
-    @t.markdown @t.truncate(post.body, length: 200, separator: " ")
+    @t.markdown @t.truncate(post.body, length: 300, separator: " ")
   end
 
   def body

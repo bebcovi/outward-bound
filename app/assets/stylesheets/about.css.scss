@@ -12,7 +12,7 @@
       img {
         @extend %img-polaroid;
         float: left;
-        margin-top: $quarter-spacing-unit;
+        margin-top: $half-spacing-unit/2;
         margin-right: $half-spacing-unit;
 
         ~ p {

@@ -1,33 +1,34 @@
 @charset "UTF-8";
 
-@import 'config';
+@import "config";
 
-@import 'bourbon';
-@import 'inuit';
-@import 'fancybox';
-@import 'icons';
+@import "bourbon";
+@import "inuit";
+@import "fancybox";
+@import "icons";
 
-@import 'variables';
-@import 'functions';
-@import 'mixins';
-@import 'extends';
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "extends";
 
-@import 'reset';
-@import 'overrides';
-@import 'general';
+@import "reset";
+@import "overrides";
+@import "general";
 
-@import 'wf_loading';
+@import "wf_loading";
 
-@import 'header';
-@import 'hero-unit';
-@import 'carousel';
-@import 'video';
-@import 'main';
-@import 'footer';
-@import 'contact';
-@import 'social';
+@import "header";
+@import "hero-unit";
+@import "carousel";
+@import "video";
+@import "main";
+@import "footer";
+@import "contact";
+@import "social";
 
-@import 'home';
-@import 'courses';
-@import 'gallery';
-@import 'about';
+@import "home";
+@import "news";
+@import "courses";
+@import "gallery";
+@import "about";

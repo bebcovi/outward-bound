@@ -1,12 +1,15 @@
 - present(post) do |post_presenter|
 
-  %section
-    .cover= image_tag post_presenter.cover_photo.url(:small), alt: post_presenter.cover_photo.title
-
+  %article.post_short
     %header
-      %h1= link_to post_presenter.title, post_presenter.post
+      %h2= link_to post_presenter.title, post_presenter.post
       = time_tag post_presenter.created_at
 
-    = post_presenter.short_body
+    .cover
+      = link_to post_presenter.post do
+        = image_tag post_presenter.cover_photo.url(:small), alt: post_presenter.cover_photo.title
 
-    = link_to "Saznajte više...", post_presenter.post
+    .inner
+      = post_presenter.short_body
+
+      = link_to "Saznajte više...", post_presenter.post, class: "more"

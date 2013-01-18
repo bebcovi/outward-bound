@@ -1,6 +1,6 @@
 - present(post) do |post_presenter|
 
-  %section.post
+  %article.post_long
     %header
       %h1= post_presenter.title
       = time_tag post_presenter.created_at
@@ -8,7 +8,8 @@
     = post_presenter.body
 
     - if post_presenter.has_photos?
-      .photos
+      %h2= t("misc.photos")
+      %ul.photos
         - post_presenter.photos.each do |photo|
           %li{class: (photo == post_presenter.cover_photo && "cover")}
             = link_to image_tag(photo.url(:medium), alt: photo.title), photo.url(:large)
