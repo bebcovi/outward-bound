@@ -1,10 +1,12 @@
-%section
-  .cover= image_tag post.cover_photo.url(:small), alt: post.cover_photo.title
+- present(post) do |post_presenter|
 
-  %header
-    %h1= link_to post.title, post
-    = time_tag post.created_at.to_date
+  %section
+    .cover= image_tag post_presenter.cover_photo.url(:small), alt: post_presenter.cover_photo.title
 
-  = markdown truncate(post.body, length: 200, separator: " ")
+    %header
+      %h1= link_to post_presenter.title, post_presenter.post
+      = time_tag post_presenter.created_at
 
-  = link_to "Saznajte više...", post
+    = post_presenter.short_body
+
+    = link_to "Saznajte više...", post_presenter.post
