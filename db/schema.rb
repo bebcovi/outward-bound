@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118165344) do
+ActiveRecord::Schema.define(:version => 20130118155649) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(:version => 20130118165344) do
     t.boolean  "hr",         :default => true
     t.date     "from"
     t.date     "till"
-    t.string   "slug"
   end
 
   create_table "tweets", :force => true do |t|
