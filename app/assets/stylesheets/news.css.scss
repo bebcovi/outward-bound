@@ -18,6 +18,12 @@
   @extend .cf;
   margin-bottom: $half-spacing-unit;
 
+  h2 a {
+    @include on-interact {
+      text-decoration: none;
+    }
+  }
+
   .cover {
     margin-bottom: $half-spacing-unit;
     line-height: 0;
@@ -33,12 +39,6 @@
 
     p {
       margin-bottom: $half-spacing-unit;
-    }
-
-    h2 a {
-      @include on-interact {
-        text-decoration: none;
-      }
     }
   }
 
