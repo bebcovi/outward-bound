@@ -4,6 +4,7 @@ en:
   misc:
     apply: "Apply for this course"
     back: "Back"
+    more: "More…"
     albums: "Albums"
     photos: "Photos"
     view_gallery: "View the gallery"
@@ -11,3 +12,8 @@ en:
     social: "We're social"
     tweets: "Latest mentions"
     people: "people"
+
+  will_paginate:
+    previous_label: "← Previous"
+    next_label: "Next →"
+    page_gap: "…"

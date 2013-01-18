@@ -4,6 +4,7 @@ hr:
   misc:
     apply: "Prijavi se na ovaj program"
     back: "Natrag"
+    more: "Saznajte više…"
     albums: "Albumi"
     photos: "Slike"
     view_gallery: "Pogledaj galeriju"
@@ -15,4 +16,4 @@ hr:
   will_paginate:
     previous_label: "← Prethodna"
     next_label: "Sljedeća →"
-    page_gap: "&hellip;"
+    page_gap: "…"
