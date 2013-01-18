@@ -1,0 +1,5 @@
+- @title = t(".page_title")
+
+= render collection: @posts, partial: "post_short", as: :post
+
+= will_paginate @posts

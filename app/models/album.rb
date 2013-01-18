@@ -1,7 +1,9 @@
 class Album < ActiveRecord::Base
   has_many :photos, dependent: :destroy
   belongs_to :cover_photo, class_name: "Photo"
-  has_one :course
+  belongs_to :event, polymorphic: true
 
-  delegate :name, to: :course
+  def name
+    event.name
+  end
 end

@@ -43,3 +43,7 @@ hr:
       price: "Cijena"
       send_application_form: "Prijavnicu je potrebno poslati na"
       contact: "Ukoliko imate pitanja u vezi ovog programa, kontaktirajte nas na"
+
+  posts:
+    index:
+      page_title: "Vijesti"

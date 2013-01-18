@@ -43,3 +43,7 @@ en:
       price: "Price"
       send_application_form: "The application form should be sent to"
       contact: "If you have any questions about this course, contact us on"
+
+  posts:
+    index:
+      page_title: "News"

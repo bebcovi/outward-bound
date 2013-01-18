@@ -19,6 +19,8 @@ gem "jquery-rails"
 # Views
 gem "haml-rails"
 gem "redcarpet"
+gem "will_paginate"
+gem "rails-i18n"
 
 # External APIs
 gem "twitter"

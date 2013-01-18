@@ -3,6 +3,8 @@ class Photo < ActiveRecord::Base
 
   validates_uniqueness_of :uid, scope: :album_id
 
+  default_scope -> { order("created_at ASC") }
+
   def url(size = nil)
     if size
       send("#{size}_url")

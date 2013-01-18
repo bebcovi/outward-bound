@@ -11,10 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114014203) do
+ActiveRecord::Schema.define(:version => 20130118024155) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
+    t.integer "event_id"
+    t.string  "event_type"
   end
 
   create_table "courses", :force => true do |t|
@@ -40,20 +42,32 @@ ActiveRecord::Schema.define(:version => 20130114014203) do
   end
 
   create_table "photos", :force => true do |t|
-    t.string  "uid"
-    t.string  "url"
-    t.string  "large_url"
-    t.string  "title"
-    t.string  "stored_on"
-    t.integer "album_id"
-    t.string  "small_url"
-    t.string  "medium_url"
-    t.integer "large_width"
-    t.integer "large_height"
-    t.integer "medium_width"
-    t.integer "medium_height"
-    t.integer "small_width"
-    t.integer "small_height"
+    t.string   "uid"
+    t.string   "url"
+    t.string   "large_url"
+    t.string   "title"
+    t.string   "stored_on"
+    t.integer  "album_id"
+    t.string   "small_url"
+    t.string   "medium_url"
+    t.integer  "large_width"
+    t.integer  "large_height"
+    t.integer  "medium_width"
+    t.integer  "medium_height"
+    t.integer  "small_width"
+    t.integer  "small_height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title_en"
+    t.string   "title_hr"
+    t.text     "body_en"
+    t.text     "body_hr"
+    t.integer  "album_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tweets", :force => true do |t|

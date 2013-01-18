@@ -1,7 +1,7 @@
 require "friendly_id"
 
 class Course < ActiveRecord::Base
-  belongs_to :album
+  has_one :album, as: :event
 
   translates :name, :description, :dates, :contact, :price
   extend FriendlyId

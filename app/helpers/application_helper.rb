@@ -5,6 +5,7 @@ module ApplicationHelper
   def navigation_pages
     pages = [
       {controller: "home",    action: "index"},
+      {controller: "posts",   action: "index"},
       {controller: "courses", action: "index"},
       {controller: "albums",  action: "index"},
       {controller: "about",   action: "index"},

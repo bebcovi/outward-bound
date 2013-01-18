@@ -1,0 +1,11 @@
+%section.post
+  %header
+    %h1= post.title
+    = time_tag post.created_at.to_date
+
+  = markdown post.body
+
+  .photos
+    - post.photos.each do |photo|
+      %li{class: (photo == post.cover_photo && "cover")}
+        = link_to image_tag(photo.url(:medium), alt: photo.title), photo.url(:large)

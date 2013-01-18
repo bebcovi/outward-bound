@@ -11,12 +11,13 @@ OutwardBound::Application.routes.draw do
     get "contact", to: "contact#index"
 
     resources :courses do
-      collection {
+      collection do
         get "apply"
         get "application"
-      }
+      end
     end
 
+    resources :posts
     resources :albums
   end
 end

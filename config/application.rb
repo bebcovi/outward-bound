@@ -11,6 +11,9 @@ require "bourbon"
 require "fancybox2-rails"
 require "sass-rails"
 
+require "will_paginate"
+require "rails-i18n"
+
 if Rails.env.development?
   require "pry-rails"
 end

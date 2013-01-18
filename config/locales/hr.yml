@@ -8,3 +8,8 @@ hr:
     social: "Volimo se družiti"
     tweets: "Što drugi kažu..."
     people: "osoba"
+
+  will_paginate:
+    previous_label: "← Prethodna"
+    next_label: "Sljedeća →"
+    page_gap: "&hellip;"

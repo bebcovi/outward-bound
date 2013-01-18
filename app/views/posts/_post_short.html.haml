@@ -1,0 +1,10 @@
+%section
+  .cover= image_tag post.cover_photo.url(:small), alt: post.cover_photo.title
+
+  %header
+    %h1= link_to post.title, post
+    = time_tag post.created_at.to_date
+
+  = markdown truncate(post.body, length: 200, separator: " ")
+
+  = link_to "Saznajte više...", post
