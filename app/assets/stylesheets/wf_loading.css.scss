@@ -1,50 +1,8 @@
 .wf-loading {
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ol,
-  ul,
-  dl,
-  .main.nav,
-  .name,
-  .value,
-  .adr,
-  .tweets .says {
-    visibility: hidden !important;
-  }
-
-  .lang.nav,
-  .navigation_sidebar,
-  .partners ul,
-  .album_list,
-  .album_photos,
-  .partner_list,
-  .contact_info,
-  .social ol,
-  .tweets ol {
-    visibility: visible !important;
-  }
-
-  figcaption,
-  blockquote,
-  blockquote a,
-  .application_form {
-    @include color-link(transparent !important);
+  * {
+    color: transparent !important;
     text-shadow: none !important;
-  }
-
-  h2,
-  .navigation_sidebar .nav-header,
-  .navigation_sidebar a,
-  .course_title,
-  .copyright {
-    @include color-link(transparent !important);
-    visibility: visible !important;
   }
 
   .hero-unit {
