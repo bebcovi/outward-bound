@@ -2,6 +2,11 @@
   .container
     = link_to image_tag("logo.png", size: "50x50"), root_path, class: "brand"
 
+    = link_to("#", class: "nav_expander") do
+      = icon("menu")
+      - navigation_pages.each do |page|
+        = page.title if params[:controller] == page.path[:controller]
+
     %ol.main.nav
       - navigation_pages.each do |page|
         %li{class: (params[:controller] == page.path[:controller] && "active")}

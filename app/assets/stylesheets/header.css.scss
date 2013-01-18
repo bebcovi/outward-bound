@@ -43,6 +43,10 @@
     background: white;
   }
 
+  .nav_expander {
+    font-weight: $base-bold;
+  }
+
   .nav {
     @extend .cf;
     margin-bottom: 0;
@@ -52,11 +56,27 @@
     }
   }
 
+  .main {
+    @extend %transition-all;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  @mixin expanded {
+    height: auto;
+    opacity: 1;
+  }
+
+  .expanded {
+    @include expanded;
+  }
+
   .lang {
+    margin-left: -8px;
     li { float: left; }
 
     a {
-      padding-top: 5px;
       padding: 5px 8px;
     }
 
@@ -75,8 +95,10 @@
   }
 
   @include media-query(palm) {
-    $link-height: $base-spacing-unit * 2;
+    $link-height: $base-spacing-unit * 1.5;
     height: auto;
+
+    li { line-height: $link-height; }
 
     a {
       height: $link-height;
@@ -104,13 +126,22 @@
       height: 100%;
     }
 
+    .nav_expander {
+      display: none;
+    }
+
     .nav {
       &, li {
         float: left;
       }
     }
 
+    .main {
+      @include expanded;
+    }
+
     .lang {
+      margin-left: 0;
       float: right;
     }
   }
