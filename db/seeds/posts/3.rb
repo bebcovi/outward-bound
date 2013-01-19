@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Post.create!(
-  title_hr: "Inside Out -- Razmjena mladih (Velebit--Rab, 25.9-6.10.2012.)",
+  title_hr: "Inside Out -- Razmjena mladih (Velebit--Rab, 25.9--6.10.2012.)",
   body_hr: <<-EOS.strip_heredoc,
     Od 25. rujna do 6. listopada Hrvatska škola Outward Bound okupila je dvadeset i dvoje mladih ljudi iz pet europskih zemalja, kako bi sudjelovali u međunarodnoj pustolovini zvanoj „<em>Inside Out</em> – unutrašnji razvoj kroz aktivnosti na otvorenom“.
 
