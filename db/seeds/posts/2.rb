@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Post.create!(
-  title_hr: "Zimski program na Krku",
+  title_hr: "Zimski program na Krku (3--9.1.2013.)",
   body_hr: <<-EOS.strip_heredoc,
     Ove zime odlučili smo ignorirati snježne radosti i organizirati Outward Bound s pogledom na more sa otoka Krka. Program smo organizirali uz potporu *Ministarstva znanosti, obrazovanja i športa RH* koji su prepoznali naš doprinos na utjecaj mladih. Na Krk smo krenuli 3.1.2013. i proveli tamo uzbudljivih tjedan dana. Naši polaznici bili su iz viših razreda osnovnih škola te iz srednjih škola Samobora, Zagreba i Kaštela. Dolazak iz drugačijih sredina u kombinaciji s drugačijim karakterima unio je u naš program puno dinamike i pretvorio je u pravu avanturu.
 
@@ -11,8 +11,6 @@ Post.create!(
 
     *Ministarstvo znanosti, obrazovanja i športa RH* poduprijet će još jedan program za srednjoškolce za vrijeme uskršnjih praznika te školu penjanja koja kreće uskoro. Ako želite prisustvovati našem programu, sad je prilika, javite se!
   EOS
-  from: "03/01/2013",
-  till: "09/01/2013",
   album: @post2_album,
   created_at: "18/01/2013",
   en: false,

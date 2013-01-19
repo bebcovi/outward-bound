@@ -4,26 +4,7 @@ class PostPresenter < BasePresenter
   presents :post
 
   def title
-    if date_range?
-      smarty_pants "#{post.title} (#{date_range})"
-    else
-      smarty_pants post.title
-    end
-  end
-
-  def date_range
-    from, till = post.from, post.till
-    if from.year != till.year
-      "#{from.strftime('%-d.%-m.%Y')}–#{till.strftime('%-d.%-m.%Y.')}"
-    elsif from.month != till.month
-      "#{from.strftime('%-d.%-m')}–#{till.strftime('%-d.%-m.%Y.')}"
-    else
-      "#{from.strftime('%-d')}–#{till.strftime('%-d.%-m.%Y.')}"
-    end
-  end
-
-  def date_range?
-    post.from? and post.till?
+    smarty_pants post.title
   end
 
   def created_at
