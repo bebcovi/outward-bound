@@ -1,6 +1,6 @@
 Outward Bound is world-renowned system of schools for non-formal education. They provide experiential learning courses in nature where participants have the opportunity to develop their skills and abilities through exciting and challenging activities.
 
-[Outward Bound International](http://www.outwardbound.net) is active in more than 50 schools in over 30 countries throughout the world. Outward Bound’s core values are personal responsibility, mutual trust and tolerance, cooperation, sincerity and compassion.
+[Outward Bound International](http://www.outwardbound.net) is active in more than 50 schools in over 30 countries throughout the world ([map](http://www.outwardbound.net/schools/)). Outward Bound’s core values are personal responsibility, mutual trust and tolerance, cooperation, sincerity and compassion.
 
 Organization of the Outward Bound school is based on 60 years of experience throughout the world and today is setting the highest standards in outdoor education as well as experiential learning. It is following strict safety policy that is ensuring highest possible course quality and effectiveness.
 
