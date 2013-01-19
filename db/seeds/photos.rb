@@ -17,6 +17,7 @@ sets = {
 
   "72157632549938042" => "@post1_album",
   "72157632553983386" => "@post2_album",
+  "72157632552374907" => "@post3_album",
 }
 
 sets.each do |set_id, album_variable|
