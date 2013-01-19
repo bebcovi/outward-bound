@@ -12,6 +12,7 @@ en:
     social: "We're social"
     tweets: "Latest mentions"
     people: "people"
+    news: "News"
 
   will_paginate:
     previous_label: "← Previous"
