@@ -81,10 +81,6 @@
   .photos {
     @extend %unstyled-list;
 
-    img {
-      max-width: 100%;
-    }
-
     html.js & {
       margin-top: $base-spacing-unit;
       padding-left: $half-spacing-unit;
@@ -94,7 +90,7 @@
       }
 
       .cover {
-        display: inline-block;
+        display: inline-block; // overriding display:none
 
         // Create the Illusion of Stacked Elements with CSS3 Pseudo-Elements
         // by @tkenny
@@ -141,6 +137,10 @@
 
     html.no-js & {
       @extend .cf;
+
+      img {
+        max-width: 100%;
+      }
 
       li {
         overflow: hidden;
