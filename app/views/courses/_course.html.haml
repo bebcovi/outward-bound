@@ -3,7 +3,8 @@
 - if course.album
   .course_cover
     .inner
-      = image_tag course.cover_photo.url(:medium), alt: course.cover_photo.title
+      = link_to course.album do
+        = image_tag course.cover_photo.url(:medium), alt: course.cover_photo.title
 
   %p= link_to t("misc.view_gallery").prepend_icon("pictures"), course.album
 
