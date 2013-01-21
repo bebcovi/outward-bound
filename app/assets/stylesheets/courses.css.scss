@@ -46,6 +46,7 @@
     @include font-size(38px);
     display: block;
     color: rgba(black, .25);
+    color: rgba($blue, .5);
   }
 
   .name,
@@ -57,6 +58,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(black, .35);
+    color: rgba($blue, .5);
+  }
+
+  .value {
+    color: rgba($blue, .9);
+    font-weight: $base-bold;
   }
 }
 
