@@ -43,7 +43,7 @@
 
 - if course.applyable?
   .apply_for_course
-    = link_to t("misc.apply").append_icon("file-download"), application_courses_path, class: "application_form"
+    = link_to t("misc.apply").append_icon("file-download"), "/files/Application_form_#{I18n.locale}.doc", class: "application_form"
     %p.send_application_form
       = t(".send_application_form")
       = mail_to("apply@outwardbound.hr") + "."
