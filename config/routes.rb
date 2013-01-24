@@ -19,5 +19,10 @@ OutwardBound::Application.routes.draw do
 
     resources :posts
     resources :albums
+
+    controller :errors do
+      match "404", to: :not_found
+      match "500", to: :internal_server_error
+    end
   end
 end

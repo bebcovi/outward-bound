@@ -1,7 +1,8 @@
 require "exception_notification"
 
 OutwardBound::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
+  # Use the routes to render HTTP-error pages instead of rendering static ones
+  config.exceptions_app = self.routes
 
   # Code is not reloaded between requests
   config.cache_classes = true
