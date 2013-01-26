@@ -1,6 +1,10 @@
 - @title = "Stranica nije pronađena"
 
 %h1= @title
-%p Iz nekog razloga stranica koju ste tražili nije pronađena.
+%p Stranica koju ste tražili nije pronađena. Mogući razlozi:
+
+%ul
+  %li Stranica je postojala na staroj web stranici, a ne postoji ovdje.
+  %li Stranica je premještena.
 
 = back_button "Početna", root_path

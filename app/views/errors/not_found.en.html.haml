@@ -1,6 +1,10 @@
 - @title = "Page not found"
 
 %h1= @title
-%p For some reason the page you were looking for was not found.
+%p The page you were looking for was not found. Possible reasons:
+
+%ul
+  %li The page existed on the old webiste, but doesn't exist here.
+  %li The page has been moved.
 
 = back_button "Home", root_path
