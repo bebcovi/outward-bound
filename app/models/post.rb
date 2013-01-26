@@ -5,5 +5,10 @@ class Post < ActiveRecord::Base
 
   translates :title, :body
 
-  scope :in_language, ->(language) { where(language => true) }
+  scope :available_in, ->(language) { where("#{table_name}.title_#{language} IS NOT NULL AND #{table_name}.body_#{language} IS NOT NULL") }
+  scope :descending,   -> { order("#{table_name}.created_at DESC") }
+
+  def available_in?(language)
+    send("title_#{language}?") && send("body_#{language}?")
+  end
 end

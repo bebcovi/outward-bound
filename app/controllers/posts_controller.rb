@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.in_language(I18n.locale).order("created_at DESC").paginate(page: params[:page], per_page: 4)
+    @posts = Post.available_in(current_language).descending.paginate(page: params[:page], per_page: 4)
   end
   caches_action :index
 

@@ -33,12 +33,16 @@ module ApplicationHelper
       .html_safe
   end
 
+  def current_language
+    I18n.locale
+  end
+
   def croatian?
-    I18n.locale == :hr
+    current_language == :hr
   end
 
   def english?
-    I18n.locale == :en
+    current_language == :en
   end
 
   def back_button(string, path, options = {})

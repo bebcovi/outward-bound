@@ -29,4 +29,8 @@ class ApplicationController < ActionController::Base
   def sub_layout
     "application"
   end
+
+  def current_language
+    I18n.locale
+  end
 end

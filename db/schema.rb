@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124210052) do
+ActiveRecord::Schema.define(:version => 20130126111139) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -66,10 +66,8 @@ ActiveRecord::Schema.define(:version => 20130124210052) do
     t.text     "body_en"
     t.text     "body_hr"
     t.integer  "album_id"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.boolean  "en",         :default => true
-    t.boolean  "hr",         :default => true
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "slug"
   end
 

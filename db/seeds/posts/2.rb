@@ -13,5 +13,4 @@ Post.create!(
   EOS
   album: @post2_album,
   created_at: "18/01/2013",
-  en: false,
 )
