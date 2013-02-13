@@ -32,6 +32,10 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.2)
     arel (3.0.2)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     bourbon (3.0.1)
       sass (>= 3.2.0)
       thor
@@ -221,6 +225,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-nulldb-adapter (>= 0.2.3)
+  better_errors
+  binding_of_caller
   bourbon
   capybara
   coffee-rails
