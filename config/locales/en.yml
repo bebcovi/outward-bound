@@ -13,6 +13,7 @@ en:
     tweets: "Latest mentions"
     people: "people"
     news: "News"
+    attachments: "Attachments"
 
   will_paginate:
     previous_label: "← Previous"

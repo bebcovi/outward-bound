@@ -6,6 +6,10 @@
   = render "carousel"
   = link_to icon("play"), "http://youtu.be/vocg-ubKYFw", class: "play_video", title: t(".play_video"), target: "_blank"
 
+- if @announcements.any?
+  %ul.announcements
+    = render @announcements
+
 = render "about"
 
 .partners

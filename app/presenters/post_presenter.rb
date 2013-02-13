@@ -22,4 +22,8 @@ class PostPresenter < BasePresenter
   def has_photos?
     post.photos.count > 1
   end
+
+  def has_attachments?
+    post.attachments.any?
+  end
 end

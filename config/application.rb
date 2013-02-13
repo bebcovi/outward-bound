@@ -16,6 +16,7 @@ require "rails-i18n"
 
 if Rails.env.development?
   require "pry-rails"
+  require "better_errors"
 end
 
 module OutwardBound

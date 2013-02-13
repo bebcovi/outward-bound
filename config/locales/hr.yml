@@ -13,6 +13,7 @@ hr:
     tweets: "Što drugi kažu..."
     people: "osoba"
     news: "Vijesti"
+    attachments: "Prilozi"
 
   will_paginate:
     previous_label: "← Prethodna"
