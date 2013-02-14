@@ -11,7 +11,7 @@
       %h2= t("misc.attachments")
       %ul.attachments
         = list_of post_presenter.attachments do |attachment|
-          = link_to attachment.name.prepend_icon(attachment.extension), "/files/#{attachment.filename}"
+          = link_to attachment.name.prepend_icon("file-#{attachment.extension.chomp("x")}"), "/files/#{attachment.filename}"
 
     - if post_presenter.has_photos?
       %h2= t("misc.photos")

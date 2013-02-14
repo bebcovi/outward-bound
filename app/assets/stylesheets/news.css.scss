@@ -12,6 +12,18 @@
       margin-right: $half-spacing-unit/2;
     }
   }
+
+  .attachments {
+    @extend %unstyled-list;
+
+    .icon-file-doc {
+      color: #2a5598;
+    }
+
+    .icon-file-pdf {
+      color: #F91D0A;
+    }
+  }
 }
 
 .post_short {
