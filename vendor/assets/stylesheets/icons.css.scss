@@ -132,6 +132,19 @@
 .icon-file-pdf:before {
   content: "\e028";
 }
+.icon-arrow-up:before {
+  content: "\e029";
+}
+.icon-arrow-right:before {
+  content: "\e02a";
+}
+.icon-arrow-down:before {
+  content: "\e02b";
+}
+.icon-arrow-left:before {
+  content: "\e02c";
+}
+
 
 .icon-file-doc {
   @extend .icon-file-word;

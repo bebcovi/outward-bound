@@ -98,3 +98,26 @@ body.home {
   }
 
 }
+
+.announcements {
+  @extend %unstyled-list;
+
+  a {
+    display: block;
+    padding: $half-spacing-unit;
+    text-decoration: none;
+    border: 1px solid rgba($link-color, .5);
+    border-radius: 3px;
+    background-color: tint($link-color, 90%);
+    @include on-interact {
+      border-color: $link-color;
+    }
+  }
+
+  i {
+    display: inline-block;
+    float: right;
+    font-size: 32px;
+    margin-top: -3px;
+  }
+}
