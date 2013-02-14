@@ -45,6 +45,7 @@ class CreateEasterAnnouncement < ActiveRecord::Migration
   end
 
   def down
-    Post.find_by_title_hr("Uskršnji program na Krku (23--30.3.2013.)").destroy
+    post = Post.find_by_title_hr("Uskršnji program na Krku (23--30.3.2013.)")
+    post.destroy unless post.nil?
   end
 end
