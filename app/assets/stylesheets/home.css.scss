@@ -101,23 +101,38 @@ body.home {
 
 .announcements {
   @extend %unstyled-list;
+  margin-bottom: $half-spacing-unit;
 
-  a {
-    display: block;
-    padding: $half-spacing-unit;
-    text-decoration: none;
-    border: 1px solid rgba($link-color, .5);
-    border-radius: 3px;
-    background-color: tint($link-color, 90%);
-    @include on-interact {
-      border-color: $link-color;
-    }
+  li {
+    position: relative;
+    margin-bottom: $half-spacing-unit;
   }
 
   i {
-    display: inline-block;
-    float: right;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: $base-spacing-unit;
     font-size: 32px;
-    margin-top: -3px;
+    line-height: 2 * $base-spacing-unit;
+    color: $link-color;
+  }
+
+  a {
+    display: block;
+    margin-left: 1.75 * $base-spacing-unit;
+    padding: $half-spacing-unit;
+    text-decoration: none;
+    border: 1px solid tint($link-color, 50%);
+    border-radius: 3px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: tint($link-color, 95%);
+    @include on-interact {
+      border-color: shade($link-color, 20%);
+      background-color: tint($link-color, 90%);
+    }
   }
 }

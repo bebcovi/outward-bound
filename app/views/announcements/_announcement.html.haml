@@ -1,2 +1,4 @@
 %li
-  = link_to announcement.content.append_icon("arrow-right"), announcement.post
+  = icon("bullhorn")
+  = link_to announcement.post do
+    = announcement.content
