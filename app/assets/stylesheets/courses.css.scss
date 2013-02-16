@@ -107,12 +107,12 @@
 .application_form {
   $font-size: $h2-size;
   @include font-size($font-size);
-  @include color-link(rgba(white, .75), white);
+  @include color-link(white);
   @include background(
-    $primary-color linear-gradient(
+    linear-gradient(
       lighten($primary-color, 5%),
       $primary-color
-    )
+    ), $fallback: $primary-color
   );
   @include box-shadow(
     rgba(black, .9) 0 1px 0,
@@ -128,10 +128,10 @@
   border-radius: 5px;
   &:hover {
     @include background(
-      lighten($primary-color, 5%) linear-gradient(
+      linear-gradient(
         lighten($primary-color, 10%),
         lighten($primary-color, 5%)
-      )
+      ), $fallback: lighten($primary-color, 5%)
     );
     @include box-shadow(
       black 0 1px 0,
