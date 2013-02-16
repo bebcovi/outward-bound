@@ -12,11 +12,12 @@ body.newsletter {
   @include color-link(white);
   position: absolute;
   z-index: 10;
-  top: $navbar-height;
+  bottom: - ($base-spacing-unit + 2px);
   right: 50%;
   width: $width;
-  margin-right: - $site-width/2 + $site-padding;
+  margin-right: - $width/2;
   font-weight: $base-light;
+  line-height: $base-line-height;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -27,15 +28,21 @@ body.newsletter {
     text-decoration: none;
   }
 
+  @include media-query(lap-and-up) {
+    right: $site-padding;
+    margin-right: 0;
+
+    body.home & {
+      right: 50%;
+      margin-right: - $width/2;
+    }
+  }
+
   i {
     position: relative;
     top: 1px;
     font-size: 16px;
     -webkit-font-smoothing: none;
-  }
-
-  body.home & {
-    margin-right: - $width/2;
   }
 }
 

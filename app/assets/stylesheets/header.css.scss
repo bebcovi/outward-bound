@@ -12,12 +12,16 @@
 
   .container {
     @extend .cf;
+    position: relative;
     height: 100%;
   }
 
   $hover-color: white;
   $color: rgba($hover-color, .75);
-  a {
+
+  .nav a,
+  .nav_expander,
+  .lang a{
     @include color-link($color, $hover-color);
     height: $navbar-height - $border-width;
     padding: 0 $half-spacing-unit;
@@ -74,11 +78,10 @@
 
   .lang {
     margin-left: -8px;
+
     li { float: left; }
 
-    a {
-      padding: 5px 8px;
-    }
+    a { padding: 5px 8px; }
 
     .current {
       a {
@@ -100,7 +103,9 @@
 
     li { line-height: $link-height; }
 
-    a {
+    .nav a,
+    .nav_expander,
+    .lang a{
       height: $link-height;
       display: block;
       padding: 0;
@@ -117,6 +122,8 @@
       margin-bottom: $half-spacing-unit;
 
       li { line-height: 0; }
+
+      a { padding: 5px 8px; }
     }
   }
 
