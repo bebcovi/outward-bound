@@ -1,0 +1,9 @@
+- @title = t(".page_title")
+
+%h1= t(".page_title")
+
+%p= t(".body") + ":"
+
+%form.newsletter_form{action: "http://outwardbound.us4.list-manage1.com/subscribe/post?u=e81d8383e78650bb58e5d5a8d&amp;id=25d990753c", method: "post", name: "mc-embedded-subscribe-form", target: "_blank", novalidate: true}
+  %input.email{type: "email", name: "EMAIL", placeholder: "Email", autofocus: true}
+  %button.submit{type: "submit", name: "subscribe"}= t(".subscribe")

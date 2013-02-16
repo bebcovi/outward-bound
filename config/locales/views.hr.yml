@@ -47,3 +47,9 @@ hr:
   posts:
     index:
       page_title: "Vijesti"
+
+  newsletter:
+    index:
+      page_title: "Newsletter"
+      body: "Želite li primati obavijesti o našim programima i planovima? Upišite svoju email adresu i pretplatite se na naš newsletter"
+      subscribe: "Pretplatite se"

@@ -47,3 +47,9 @@ en:
   posts:
     index:
       page_title: "News"
+
+  newsletter:
+    index:
+      page_title: "Newsletter"
+      body: "Would you like to recieve updates about our courses and plans? Enter your email address and subscribe to our newsletter"
+      subscribe: "Subscribe"

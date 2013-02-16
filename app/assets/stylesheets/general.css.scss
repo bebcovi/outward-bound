@@ -25,6 +25,11 @@ body {
   padding-top: $base-spacing-unit;
   padding-bottom: $half-spacing-unit;
   min-height: 400px;
+
+  // make room for newsletter link
+  body.albums.index & {
+    padding-top: 1.5 * $base-spacing-unit;
+  }
 }
 
 h1,

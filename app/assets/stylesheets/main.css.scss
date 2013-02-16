@@ -7,6 +7,10 @@
     margin-bottom: $half-spacing-unit;
     border-bottom: 1px solid rgba(black, .25);
   }
+
+  > p:first-child {
+    margin-top: $half-spacing-unit;
+  }
 }
 
 .navigation_sidebar {
