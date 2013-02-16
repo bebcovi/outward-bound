@@ -17,11 +17,6 @@
     .site.container
       = render "layouts/#{controller.send(:sub_layout)}"
 
-    - if content_for? :highlight
-      .site_highlight
-        .container
-          = content_for :highlight
-
     = render "footer"
 
     = javascript_include_tag "application"
