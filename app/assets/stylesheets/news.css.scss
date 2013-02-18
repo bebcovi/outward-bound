@@ -3,7 +3,6 @@
   time {
     @include font-size($base-font-size - 2px);
     display: block;
-    margin-top: $half-spacing-unit;
     color: rgba(black, .5);
     @extend .icon-calendar;
 
@@ -23,6 +22,16 @@
     .icon-file-pdf {
       color: #F91D0A;
     }
+  }
+}
+
+time {
+  .post_short & {
+    margin-top: $half-spacing-unit;
+  }
+
+  .post_long & {
+    margin-bottom: $half-spacing-unit;
   }
 }
 

@@ -1,5 +1,6 @@
 .hero-unit {
   position: relative;
+  margin-bottom: $base-spacing-unit;
   padding-top: 2 * $base-spacing-unit;
   padding-bottom: $base-spacing-unit * 2;
   text-align: center;
@@ -11,16 +12,27 @@
 }
 
 .main_title {
-  @include font-size(62px);
+  @include font-size(40px);
+  margin-bottom: 0;
   text-shadow: 0 0 6px rgba(black, .75);
   font: {
     family: $alt-font-family;
     weight: $alt-bold;
   }
   margin-bottom: $half-spacing-unit;
+
+  @include media-query(lap-and-up) {
+    @include font-size(86px);
+    line-height: 3.5 * $base-spacing-unit;;
+  }
 }
 
 .lead {
-  @include font-size(26px);
-  font-family: $alt-font-family;
+  margin-bottom: $half-spacing-unit;
+  font-weight: $base-light;
+
+  @include media-query(lap-and-up) {
+    @include font-size(36px);
+    font-family: $alt-font-family;
+  }
 }

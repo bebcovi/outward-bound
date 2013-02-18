@@ -41,13 +41,24 @@ h2 {
 }
 
 h1 {
-  margin-bottom: 0;
+  @include font-size(38px);
+  margin-bottom: $half-spacing-unit;
   font-weight: $alt-regular;
+
+  @include media-query(lap-and-up) {
+    @include font-size($h1-size);
+    margin-bottom: 0;
+  }
 }
 
 h2 {
+  @include font-size(28px);
   font-weight: $alt-regular;
   margin-bottom: 0;
+
+  @include media-query(lap-and-up) {
+    @include font-size($h2-size);
+  }
 }
 
 a {

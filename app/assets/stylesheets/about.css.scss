@@ -11,9 +11,12 @@
 
       img {
         @extend %img-polaroid;
-        float: left;
-        margin-top: $half-spacing-unit/2;
-        margin-right: $half-spacing-unit;
+
+        @media (min-width: 480px) {
+          float: left;
+          margin-top: $half-spacing-unit/2;
+          margin-right: $half-spacing-unit;
+        }
 
         ~ p {
           overflow: hidden;

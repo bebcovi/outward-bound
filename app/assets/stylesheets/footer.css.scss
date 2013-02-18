@@ -11,6 +11,11 @@ html,
 
   h2 {
     margin-bottom: $half-spacing-unit;
+    border-bottom: 2px solid rgba(white, .15);
+
+    @include media-query(lap-and-up) {
+      border-bottom: none;
+    }
   }
 
   .sections {
