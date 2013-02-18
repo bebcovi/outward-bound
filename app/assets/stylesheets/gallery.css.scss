@@ -48,8 +48,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     box-shadow: 1px 1px 0 rgba(black, .25);
-    &:hover,
-    &:focus {
+    @include on-interact {
       .album_title {
         background: rgba($link-color, .75);
         color: white;
@@ -90,7 +89,7 @@
     color: transparent;
     background: transparent;
     &:after {
-      content: '\e015';
+      content: '\e017';
       position: absolute;
       z-index: 2;
       top: 0;
