@@ -3,7 +3,6 @@
 - content_for :hero_unit do
   %h1.main_title= t("title")
   %p.lead= t("subtitle")
-  = render "carousel"
   = link_to icon("play"), "http://youtu.be/vocg-ubKYFw", class: "play_video", title: t(".play_video"), target: "_blank"
 
 - if @announcements.any?
@@ -11,6 +10,8 @@
     = render @announcements
 
 = render "about"
+
+= render "carousel"
 
 .partners
   %ul

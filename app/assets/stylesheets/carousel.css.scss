@@ -4,11 +4,12 @@
   position: relative;
   overflow: hidden;
   height: $height + 2 * $border-width;
-  margin: 0 auto;
-  border: $border-width solid rgba(white, .1);
+  margin-bottom: $half-spacing-unit;
 
-  @include media-query(palm) {
-    margin: 0 0 - $site-padding;
+  @include media-query(lap-and-up) {
+    margin: 0 auto;
+    margin-top: 1.5 * $base-spacing-unit;
+    border: $border-width solid rgba($primary-color, .1);
   }
 
   .inner { background: white; }
