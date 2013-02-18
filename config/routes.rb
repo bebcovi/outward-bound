@@ -17,8 +17,6 @@ OutwardBound::Application.routes.draw do
       end
     end
 
-    get "newsletter", to: "newsletter#index"
-
     resources :posts
     resources :albums
     resources :newsletter
