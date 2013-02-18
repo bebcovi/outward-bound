@@ -3,7 +3,7 @@
   time {
     @include font-size($base-font-size - 2px);
     display: block;
-    margin-bottom: $half-spacing-unit;
+    margin-top: $half-spacing-unit;
     color: rgba(black, .5);
     @extend .icon-calendar;
 

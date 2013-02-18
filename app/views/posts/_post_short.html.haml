@@ -2,8 +2,8 @@
 
   %article.post_short
     %header
-      %h2= link_to post_presenter.title, post_presenter.post
       = time_tag post_presenter.created_at
+      %h2= link_to post_presenter.title, post_presenter.post
 
     .cover
       = link_to post_presenter.post do
