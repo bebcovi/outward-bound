@@ -2,8 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require "active_record/railtie"
 require "action_controller/railtie"
-require "action_mailer/railtie"
-require "rails/test_unit/railtie" if Rails.env.test?
+require "action_mailer/railtie" if Rails.env.production?
 
 require "sprockets/railtie"
 require "jquery-rails"
@@ -11,8 +10,8 @@ require "bourbon"
 require "fancybox2-rails"
 require "sass-rails"
 
-require "will_paginate"
-require "rails-i18n"
+require "will_paginate/railtie"
+require "rails_i18n/railtie" unless Rails.env.test?
 
 if Rails.env.development?
   require "pry-rails"

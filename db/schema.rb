@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(:version => 20130213223306) do
     t.integer  "album_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "slug"
   end
 
   create_table "tweets", :force => true do |t|

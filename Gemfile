@@ -1,9 +1,9 @@
 ruby "1.9.3"
 
-source :rubygems
+source "https://rubygems.org"
 
 gem "thin"
-gem "rails", "~> 3.2.0"
+gem "rails", ">= 3.2"
 gem "pg"
 
 group :assets do
@@ -35,17 +35,20 @@ gem "exception_notification"
 # Caching
 gem "dalli", ">= 2.6"
 
-group :development, :test do
-  gem "debugger"
-  gem "pry-rails"
-  gem "rspec-rails"
+group :development do
   gem "better_errors"
   gem "binding_of_caller"
+end
+
+group :development, :test do
+  gem "pry-rails"
+  gem "rspec-rails"
 end
 
 group :test do
   gem "capybara"
   gem "factory_girl"
   gem "activerecord-nulldb-adapter", ">= 0.2.3"
-  gem "database_cleaner"
+  gem "guard-rspec", ">= 2.4.1"
+  gem "rb-inotify", "~> 0.8.8"
 end

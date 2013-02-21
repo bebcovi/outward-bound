@@ -1,4 +1,4 @@
-module SpecHelpers
+module RSpecHelpers
   def self.included(base)
     base.extend(ClassMethods)
   end
