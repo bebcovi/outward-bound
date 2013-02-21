@@ -11,6 +11,7 @@ html,
 
   h2 {
     margin-bottom: $half-spacing-unit;
+    line-height: 1.5 * $base-line-height;
     border-bottom: 2px solid rgba(white, .15);
 
     @include media-query(lap-and-up) {

@@ -41,7 +41,7 @@ h2 {
 }
 
 h1 {
-  @include font-size(38px);
+  @include font-size($h2-size);
   margin-bottom: $half-spacing-unit;
   font-weight: $alt-regular;
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-  @include font-size(28px);
+  @include font-size($h3-size);
   font-weight: $alt-regular;
   margin-bottom: 0;
 
