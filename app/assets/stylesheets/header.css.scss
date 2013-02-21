@@ -41,10 +41,16 @@
     display: inline-block;
     height: auto;
     margin-right: $half-spacing-unit;
+    margin-bottom: $half-spacing-unit;
     padding: 7px $half-spacing-unit/2;
+    line-height: 0;
     border-left: 1px solid black;
     border-right: 1px solid black;
     background: white;
+
+    @include media-query(lap-and-up) {
+      margin-bottom: 0;
+    }
   }
 
   .nav_expander {

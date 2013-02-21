@@ -64,3 +64,5 @@ h2 {
 a {
   @include color-link($link-color, $link-hover);
 }
+
+img { vertical-align: middle; }

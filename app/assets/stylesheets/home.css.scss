@@ -36,12 +36,10 @@ body.home {
 
   .partners {
     text-align: center;
-    height: $base-spacing-unit * 4;
 
     ul {
       @extend %unstyled-list;
-      @include clearfix;
-      display: inline-block;
+      @extend .cf;
       margin-bottom: 0;
       font-family: $alt-font-family;
       font-size: $h4-size;
@@ -49,14 +47,16 @@ body.home {
     }
 
     li {
-      float: left;
       text-align: left;
+    }
+
+    .rh, a {
+      padding: $half-spacing-unit;
     }
 
     a {
       @include color-link(rgba(black, .35), $link-hover);
       display: inline-block;
-      padding: $base-spacing-unit;
     }
 
     .img,
@@ -67,22 +67,24 @@ body.home {
 
     .img {
       margin-right: $half-spacing-unit;
-      line-height: 0;
     }
 
     img { height: $base-spacing-unit * 2; }
 
-    @include media-query(palm) {
-      height: auto;
+    @include media-query(lap-and-up) {
+      height: $base-spacing-unit * 4;
 
       ul {
-        float: none;
-        display: block;
+        display: inline-block;
       }
 
-      li  { float: none; }
-      a   { padding: $half-spacing-unit; }
+      li {
+        float: left;
+      }
+
+      a, .rh {
+        padding: $base-spacing-unit;
+      }
     }
   }
-
 }
