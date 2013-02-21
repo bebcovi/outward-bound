@@ -8,8 +8,7 @@
 
   @include media-query(lap-and-up) {
     margin: 0 auto;
-    margin-top: 1.5 * $base-spacing-unit;
-    border: $border-width solid rgba($primary-color, .1);
+    border: $border-width solid rgba(white, .1);
   }
 
   .inner { background: white; }
