@@ -41,6 +41,7 @@
   .img,
   .name {
     @include font-size($h3-size);
+    line-height: 1.5 * $base-line-height;
     display: inline-block;
     vertical-align: middle;
   }
@@ -50,5 +51,13 @@
     margin-right: $half-spacing-unit;
     text-align: center;
     line-height: 0;
+  }
+
+  img {
+    margin-bottom: $half-spacing-unit;
+
+    @media (min-width: 540px) {
+      margin-bottom: 0;
+    }
   }
 }

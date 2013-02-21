@@ -35,8 +35,6 @@ body.home {
   }
 
   .partners {
-    text-align: center;
-
     ul {
       @extend %unstyled-list;
       @extend .cf;
@@ -46,42 +44,43 @@ body.home {
       line-height: $base-line-height;
     }
 
-    li {
-      text-align: left;
-    }
-
-    .rh, a {
-      padding: $half-spacing-unit;
-    }
-
-    a {
-      @include color-link(rgba(black, .35), $link-hover);
-      display: inline-block;
-    }
-
+    a,
     .img,
     .name {
       display: inline-block;
       vertical-align: middle;
     }
 
+    a, .rh {
+      padding: $half-spacing-unit;
+    }
+
+    a {
+      @include color-link(rgba(black, .35), $link-hover);
+    }
+
     .img {
       margin-right: $half-spacing-unit;
     }
 
-    img { height: $base-spacing-unit * 2; }
+    img {
+      height: 2 * $base-spacing-unit;
+    }
 
-    @include media-query(lap-and-up) {
-      height: $base-spacing-unit * 4;
+    .rh img {
+      height: 3 * $base-spacing-unit;
+    }
 
-      ul {
-        display: inline-block;
-      }
+    @media (min-width: 500px) {
+      text-align: center;
 
       li {
-        float: left;
+        display: inline-block;
+        text-align: left;
       }
+    }
 
+    @include media-query(lap-and-up) {
       a, .rh {
         padding: $base-spacing-unit;
       }
