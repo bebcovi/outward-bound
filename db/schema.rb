@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213223306) do
+ActiveRecord::Schema.define(:version => 20130223171543) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -60,6 +67,14 @@ ActiveRecord::Schema.define(:version => 20130213223306) do
     t.boolean  "applyable",      :default => true
   end
 
+  create_table "email_forwards", :force => true do |t|
+    t.string   "from"
+    t.string   "to"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "photos", :force => true do |t|
     t.string   "uid"
     t.string   "url"
@@ -95,6 +110,13 @@ ActiveRecord::Schema.define(:version => 20130213223306) do
     t.string   "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

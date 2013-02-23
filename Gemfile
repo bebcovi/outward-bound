@@ -21,6 +21,7 @@ gem "haml-rails"
 gem "redcarpet"
 gem "will_paginate"
 gem "rails-i18n"
+gem "simple_form"
 
 # External APIs
 gem "twitter"
@@ -28,6 +29,9 @@ gem "flickr-objects", ">= 0.2"
 
 # Database
 gem "friendly_id"
+gem "bcrypt-ruby", ">= 3"
+gem "active_attr"
+gem "squeel", ">= 1"
 
 # Other
 gem "exception_notification"
@@ -46,8 +50,8 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara"
-  gem "factory_girl"
+  gem "capybara", ">= 2"
+  gem "factory_girl_rails"
   gem "activerecord-nulldb-adapter", ">= 0.2.3"
   gem "guard-rspec", ">= 2.4.1"
   gem "rb-inotify", "~> 0.8.8"

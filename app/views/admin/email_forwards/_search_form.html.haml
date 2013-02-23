@@ -1,0 +1,4 @@
+= form_tag request.path, method: :get do
+  = search_field_tag :query, params[:query]
+  = button_tag "Filtriraj", name: nil
+= link_to "Očisti", request.path

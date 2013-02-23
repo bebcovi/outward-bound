@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module RSpecHelpers
   def self.included(base)
     base.extend(ClassMethods)
@@ -18,6 +20,13 @@ module RSpecHelpers
 
   def teardown_nulldb
     NullDB.restore
+  end
+
+  def login_as(user)
+    visit login_path
+    fill_in "Korisničko ime", with: user.username
+    fill_in "Lozinka",        with: user.password
+    click_on "Prijava"
   end
 
   module ClassMethods

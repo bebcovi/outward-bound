@@ -1,0 +1,22 @@
+hr: &admin
+  simple_form:
+    labels:
+      session:
+        username: "Korisničko ime"
+        password: "Lozinka"
+        remember_me: "Zapamti me"
+
+  activerecord:
+    errors:
+      models:
+        email_forward:
+          attributes:
+            to:
+              taken: "već postoji"
+
+  admin:
+    email_forwards:
+      index:
+        page_title: "Emailovi"
+en:
+  <<: *admin

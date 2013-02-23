@@ -53,8 +53,3 @@ module DNSimple
     end
   end
 end
-
-DNSimple.configure do |config|
-  config.email = ENV["DNSIMPLE_EMAIL"]
-  config.token = ENV["DNSIMPLE_TOKEN"]
-end

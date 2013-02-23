@@ -1,0 +1,21 @@
+!!!
+%html.no-js{lang: "hr"}
+  %head
+    %title Outward Bound &middot; #{@title}
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %link{rel: "authors", href: "humans.txt"}
+    = favicon_link_tag
+    = stylesheet_link_tag "application"
+    = render "application/javascript"
+    = csrf_meta_tags
+
+  %body{class: "#{params[:controller]} #{params[:action]}"}
+    = render partial: "application/navbar", locals: {navigation_pages: admin_navigation_pages}
+
+    .site.container
+      = render "layouts/#{controller.send(:sub_layout)}"
+
+    = render "application/footer"
+
+    = javascript_include_tag "application"

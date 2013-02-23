@@ -8,18 +8,24 @@ OutwardBound::Application.routes.draw do
       get "about/:action"
     end
 
-    get "contact", to: "contact#index"
-
-    resources :courses do
-      collection do
-        get "apply"
-        get "application"
-      end
-    end
-
+    resources :courses
     resources :posts
     resources :albums
-    resources :newsletter
+
+    controller :sessions do
+      get "login",  to: :new
+      post "login", to: :create
+    end
+
+    namespace :admin do
+      root to: "email_forwards#index"
+
+      resources :email_forwards do
+        collection {
+          put "update", to: :update_all
+        }
+      end
+    end
 
     controller :errors do
       match "404", to: :not_found

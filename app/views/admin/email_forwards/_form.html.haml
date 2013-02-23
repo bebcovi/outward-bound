@@ -1,0 +1,9 @@
+= simple_form_for @email_forward, url: [:admin, @email_forward] do |f|
+
+  = f.input :from, label: false do
+    = f.input :from, label: false, wrapper: false
+    @outwardbound.hr
+  →
+  = f.input :to, label: false
+
+  = f.button :button, "Dodaj"
