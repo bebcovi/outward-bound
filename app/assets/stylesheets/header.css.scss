@@ -156,6 +156,11 @@
     .lang {
       margin-left: 0;
       float: right;
+
+      a {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
   }
 }
