@@ -1,8 +1,10 @@
-= simple_form_for @email_forward, url: [:admin, @email_forward] do |f|
+= simple_form_for @email_forward, url: [:admin, @email_forward], defaults: {error: false, label: false} do |f|
+
+  = error_messages @email_forward
 
   %fieldset
-    = f.input :from, label: false, wrapper: false
+    = f.input :from, wrapper: false
     .suffix @outwardbound.hr
     .arrow= icon("arrow-right")
-    = f.input :to, label: false, wrapper: false
+    = f.input :to, wrapper: false
     = f.button :button, t(".add").prepend_icon("plus"), class: "btn-primary"

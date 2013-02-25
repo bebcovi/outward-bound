@@ -77,4 +77,10 @@ module ApplicationHelper
     presenter = klass.new(object, self)
     yield presenter
   end
+
+  def error_messages(record)
+    record.errors.inject(raw("")) do |result, (_, message)|
+      result += content_tag(:div, message, class: "error")
+    end
+  end
 end

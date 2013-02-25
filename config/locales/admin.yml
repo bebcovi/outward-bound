@@ -12,7 +12,10 @@ hr: &admin
         email_forward:
           attributes:
             to:
-              taken: "već postoji"
+              taken: "Ovaj par već postoji."
+              blank: "Polje ne smije biti prazno."
+            from:
+              blank: "Polje ne smije biti prazno."
 
   admin:
     email_forwards:

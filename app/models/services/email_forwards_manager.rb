@@ -7,11 +7,13 @@ class EmailForwardsManager
 
   def create(hash)
     EmailForward.create(hash) do |email_forward|
-      response = @client.post("email_forwards", email_forward: {
-        from: email_forward.from.chomp("@outwardbound.hr"),
-        to:   email_forward.to,
-      })
-      email_forward.uid = response["email_forward"]["id"]
+      if email_forward.valid?
+        response = @client.post("email_forwards", email_forward: {
+          from: email_forward.from.chomp("@outwardbound.hr"),
+          to:   email_forward.to,
+        })
+        email_forward.uid = response["email_forward"]["id"]
+      end
     end
   end
 
