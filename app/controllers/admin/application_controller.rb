@@ -8,8 +8,4 @@ class Admin::ApplicationController < ApplicationController
       redirect_to login_path
     end
   end
-
-  def logged_in?
-    cookies[:user_id].present? and User.exists?(cookies[:user_id])
-  end
 end

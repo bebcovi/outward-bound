@@ -32,4 +32,9 @@ class ApplicationController < ActionController::Base
   def current_language
     I18n.locale
   end
+
+  def logged_in?
+    cookies[:user_id].present? and User.exists?(cookies[:user_id])
+  end
+  helper_method :logged_in?
 end
