@@ -7,15 +7,15 @@ body.newsletter {
 }
 
 .newsletter_link {
-  $width: 170px;
   @include font-size($base-font-size - 2px);
   @include color-link(white);
   position: absolute;
   z-index: 10;
-  bottom: - ($base-spacing-unit + 1px + 1px);
+  bottom: - ($base-spacing-unit + 1px);
   right: 50%;
-  width: $width;
-  margin-right: - $width/2;
+  width: $newsletter-width;
+  height: $base-spacing-unit;
+  margin-right: - $newsletter-width/2;
   font-weight: $base-light;
   line-height: $base-line-height;
   text-align: center;
@@ -34,7 +34,7 @@ body.newsletter {
 
     body.home & {
       right: 50%;
-      margin-right: - $width/2;
+      margin-right: - $newsletter-width/2;
     }
   }
 

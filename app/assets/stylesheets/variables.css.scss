@@ -5,6 +5,7 @@ $navbar-height:         $base-spacing-unit * 2.5;
 $gutter-width:          24px;
 $site-padding:          $gutter-width / 2;
 $side-navigation-width: 220px;
+$newsletter-width:      170px;
 
 // type
 
@@ -35,6 +36,8 @@ $hero-background:   #535a7e;
 
 $link-color:        $secondary-color;
 $link-hover:        darken($secondary-color, 10%);
+
+$error-color:       shade(red, 20%);
 
 // Compass
 

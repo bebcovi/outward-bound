@@ -1,0 +1,13 @@
+.error,
+.alert {
+  padding: $half-spacing-unit/2;
+  color: $error-color;
+  border: 1px solid rgba($error-color, .5);
+  border-radius: 2px;
+  background-color: rgba($error-color, .1);
+}
+
+.alert {
+  margin-bottom: $half-spacing-unit;
+  max-width: $site-width - $newsletter-width - 70px;
+}

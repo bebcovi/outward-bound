@@ -3,6 +3,11 @@ form.new_email_forward {
     margin-bottom: 0;
   }
 
+  .error {
+    display: inline-block;
+    margin-bottom: $half-spacing-unit;
+  }
+
   div,
   [type="text"],
   [type="email"] {
@@ -11,11 +16,11 @@ form.new_email_forward {
   }
 
   #email_forward_from {
-    width: 200px;
+    width: 180px;
   }
 
   #email_forward_to {
-    width: 300px;
+    width: 280px;
   }
 
   .suffix {
