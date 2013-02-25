@@ -13,8 +13,9 @@ OutwardBound::Application.routes.draw do
     resources :albums
 
     controller :sessions do
-      get "login",  to: :new
-      post "login", to: :create
+      get    "login", to: :new
+      post   "login", to: :create
+      delete "logout", to: :destroy
     end
 
     namespace :admin do
