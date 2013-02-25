@@ -76,8 +76,8 @@ module ApplicationHelper
 
   def error_messages(record)
     messages = record.errors.map { |_, message| message }.uniq
-    messages.inject do |result, message|
-      result += content_tag(:div, message, class: "error")
+    messages.inject(raw("")) do |result, message|
+      result += content_tag(:div, class: "error") { message }
     end
   end
 end
