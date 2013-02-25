@@ -4,8 +4,10 @@
 
 = simple_form_for @session, url: login_path do |f|
 
-  = f.input :username
-  = f.input :password
-  = f.input :remember_me, as: :boolean
+  %fieldset
+    = f.input :username
+    = f.input :password
+    = f.input :remember_me, as: :boolean
 
-  = f.button :button, "Prijava"
+  .form_actions
+    = f.button :button, "Prijava", class: "btn-primary"

@@ -18,5 +18,11 @@ hr: &admin
     email_forwards:
       index:
         page_title: "Emailovi"
+        refresh: "Osviježi"
+        delete: "Izbriši"
+      search_form:
+        filter: "Filtriraj"
+        clear_filter: "Očisti filter"
+
 en:
   <<: *admin

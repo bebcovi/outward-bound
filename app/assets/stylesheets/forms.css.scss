@@ -1,7 +1,31 @@
+form {
+  margin-bottom: $base-spacing-unit;
+}
+
+fieldset {
+  margin-bottom: 0;
+  // padding: $half-spacing-unit;
+  border: none;
+  border-radius: 3px;
+  // background-color: rgba(black, .05);
+
+  > div {
+    margin-bottom: $half-spacing-unit;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 #{$all-text-inputs} {
+  @include font-size($base-font-size - 2px);
+  display: block;
+  width: 340px;
   cursor: text;
   padding: $half-spacing-unit/2;
+  line-height: $base-line-height;
   border: 1px solid rgba(black, .25);
+  border-radius: 2px;
   outline: none;
 
   &:focus {
@@ -9,10 +33,38 @@
   }
 }
 
-button {
-  padding: $half-spacing-unit/2 $half-spacing-unit;
-  border: 1px solid black;
+[type="checkbox"],
+[type="radio"] {
+  margin-right: 8px;
+}
+
+.form_actions {
+  margin-top: $base-spacing-unit;
+  margin-bottom: $half-spacing-unit;
+
+  * {
+    margin-right: $half-spacing-unit;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.btn,
+button,
+[type="submit"] {
+  @include btn-gradient(shade(white, 15%));
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $half-spacing-unit/2;
+  padding: $half-spacing-unit/2 $base-spacing-unit;
+  line-height: inherit;
+  border-radius: 3px;
   outline: none;
-  color: white;
-  background-color: $primary-color;
+}
+
+.btn-primary {
+  @extend .btn;
+  @include btn-gradient($primary-color);
 }

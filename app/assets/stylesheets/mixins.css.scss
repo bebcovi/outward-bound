@@ -12,6 +12,32 @@
   }
 }
 
+@mixin btn-gradient($color) {
+  $c2: $color;
+  $c1: lighten($c2, 15%);
+  @include linear-gradient($c1, $c2, $fallback: $c2);
+  border: 1px solid shade($color, 30%);
+  @if lightness($color) < 50% {
+    @include color-link(white);
+  }
+  @else {
+    @include color-link(rgba(black, .75), black);
+  }
+
+  @include on-interact {
+    $c2: lighten($c2, 5%);
+    $c1: lighten($c1, 5%);
+    @include linear-gradient($c1, $c2, $fallback: $c2);
+    text-decoration: none;
+  }
+
+  &:active {
+    $c2: lighten($color, 5%);
+    $c1: darken($color, 5%);
+    @include linear-gradient($c1, $c2, $fallback: $c2);
+  }
+}
+
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;

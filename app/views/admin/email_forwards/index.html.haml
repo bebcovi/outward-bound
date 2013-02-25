@@ -2,18 +2,18 @@
 
 = render "form"
 
-= button_to "refresh", admin_email_forwards_path, method: :put
-
 = render "search_form"
 
-%table
+= button_to t(".refresh"), admin_email_forwards_path, method: :put
+
+%table.email_forwards
   %tbody
     - @email_forwards.each do |from, tos|
       %tr
         %td= "#{from}@outwardbound.hr"
-        %td →
+        %td.arrow= icon("arrow-right")
         %td
           %ul
             = list_of tos do |email, email_forward|
-              = email
-              (#{button_to "delete", [:admin, email_forward], method: :delete})
+              %span.email= email
+              = button_to t(".delete"), [:admin, email_forward], method: :delete

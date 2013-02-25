@@ -1,9 +1,8 @@
 = simple_form_for @email_forward, url: [:admin, @email_forward] do |f|
 
-  = f.input :from, label: false do
+  %fieldset
     = f.input :from, label: false, wrapper: false
-    @outwardbound.hr
-  →
-  = f.input :to, label: false
-
-  = f.button :button, "Dodaj"
+    .suffix @outwardbound.hr
+    .arrow= icon("arrow-right")
+    = f.input :to, label: false, wrapper: false
+    = f.button :button, "Dodaj", class: "btn-primary"

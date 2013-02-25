@@ -138,6 +138,12 @@
 .icon-newspaper:before {
   content: "\e02a";
 }
+.icon-loop:before {
+  content: "\e02b";
+}
+.icon-arrow-right:before {
+  content: "\e02c";
+}
 
 .icon-file-doc {
   @extend .icon-file-word;
