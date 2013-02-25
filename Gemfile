@@ -17,6 +17,7 @@ end
 gem "jquery-rails"
 
 # Views
+gem "haml", "~> 3.0"
 gem "haml-rails"
 gem "redcarpet"
 gem "will_paginate"

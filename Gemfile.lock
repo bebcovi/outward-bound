@@ -91,8 +91,7 @@ GEM
     guard-rspec (2.4.1)
       guard (>= 1.1)
       rspec (~> 2.11)
-    haml (4.0.0)
-      tilt
+    haml (3.1.8)
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
       activesupport (>= 3.1, < 4.1)
@@ -228,6 +227,7 @@ DEPENDENCIES
   flickr-objects (>= 0.2)
   friendly_id
   guard-rspec (>= 2.4.1)
+  haml (~> 3.0)
   haml-rails
   jquery-rails
   pg
