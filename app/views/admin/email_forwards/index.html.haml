@@ -15,6 +15,6 @@
         %td.arrow= icon("arrow-right")
         %td
           %ul
-            = list_of tos do |email, email_forward|
-              %span.email= email
-              = link_to icon("remove"), [:admin, email_forward], method: :delete, title: t(".delete"), class: "delete"
+            = list_of tos do |to, email_forward|
+              %span.email= to
+              = delete_button icon("remove"), [:admin, email_forward], title: t(".delete"), confirm: "Jeste li sigurni da želite izbrisati \"#{from}@outwardbound.hr => #{to}\"?"

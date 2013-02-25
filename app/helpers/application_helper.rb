@@ -50,10 +50,6 @@ module ApplicationHelper
     current_language == :en
   end
 
-  def back_button(string, path, options = {})
-    link_to string.prepend_icon("chevron-left"), path, options = {}
-  end
-
   def TranslationHash(value)
     TranslationHash.new(value)
   end
