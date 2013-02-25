@@ -17,4 +17,5 @@
           %ul
             = list_of tos do |to, email_forward|
               %span.email= to
-              = delete_button icon("remove"), [:admin, email_forward], title: t(".delete"), confirm: "Jeste li sigurni da želite izbrisati \"#{from}@outwardbound.hr => #{to}\"?"
+              = delete_button icon("remove"), [:admin, email_forward], title: t(".delete"),
+                confirm: "Jeste li sigurni da želite izbrisati \"#{from}@outwardbound.hr => #{to}\"?"
