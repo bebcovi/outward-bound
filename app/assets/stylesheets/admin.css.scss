@@ -39,6 +39,10 @@ form.new_email_forward {
   }
 }
 
+div.refresh {
+  margin-bottom: $base-spacing-unit;
+}
+
 form.filter {
   [type="search"] {
     display: inline-block;
@@ -61,6 +65,7 @@ table.email_forwards {
 
   td {
     padding: $half-spacing-unit/2;
+    vertical-align: middle;
   }
 
   .arrow i {
@@ -84,19 +89,13 @@ table.email_forwards {
     }
   }
 
-  .email,
-  form {
+  .delete {
+    @include font-size(16px);
+    @include color-link(shade(white, 25%), shade(red, 20%));
     display: inline-block;
-    vertical-align: middle;
-  }
-
-  .email {
-    line-height: 1.5 * $base-line-height;
-  }
-
-  form {
     float: right;
     clear: right;
-    margin-bottom: 0;
+    text-decoration: none;
+    font-family: icons;
   }
 }

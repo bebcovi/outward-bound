@@ -20,6 +20,8 @@ hr: &admin
         page_title: "Emailovi"
         refresh: "Osviježi"
         delete: "Izbriši"
+      form:
+        add: "Dodaj"
       search_form:
         filter: "Filtriraj"
         clear_filter: "Očisti filter"

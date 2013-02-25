@@ -4,7 +4,8 @@
 
 = render "search_form"
 
-= link_to t(".refresh"), admin_email_forwards_path, method: :put, class: "btn"
+.refresh
+  = link_to t(".refresh").prepend_icon("loop"), admin_email_forwards_path, method: :put, class: "btn"
 
 %table.email_forwards
   %tbody
@@ -16,4 +17,4 @@
           %ul
             = list_of tos do |email, email_forward|
               %span.email= email
-              = link_to t(".delete"), [:admin, email_forward], method: :delete, class: "btn"
+              = link_to icon("remove"), [:admin, email_forward], method: :delete, title: t(".delete"), class: "delete"
