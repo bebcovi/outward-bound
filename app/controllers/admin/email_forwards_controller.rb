@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Admin::EmailForwardsController < Admin::ApplicationController
   def index
     @email_forwards = to_hash(email_forwards.search(params[:query]))
