@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130223171543) do
 
-  create_table "admins", :force => true do |t|
-    t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
     t.integer "event_id"
@@ -102,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20130223171543) do
     t.integer  "album_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
 
   create_table "tweets", :force => true do |t|
