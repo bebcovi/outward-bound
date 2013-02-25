@@ -1,3 +1,12 @@
+.log_out {
+  @include font-size($base-font-size);
+  display: inline-block;
+  height: $base-font-size;
+  position: absolute;
+  right: $site-padding + $half-spacing-unit;
+  bottom: - $base-spacing-unit;
+}
+
 form.new_email_forward {
   div {
     margin-bottom: 0;

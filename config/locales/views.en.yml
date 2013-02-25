@@ -1,5 +1,9 @@
 en:
 
+  application:
+    navbar:
+      log_out: "Odjava"
+
   home:
     index:
       page_title: "Home"

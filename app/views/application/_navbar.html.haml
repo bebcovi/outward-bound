@@ -19,3 +19,6 @@
         = link_to image_tag("lang/HR.png", size: "32x22"), locale: :hr
 
     = render "newsletter" unless admin?
+
+    - if logged_in?
+      = link_to t(".log_out").append_icon("exit"), logout_path, method: :delete, class: "log_out"
