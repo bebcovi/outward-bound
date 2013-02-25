@@ -15,6 +15,7 @@
     = render "hero_unit"
 
     .site.container
+      = render partial: "flash", locals: {flash: flash}
       = render "layouts/#{controller.send(:sub_layout)}"
 
     = render "footer"

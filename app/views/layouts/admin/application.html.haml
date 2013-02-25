@@ -14,6 +14,7 @@
     = render partial: "application/navbar", locals: {navigation_pages: admin_navigation_pages}
 
     .site.container
+      = render partial: "application/flash", locals: {flash: flash}
       = render "layouts/#{controller.send(:sub_layout)}"
 
     = render "application/footer"
