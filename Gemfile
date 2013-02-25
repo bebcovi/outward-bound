@@ -1,4 +1,4 @@
-ruby "1.9.3"
+ruby "2.0.0"
 
 source "https://rubygems.org"
 
@@ -37,7 +37,7 @@ gem "dalli", ">= 2.6"
 
 group :development do
   gem "better_errors"
-  gem "binding_of_caller"
+  gem "binding_of_caller", ">= 0.7.1"
 end
 
 group :development, :test do
