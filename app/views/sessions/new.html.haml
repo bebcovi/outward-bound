@@ -1,0 +1,13 @@
+- @title = "Prijava"
+
+%h1= @title
+
+= simple_form_for @session, url: login_path do |f|
+
+  %fieldset
+    = f.input :username
+    = f.input :password
+    = f.input :remember_me, as: :boolean
+
+  .form_actions
+    = f.button :button, "Prijava", class: "btn-primary"

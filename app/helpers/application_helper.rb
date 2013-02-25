@@ -11,7 +11,12 @@ module ApplicationHelper
       {controller: "about",   action: "index"},
     ]
 
-    pages.map { |page| Page.new(t("#{page[:controller]}.#{page[:action]}.page_title"), page) }
+    pages.map { |page|
+      Page.new(
+        t("#{page[:controller]}.#{page[:action]}.page_title"),
+        page
+      )
+    }
   end
 
   def icon(name)

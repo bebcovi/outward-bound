@@ -12,6 +12,8 @@ require "sass-rails"
 
 require "will_paginate/railtie"
 require "rails_i18n/railtie" unless Rails.env.test?
+require "simple_form"
+require "squeel"
 
 if Rails.env.development?
   require "pry-rails"
@@ -28,7 +30,7 @@ module OutwardBound
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += ["#{config.root}/lib"]
+    config.autoload_paths += ["#{config.root}/lib", "#{config.root}/app/models/services"]
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.

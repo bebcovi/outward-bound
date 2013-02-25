@@ -3,7 +3,7 @@
     .sections
       %section.contact
         %h2= t("misc.contact")
-        = render "contact"
+        = render "application/contact"
 
       %section.social
         %h2= t("misc.social")
@@ -24,6 +24,6 @@
       %section.tweets
         %h2= t("misc.tweets")
         %ol
-          = render @tweets
+          = render collection: @tweets, partial: "tweets/tweet"
 
     %p.copyright #{Date.today.year} © Outward Bound

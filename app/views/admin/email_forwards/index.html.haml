@@ -1,0 +1,20 @@
+- @title = t(".page_title")
+
+= render "form"
+
+= render "search_form"
+
+.refresh
+  = link_to t(".refresh").prepend_icon("loop"), admin_email_forwards_path, method: :put, class: "btn"
+
+%table.email_forwards
+  %tbody
+    - @email_forwards.each do |from, tos|
+      %tr
+        %td= "#{from}@outwardbound.hr"
+        %td.arrow= icon("arrow-right")
+        %td
+          %ul
+            = list_of tos do |email, email_forward|
+              %span.email= email
+              = link_to icon("remove"), [:admin, email_forward], method: :delete, title: t(".delete"), class: "delete"

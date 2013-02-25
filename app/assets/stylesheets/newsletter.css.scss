@@ -12,7 +12,7 @@ body.newsletter {
   @include color-link(white);
   position: absolute;
   z-index: 10;
-  bottom: - ($base-spacing-unit + 2px);
+  bottom: - ($base-spacing-unit + 1px + 1px);
   right: 50%;
   width: $width;
   margin-right: - $width/2;

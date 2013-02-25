@@ -18,4 +18,4 @@
       %li{class: croatian? && "current"}
         = link_to image_tag("lang/HR.png", size: "32x22"), locale: :hr
 
-    = render "newsletter/link"
+    = render "newsletter" unless admin?
