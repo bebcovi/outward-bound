@@ -10,7 +10,7 @@ class Admin::EmailForwardsController < Admin::ApplicationController
     @email_forward = email_forwards.create(params[:email_forward])
 
     if @email_forward.valid?
-      flash[:notice] = "\"#{@email_forward.from}@outwardbound.hr => #{@email_forward.to}\" je uspješno dodan."
+      flash[:notice] = "Par \"#{@email_forward.from}@outwardbound.hr #{"".prepend_icon("arrow-right")} #{@email_forward.to}\" je uspješno dodan.".html_safe
       redirect_to action: :index
     else
       @email_forwards = to_hash(email_forwards.all)
@@ -21,7 +21,7 @@ class Admin::EmailForwardsController < Admin::ApplicationController
   def destroy
     if EmailForward.exists?(params[:id])
       email_forward = email_forwards.destroy(params[:id])
-      flash[:notice] = "\"#{email_forward.from}@outwardbound.hr => #{email_forward.to}\" je uspješno izbrisan."
+      flash[:notice] = "Par \"#{email_forward.from}@outwardbound.hr #{"".prepend_icon("arrow-right")} #{email_forward.to}\" je uspješno izbrisan.".html_safe
     end
     redirect_to action: :index
   end

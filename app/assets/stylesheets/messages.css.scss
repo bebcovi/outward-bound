@@ -2,6 +2,11 @@
 .error {
   padding: $half-spacing-unit/2;
   border-radius: 2px;
+
+  i {
+    position: relative;
+    top: 2px;
+  }
 }
 
 .flash {
