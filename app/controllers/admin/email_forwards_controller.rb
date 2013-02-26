@@ -20,7 +20,7 @@ class Admin::EmailForwardsController < Admin::ApplicationController
 
   def destroy
     if EmailForward.exists?(params[:id])
-      email_forward = email_forwards.find(params[:id]).destroy
+      email_forward = email_forwards.destroy(params[:id])
       flash[:notice] = "\"#{email_forward.from}@outwardbound.hr => #{email_forward.to}\" je uspješno izbrisan."
     end
     redirect_to action: :index
