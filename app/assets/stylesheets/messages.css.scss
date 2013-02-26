@@ -1,13 +1,23 @@
-.error,
-.alert {
+.flash,
+.error {
   padding: $half-spacing-unit/2;
-  color: $error-color;
-  border: 1px solid rgba($error-color, .5);
   border-radius: 2px;
-  background-color: rgba($error-color, .1);
 }
 
-.alert {
-  margin-bottom: $half-spacing-unit;
+.flash {
   max-width: $site-width - $newsletter-width - 70px;
+  margin-bottom: $half-spacing-unit;
+}
+
+.flash.notice {
+  color: $success-color;
+  border: 1px solid rgba($success-color, .5);
+  background-color: rgba($success-color, .1);
+}
+
+.flash.alert,
+.error {
+  color: $error-color;
+  border: 1px solid rgba($error-color, .5);
+  background-color: rgba($error-color, .1);
 }
