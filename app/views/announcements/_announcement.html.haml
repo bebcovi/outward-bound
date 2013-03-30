@@ -1,4 +1,4 @@
-%li
-  = icon("bullhorn")
+%article
   = link_to announcement.post do
-    = announcement.content
+    = image_tag announcement.post.cover_photo.url(:small)
+    = markdown announcement.content

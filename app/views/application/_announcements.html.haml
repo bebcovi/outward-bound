@@ -1,0 +1,8 @@
+- if @announcements.any? and params[:controller] == "home"
+  .announcements
+    .container
+      %h2
+        = icon("bullhorn")
+        Najave
+
+      = render @announcements

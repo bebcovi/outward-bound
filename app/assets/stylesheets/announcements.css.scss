@@ -1,35 +1,54 @@
 .announcements {
   @extend %unstyled-list;
   margin-bottom: $half-spacing-unit;
+  padding-top: 1.5 * $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
+  background-color: rgba(black, .15);
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgba(black, .25);
+
+  article {
+    margin-bottom: $half-spacing-unit;
+  }
 
   li {
     position: relative;
     margin-bottom: $half-spacing-unit;
   }
 
-  i {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: block;
-    width: $base-spacing-unit;
-    font-size: 32px;
-    line-height: 2 * $base-spacing-unit;
-    color: $link-color;
-  }
-
   a {
+    @extend .cf;
+    @include color-link(rgba(black, .7), rgba(black, .9));
     display: block;
-    margin-left: 1.75 * $base-spacing-unit;
     padding: $half-spacing-unit;
     text-decoration: none;
-    border: 1px solid tint($link-color, 50%);
     border-radius: 3px;
-    background-color: tint($link-color, 95%);
+    background-color: rgba(white, .8);
+    border: 1px solid white;
+    box-shadow: rgba(black, .25) 0 0 5px;
+
+    img { opacity: 0.8; }
+
     @include on-interact {
-      border-color: shade($link-color, 20%);
-      background-color: tint($link-color, 90%);
+      background-color: white;
+
+      img { opacity: 1; }
     }
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: $half-spacing-unit;
+
+    @media (min-width: 480px) {
+      float: left;
+      max-width: 50%;
+      margin-right: $half-spacing-unit;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    overflow: hidden;
   }
 }
