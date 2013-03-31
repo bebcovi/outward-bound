@@ -6,6 +6,16 @@
   = render "carousel"
   = link_to icon("play"), "http://youtu.be/vocg-ubKYFw", class: "play_video", title: t(".play_video"), target: "_blank"
 
+- content_for :announcements do
+  - if @announcements.any?
+    .announcements
+      .container
+        %h2
+          = icon("bullhorn")
+          Najave
+
+        = render @announcements
+
 = render "about"
 
 .partners

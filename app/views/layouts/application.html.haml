@@ -13,7 +13,7 @@
   %body{class: "#{params[:controller]} #{params[:action]}"}
     = render "navbar"
     = render "hero_unit"
-    = render "announcements"
+    = content_for :announcements if content_for? :announcements
 
     .site.container
       = render partial: "flash", locals: {flash: flash}
