@@ -77,3 +77,11 @@ hr:
         page_title: "Nova objava"
       edit:
         page_title: "Izmjena objave"
+
+en:
+  simple_form:
+    labels:
+      session:
+        username: "Korisničko ime"
+        password: "Lozinka"
+        remember_me: "Zapamti me"
