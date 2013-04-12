@@ -1,11 +1,24 @@
 .flash,
 .error {
+  display: inline-block;
   padding: $half-spacing-unit/2;
   border-radius: 2px;
 
   i {
     position: relative;
     top: 2px;
+  }
+}
+
+span.error {
+  .input.string &,
+  .input.text & {
+    position: relative;
+    z-index: -1;
+    margin-top: -1px;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
