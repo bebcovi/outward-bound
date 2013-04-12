@@ -21,7 +21,7 @@
 
     = f.simple_fields_for :attachments do |builder|
       = render "attachment_fields", f: builder
-    %p= link_to_add_fields "Dodaj prilog", f, :attachments
+    %p= link_to_add_fields "Dodaj prilog".prepend_icon("plus"), f, :attachments
 
     .form_actions
       = f.button :button, "Spremi", class: "btn-primary"

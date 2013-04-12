@@ -1,6 +1,24 @@
-# do ($ = jQuery) ->
+do ($ = jQuery) ->
 
-#   $form                 = $("form.new_post")
+  $form                 = $("form.new_post")
+
+  $form.on "click", ".add_fields", (event) ->
+    event.preventDefault()
+
+    $this = $(@)
+    time  = new Date().getTime()
+    re    = new RegExp $this.data("id"), "g"
+
+    $this.before $this.data("fields").replace(re, time)
+
+  $form.on "click", ".remove_fields", (event) ->
+    event.preventDefault()
+
+    $this = $(@)
+
+    $this.prev("[type=hidden]").val("1")
+    $this.closest(".attachment").hide()
+
 #   fileSystemSupported   = window.File and window.FileReader and window.FileList and window.Blob
 
 #   class NotAnImageException
