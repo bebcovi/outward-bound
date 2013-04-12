@@ -8,9 +8,16 @@ class Post < ActiveRecord::Base
   translates :title, :body
 
   scope :available_in, ->(language) { where("#{table_name}.title_#{language} IS NOT NULL AND #{table_name}.body_#{language} IS NOT NULL") }
-  scope :descending,   -> { order("#{table_name}.created_at DESC") }
+  scope :descending,   ->           { order("#{table_name}.created_at DESC") }
+
+  validates :title_hr, presence: true
+  validates :body_hr, presence: true
 
   def available_in?(language)
     send("title_#{language}?") && send("body_#{language}?")
+  end
+
+  def to_s
+    title
   end
 end

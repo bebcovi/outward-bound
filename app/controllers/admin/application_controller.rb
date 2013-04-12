@@ -1,5 +1,16 @@
 class Admin::ApplicationController < ApplicationController
   before_filter :authenticate
+  before_filter :adjust_view_path
+
+  protected
+
+  def set_locale
+    I18n.locale = :hr
+  end
+
+  def default_url_options(options = {})
+    {}
+  end
 
   private
 
@@ -7,5 +18,9 @@ class Admin::ApplicationController < ApplicationController
     if not logged_in?
       redirect_to login_path
     end
+  end
+
+  def adjust_view_path
+    prepend_view_path "app/views/admin"
   end
 end

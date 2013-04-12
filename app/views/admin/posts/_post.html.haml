@@ -1,0 +1,15 @@
+- present(post) do |post_presenter|
+
+  %article
+    %header
+      = time_tag post_presenter.created_at
+      %h2= post_presenter.title
+
+    .cover
+      = image_tag post_presenter.cover_photo.url(:small), alt: post_presenter.cover_photo.title
+
+    .inner
+      = post_presenter.short_body
+
+      = link_to "Izmjeni", edit_admin_post_path(post)
+      = link_to "Izbriši", admin_post_path(post), method: :delete, confirm: "Jeste li sigurni?"

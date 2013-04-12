@@ -1,21 +1,34 @@
-hr: &admin
+hr:
   simple_form:
     labels:
       session:
         username: "Korisničko ime"
         password: "Lozinka"
         remember_me: "Zapamti me"
+      post:
+        title_en: "Naslov"
+        body_en: "Sadržaj"
+        title_hr: "Naslov"
+        body_hr: "Sadržaj"
+      announcement:
+        post: "Vijest"
+        content_en: "Sadržaj"
+        content_hr: "Sadržaj"
+        expires_on: "Istječe"
 
   activerecord:
     errors:
+      messages:
+        blank: "Ne smije biti prazno."
       models:
         email_forward:
           attributes:
             to:
               taken: "Ovaj par već postoji."
-              blank: "Polje ne smije biti prazno."
-            from:
-              blank: "Polje ne smije biti prazno."
+        announcement:
+          attributes:
+            post_id:
+              blank: "Obavijest mora biti vezana uz neku vijest."
 
   admin:
     email_forwards:
@@ -29,5 +42,18 @@ hr: &admin
         filter: "Filtriraj"
         clear_filter: "Očisti filter"
 
-en:
-  <<: *admin
+    posts:
+      index:
+        page_title: "Vijesti"
+      new:
+        page_title: "Nova vijest"
+      edit:
+        page_title: "Izmjena vijesti"
+
+    announcements:
+      index:
+        page_title: "Objave"
+      new:
+        page_title: "Nova objava"
+      edit:
+        page_title: "Izmjena objave"

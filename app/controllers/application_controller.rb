@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     super(*args)
   end
 
-  private
+  protected
 
   def default_url_options(options = {})
     {locale: params[:locale]}

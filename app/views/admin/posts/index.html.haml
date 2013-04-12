@@ -1,0 +1,12 @@
+- @title = "Vijesti"
+
+%h1= @title
+
+= link_to "Dodaj", new_admin_post_path
+
+%ol
+  - @posts.each do |post|
+    = content_tag_for :li, post do
+      = render post
+
+= will_paginate @posts

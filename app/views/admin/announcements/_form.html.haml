@@ -1,0 +1,11 @@
+= simple_form_for @announcement, url: [:admin, @announcement] do |f|
+
+  = f.association :post, collection: Post.descending, prompt: "Izaberi..."
+
+  = f.input :content_hr
+  = f.input :content_en
+
+  = f.input :expires_on
+
+  = f.button :button, "Spremi"
+  = link_to "Odustani", admin_announcements_path

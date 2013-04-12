@@ -1,0 +1,6 @@
+%article
+  = image_tag announcement.post.cover_photo.url(:small)
+  = markdown announcement.content
+
+  = link_to "Izmijeni", edit_admin_announcement_path(announcement)
+  = link_to "Izbriši", admin_announcement_path(announcement), method: :delete, confirm: "Jeste li sigurni?"

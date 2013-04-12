@@ -18,19 +18,22 @@ OutwardBound::Application.routes.draw do
       delete "logout", to: :destroy
     end
 
-    namespace :admin do
-      root to: "email_forwards#index"
-
-      resources :email_forwards do
-        collection {
-          put "update", to: :update_all
-        }
-      end
-    end
-
     controller :errors do
       match "404", to: :not_found
       match "500", to: :internal_server_error
     end
+  end
+
+  namespace :admin do
+    root to: "email_forwards#index"
+
+    resources :email_forwards do
+      collection do
+        put "update", to: :update_all
+      end
+    end
+
+    resources :posts
+    resources :announcements
   end
 end

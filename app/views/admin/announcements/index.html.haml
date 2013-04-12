@@ -1,0 +1,10 @@
+- @title = t(".page_title")
+
+%h1= @title
+
+= link_to "Dodaj", new_admin_announcement_path
+
+%ol
+  - @announcements.each do |announcement|
+    = content_tag_for :li, announcement do
+      = render announcement
