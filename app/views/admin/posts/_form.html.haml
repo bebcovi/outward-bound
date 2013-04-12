@@ -1,10 +1,12 @@
 = simple_form_for @post, url: [:admin, @post] do |f|
 
-  = f.input :title_hr
-  = f.input :body_hr
+  %fieldset
 
-  = f.input :title_en
-  = f.input :body_en
+    = f.input :title_hr
+    = f.input :body_hr
 
-  = f.button :button, "Spremi"
-  = link_to "Odustani", admin_posts_path
+    = f.input :title_en
+    = f.input :body_en
+
+    = f.button :button, "Spremi", class: "btn-primary"
+    = link_to "Odustani", admin_posts_path, class: "btn"

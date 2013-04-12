@@ -37,5 +37,8 @@
 @import "gallery";
 @import "about";
 
-@import "admin";
+@import "admin/email_forwards";
+@import "admin/posts";
+@import "admin/announcements";
+
 @import "messages";

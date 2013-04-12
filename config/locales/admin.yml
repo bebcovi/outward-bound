@@ -15,6 +15,10 @@ hr:
         content_en: "Sadržaj"
         content_hr: "Sadržaj"
         expires_on: "Istječe"
+    placeholders:
+      announcement:
+        content_hr: "Ograničenje je 255 znakova."
+        content_en: "Ograničenje je 255 znakova."
 
   activerecord:
     errors:

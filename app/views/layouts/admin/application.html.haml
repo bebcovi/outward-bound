@@ -10,7 +10,7 @@
     = render "application/javascript"
     = csrf_meta_tags
 
-  %body{class: "#{params[:controller]} #{params[:action]}"}
+  %body{class: "#{params[:controller].split("/").join(" ")} #{params[:action]}"}
     = render partial: "application/navbar", locals: {navigation_pages: admin_navigation_pages}
 
     .site.container

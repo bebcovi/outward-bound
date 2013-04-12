@@ -1,0 +1,20 @@
+.admin {
+  .new-announcement {
+    margin: $half-spacing-unit 0;
+  }
+
+  .announcements-list {
+    padding: $base-spacing-unit;
+    padding-bottom: $half-spacing-unit;
+    border: 1px solid shade(white, 30%);
+
+    article {
+      @extend .cf;
+      padding: $half-spacing-unit;
+      background-color: white;
+      box-shadow: rgba(black, .25) 0 0 5px;
+      border: 1px solid white;
+      border-radius: 3px;
+    }
+  }
+}

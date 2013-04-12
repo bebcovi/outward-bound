@@ -1,4 +1,4 @@
-.announcements {
+.announcements-list {
   @extend %unstyled-list;
   margin-bottom: $half-spacing-unit;
   padding-top: 1.5 * $base-spacing-unit;
@@ -9,30 +9,25 @@
 
   article {
     margin-bottom: $half-spacing-unit;
-  }
 
-  li {
-    position: relative;
-    margin-bottom: $half-spacing-unit;
-  }
+    > a:first-child {
+      @extend .cf;
+      @include color-link(rgba(black, .7), rgba(black, .9));
+      display: block;
+      padding: $half-spacing-unit;
+      text-decoration: none;
+      border-radius: 3px;
+      background-color: rgba(white, .8);
+      border: 1px solid white;
+      box-shadow: rgba(black, .25) 0 0 5px;
 
-  a {
-    @extend .cf;
-    @include color-link(rgba(black, .7), rgba(black, .9));
-    display: block;
-    padding: $half-spacing-unit;
-    text-decoration: none;
-    border-radius: 3px;
-    background-color: rgba(white, .8);
-    border: 1px solid white;
-    box-shadow: rgba(black, .25) 0 0 5px;
+      img { opacity: 0.8; }
 
-    img { opacity: 0.8; }
+      @include on-interact {
+        background-color: white;
 
-    @include on-interact {
-      background-color: white;
-
-      img { opacity: 1; }
+        img { opacity: 1; }
+      }
     }
   }
 

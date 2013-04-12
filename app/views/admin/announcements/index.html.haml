@@ -2,9 +2,9 @@
 
 %h1= @title
 
-= link_to "Dodaj", new_admin_announcement_path
+.new-announcement= link_to "Dodaj najavu".prepend_icon("plus"), new_admin_announcement_path, class: "btn-primary"
 
-%ol
+%ol.announcements-list
   - @announcements.each do |announcement|
     = content_tag_for :li, announcement do
       = render announcement
