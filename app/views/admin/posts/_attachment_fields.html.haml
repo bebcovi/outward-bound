@@ -1,6 +1,4 @@
 .attachment
-  = content_tag :div, f.error(:base), class: "flash"
-
   .fields
     %div
       = f.input :url_hr, as: :string, wrapper: false
@@ -12,3 +10,5 @@
 
   = f.hidden_field :_destroy
   = link_to icon("cancel-circle"), "#", class: "remove_fields"
+
+.attachment-error= f.error(:base)

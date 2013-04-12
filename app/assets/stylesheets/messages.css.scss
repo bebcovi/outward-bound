@@ -12,7 +12,8 @@
 
 span.error {
   .input.string &,
-  .input.text & {
+  .input.text &,
+  .attachment-error & {
     position: relative;
     z-index: -1;
     margin-top: -1px;

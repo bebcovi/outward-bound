@@ -13,7 +13,7 @@
     %h2 Slike
 
     = f.simple_fields_for :photos_attributes do |builder|
-      = content_tag :div, f.error(:photos_attributes), class: "flash" if f.error(:photos_attributes)
+      = content_tag :div, f.error(:photos_attributes) if f.error(:photos_attributes)
       = builder.input :cover, as: :file
       = builder.input :other, as: :file, input_html: {multiple: true}
 

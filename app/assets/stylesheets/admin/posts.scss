@@ -11,7 +11,7 @@ form {
   &.new_post,
   &.edit_post {
     .attachment {
-      margin-bottom: $half-spacing-unit;
+      margin-bottom: 0;
       padding: $half-spacing-unit;
       border: 1px solid shade(white, 20%);
       background-color: shade(white, 2%);
@@ -39,6 +39,10 @@ form {
 
         i { font-size: 16px; }
       }
+    }
+
+    .attachment-error {
+      margin-bottom: $half-spacing-unit;
     }
   }
 }
