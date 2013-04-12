@@ -48,7 +48,7 @@ hr:
         attachment:
           attributes:
             base:
-              blank: "URL ne smije biti prazan."
+              blank: "Ne mogu oba URL-a biti prazna."
 
   admin:
     email_forwards:
