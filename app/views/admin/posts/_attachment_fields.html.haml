@@ -1,0 +1,10 @@
+= content_tag :span, f.error(:base), class: "error" if f.error(:base)
+%div
+  = f.input :url_hr, as: :string, wrapper: false
+  = f.input :name_hr, wrapper: false
+%div
+  = f.input :url_en, as: :string, wrapper: false
+  = f.input :name_en, wrapper: false
+
+= f.hidden_field :_destroy
+= link_to "x", "#", class: "remove_fields"

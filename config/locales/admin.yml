@@ -13,6 +13,11 @@ hr:
         photos:
           cover: "Naslovna slika"
           other: "Ostale slike"
+        attachments:
+          url_hr: "URL"
+          url_en: "URL"
+          name_hr: "Naziv"
+          name_en: "Naziv"
       announcement:
         post: "Vijest"
         content_en: "Sadržaj"
@@ -22,6 +27,10 @@ hr:
       announcement:
         content_hr: "Ograničenje je 255 znakova."
         content_en: "Ograničenje je 255 znakova."
+    hints:
+      post:
+        photos:
+          other: "Ovdje se mogu označiti više datoteka (koristeći CTRL ili SHIFT, kao i inače)."
 
   activerecord:
     errors:
@@ -36,6 +45,10 @@ hr:
           attributes:
             post_id:
               blank: "Obavijest mora biti vezana uz neku vijest."
+        attachment:
+          attributes:
+            base:
+              blank: "URL ne smije biti prazan."
 
   admin:
     email_forwards:

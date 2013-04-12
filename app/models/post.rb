@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   has_many :attachments, dependent: :destroy
   has_many :announcements, dependent: :destroy
 
+  accepts_nested_attributes_for :attachments, allow_destroy: true
+
   translates :title, :body
 
   scope :available_in, ->(locale) {

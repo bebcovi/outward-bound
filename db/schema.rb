@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411121712) do
+ActiveRecord::Schema.define(:version => 20130412202748) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(:version => 20130411121712) do
   create_table "attachments", :force => true do |t|
     t.string   "name_hr"
     t.string   "name_en"
-    t.string   "filename_hr"
-    t.string   "filename_en"
     t.integer  "post_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "url_hr"
+    t.text     "url_en"
   end
 
   create_table "courses", :force => true do |t|
