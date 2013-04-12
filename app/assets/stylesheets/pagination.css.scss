@@ -2,6 +2,8 @@
   $color: $blue;
   $color-hover: shade($blue, 15%);
   background: rgba(black, .05);
+  margin-top: 2 * $base-spacing-unit;
+  margin-bottom: $half-spacing-unit;
   padding: $half-spacing-unit;
   border: 1px solid rgba(black, .2);
   border-radius: 3px;
