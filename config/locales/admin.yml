@@ -10,6 +10,9 @@ hr:
         body_en: "Sadržaj"
         title_hr: "Naslov"
         body_hr: "Sadržaj"
+        photos:
+          cover: "Naslovna slika"
+          other: "Ostale slike"
       announcement:
         post: "Vijest"
         content_en: "Sadržaj"

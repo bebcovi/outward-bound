@@ -15,6 +15,7 @@ class Admin::AnnouncementsController < Admin::ApplicationController
 
     if @announcement.valid?
       @announcement.save
+      expire_page home_path
       redirect_to admin_announcements_path, notice: "Objava je uspješno stvorena."
     else
       render :new
@@ -31,6 +32,7 @@ class Admin::AnnouncementsController < Admin::ApplicationController
 
     if @announcement.valid?
       @announcement.save
+      expire_page home_path
       redirect_to admin_announcements_path, notice: "Objava je uspješno izmijenjena."
     else
       render :edit
@@ -39,6 +41,7 @@ class Admin::AnnouncementsController < Admin::ApplicationController
 
   def destroy
     Announcement.destroy(params[:id]) if Announcement.exists?(params[:id])
+    expire_page home_path
     redirect_to admin_announcements_path, notice: "Objava je uspješno izbrisana."
   end
 end

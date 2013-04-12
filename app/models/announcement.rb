@@ -3,9 +3,9 @@ class Announcement < ActiveRecord::Base
 
   translates :content
 
-  scope :available_in, ->(language) { where("#{table_name}.content_#{language} IS NOT NULL") }
-  scope :not_expired,  ->           { where("#{table_name}.expires_on >= ?", Date.today) }
-  scope :descending,   ->           { order("#{table_name}.created_at DESC") }
+  scope :available_in, ->(locale) { where{(announcements.send("content_#{locale}") != nil) & (announcements.send("content_#{locale}") != "")} }
+  scope :not_expired,  ->         { where{expires_on >= Date.today} }
+  scope :descending,   ->         { order{created_at.desc} }
 
   validates :content_hr, presence: true
   validates :post_id, presence: true

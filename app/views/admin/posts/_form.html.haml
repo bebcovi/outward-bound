@@ -8,5 +8,10 @@
     = f.input :title_en
     = f.input :body_en
 
+    = content_tag :span, f.error(:photos_attributes), class: "error" if f.error(:photos_attributes)
+    = f.simple_fields_for :photos_attributes do |p|
+      = p.input :cover, as: :file
+      = p.input :other, as: :file, input_html: {multiple: true}
+
     = f.button :button, "Spremi", class: "btn-primary"
     = link_to "Odustani", admin_posts_path, class: "btn"
