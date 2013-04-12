@@ -9,5 +9,6 @@
 
     = f.input :expires_on
 
-    = f.button :button, "Spremi", class: "btn-primary"
-    = link_to "Odustani", admin_announcements_path, class: "btn"
+    .form_actions
+      = f.button :button, "Spremi", class: "btn-primary"
+      = link_to "Odustani", admin_announcements_path, class: "btn"

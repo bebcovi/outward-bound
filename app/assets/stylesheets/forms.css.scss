@@ -1,6 +1,12 @@
 form {
   margin-bottom: $base-spacing-unit;
   padding: 0 2px;
+
+  .hint {
+    @include font-size($base-font-size - 2px);
+    display: block;
+    color: tint(black, 50%);
+  }
 }
 
 fieldset {
