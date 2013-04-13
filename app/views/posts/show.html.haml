@@ -2,7 +2,10 @@
 
 = back_button t("misc.news"), posts_path
 
-- if @post.available_in?(current_language)
+- if @post.available_in?(current_locale)
+
   = render @post
+
 - else
+
   = render "not_available"

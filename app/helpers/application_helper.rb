@@ -38,16 +38,12 @@ module ApplicationHelper
       .html_safe
   end
 
-  def current_language
-    I18n.locale
-  end
-
   def croatian?
-    current_language == :hr
+    current_locale == :hr
   end
 
   def english?
-    current_language == :en
+    current_locale == :en
   end
 
   def TranslationHash(value)

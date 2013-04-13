@@ -30,9 +30,10 @@ class ApplicationController < ActionController::Base
     "application"
   end
 
-  def current_language
+  def current_locale
     I18n.locale
   end
+  helper_method :current_locale
 
   def use_locale_cookie
     if cookies[:locale].blank? or params[:locale].present?
