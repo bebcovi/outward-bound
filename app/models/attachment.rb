@@ -12,7 +12,7 @@ class Attachment < ActiveRecord::Base
   def extension
     uri = URI.parse(url)
     uri.query = nil
-    File.extname(uri).delete(".")
+    File.extname(uri.to_s).delete(".")
   end
 
   private
