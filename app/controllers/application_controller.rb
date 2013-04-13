@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
   before_filter :set_mentions
+  before_filter :use_locale_cookie
 
   def render(*args)
     options = args.extract_options!.dup
@@ -31,6 +32,14 @@ class ApplicationController < ActionController::Base
 
   def current_language
     I18n.locale
+  end
+
+  def use_locale_cookie
+    if cookies[:locale].blank? or params[:locale].present?
+      cookies.permanent[:locale] = I18n.locale
+    else
+      redirect_to locale: cookies[:locale]
+    end
   end
 
   def logged_in?
