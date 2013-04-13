@@ -72,11 +72,11 @@ hr:
 
     announcements:
       index:
-        page_title: "Objave"
+        page_title: "Najave"
       new:
-        page_title: "Nova objava"
+        page_title: "Nova najava"
       edit:
-        page_title: "Izmjena objave"
+        page_title: "Izmjena najave"
 
 en:
   simple_form:
