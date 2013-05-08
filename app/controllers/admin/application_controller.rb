@@ -1,6 +1,7 @@
 class Admin::ApplicationController < ApplicationController
   before_filter :authenticate
   before_filter :adjust_view_path
+  skip_before_filter :use_locale_cookie
 
   protected
 
