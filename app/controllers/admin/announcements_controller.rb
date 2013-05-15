@@ -39,7 +39,6 @@ class Admin::AnnouncementsController < Admin::ApplicationController
 
   def destroy
     Announcement.destroy(params[:id]) if Announcement.exists?(params[:id])
-    expire_page home_path
     redirect_to admin_announcements_path, notice: "Objava je uspješno izbrisana."
   end
 end
