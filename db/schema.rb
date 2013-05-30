@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412202748) do
+ActiveRecord::Schema.define(:version => 20130530114953) do
 
   create_table "albums", :force => true do |t|
     t.integer "cover_photo_id"
@@ -36,28 +36,6 @@ ActiveRecord::Schema.define(:version => 20130412202748) do
     t.datetime "updated_at", :null => false
     t.text     "url_hr"
     t.text     "url_en"
-  end
-
-  create_table "courses", :force => true do |t|
-    t.string   "name_en"
-    t.string   "name_hr"
-    t.string   "slug"
-    t.text     "description_en"
-    t.text     "description_hr"
-    t.string   "dates_en"
-    t.string   "dates_hr"
-    t.string   "contact_en"
-    t.string   "contact_hr"
-    t.string   "price_en"
-    t.string   "price_hr"
-    t.integer  "min_people"
-    t.integer  "max_people"
-    t.integer  "album_id"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-    t.string   "category"
-    t.integer  "duration"
-    t.boolean  "applyable",      :default => true
   end
 
   create_table "email_forwards", :force => true do |t|

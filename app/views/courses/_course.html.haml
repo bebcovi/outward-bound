@@ -11,31 +11,31 @@
 = markdown course.description
 
 .course_info
-  - if course.dates?
+  - if course.dates
     .dates
       = icon("calendar")
       .name= t(".dates")
       .value= markdown course.dates
 
-  - if course.duration?
+  - if course.duration
     .duration
       = icon("clock")
       .name= t(".duration")
       .value= days course.duration
 
-  - if course.min_people? or course.max_people?
+  - if course.min_people or course.max_people
     .people
       = icon("users")
       .name= t(".people")
       .value= "#{course.min_people}–#{course.max_people} #{t("misc.people")}"
 
-  - if course.price?
+  - if course.price
     .price
       = icon("coins")
       .name= t(".price")
       .value= money course.price
 
-- if course.contact?
+- if course.contact
   .course_contact
     = icon("mail")
     = t(".contact") + ":"

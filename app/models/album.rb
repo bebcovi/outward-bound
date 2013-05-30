@@ -4,6 +4,11 @@ class Album < ActiveRecord::Base
   belongs_to :event, polymorphic: true
 
   def name
-    event.name
+    if event_type == "Course"
+      course = COURSES.find { |course| course.album_id == id }
+      course.name
+    else
+      event.name
+    end
   end
 end

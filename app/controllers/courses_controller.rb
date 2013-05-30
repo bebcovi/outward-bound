@@ -6,16 +6,18 @@ class CoursesController < ApplicationController
   caches_action :index
 
   def show
-    @course = Course.find(params[:id])
+    @course = COURSES.find { |course| course.to_param == params[:id] }
   end
   caches_action :show
 
   private
 
   def set_courses
-    @courses = ["one", "eight", "other"].inject({}) do |hash, category|
-      hash.update(category => Course.where(category: category))
-    end
+    @courses = {
+      "one"   => COURSES.select(&:one_day?),
+      "eight" => COURSES.select(&:eight_days?),
+      "other" => COURSES.select(&:other?),
+    }
   end
 
   def sub_layout
