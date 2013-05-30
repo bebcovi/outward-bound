@@ -20,8 +20,6 @@ Although Outward Bound courses are meant to be physically and mentally challengi
 
 ## Technical details
 
-Za smještaj se koristi bivak (zaklon, poput šatora) u prirodnom okruženju mediteranskih otoka (borova šuma). Obroke osiguravamo mi, a pripremaju ih polaznici tijekom programa.
-
 For accommodation, a bivouac is used (shelter, like a tent), in the natural surroundings of mediterranian islands (pine forrest). The meals are provided by us, and prepared by the group during the course.
 
 ## Expenses
