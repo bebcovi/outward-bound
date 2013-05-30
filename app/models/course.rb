@@ -1,11 +1,11 @@
 require Rails.root.join("config/initializers/translation")
 
 Course = Struct.new(:name_en, :name_hr, :description_en, :description_hr,
-  :dates_en, :dates_hr, :contact_en, :contact_hr, :price, :min_people,
-  :max_people, :category, :duration, :applyable, :album_id) do
+  :dates_en, :dates_hr, :contact_en, :contact_hr, :price_en, :price_hr,
+  :min_people, :max_people, :category, :duration, :applyable, :album_id) do
 
   extend TranslationHelpers
-  translates :name, :description, :dates, :contact
+  translates :name, :description, :dates, :contact, :price
 
   delegate :cover_photo, to: :album
 
