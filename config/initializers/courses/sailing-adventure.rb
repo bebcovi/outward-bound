@@ -25,13 +25,13 @@ Polaznicima nudimo priliku da provedu osam nezaboravih dana ploveći na brodu Be
 
 OB pomorska škola nudi ovo uzbudljivo putovanje te iskustvo jedrenja na ovom prekrasnom tradicionalnom plovilu, iskustvo koje rijetki u svijetu imaju prilike doživjeti.
   EOS
-  dates_en: "",
-  dates_hr: "",
+  dates_en: "* 17.8--24.8.2013.",
+  dates_hr: "* 17.8--24.8.2013.",
   contact_en: "contact@outwardbound.hr",
   contact_hr: "kontakt@outwardbound.hr",
-  min_people: 10,
-  max_people: 16,
-  price: nil,
+  price: 770,
+  min_people: 0,
+  max_people: 12,
   album_id: 34,
   category: "eight",
   duration: 8,
