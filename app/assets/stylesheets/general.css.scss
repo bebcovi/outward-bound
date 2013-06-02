@@ -22,12 +22,12 @@ body {
 }
 
 .site {
-  padding-top: 1.5 * $base-spacing-unit;
+  padding-top: 2 * $base-spacing-unit;
   padding-bottom: $half-spacing-unit;
   min-height: 400px;
 
   @include media-query(lap-and-up) {
-    padding-top: $base-spacing-unit;
+    padding-top: 2 * $base-spacing-unit;
     // make room for newsletter link
     body.albums.index & {
       padding-top: 1.5 * $base-spacing-unit;

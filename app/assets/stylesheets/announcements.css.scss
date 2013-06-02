@@ -1,6 +1,5 @@
 .announcements-list {
   @extend %unstyled-list;
-  margin-bottom: $half-spacing-unit;
   padding-top: 1.5 * $base-spacing-unit;
   padding-bottom: $base-spacing-unit;
   background-color: rgba(black, .15);
