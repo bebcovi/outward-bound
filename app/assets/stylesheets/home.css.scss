@@ -38,7 +38,7 @@ body.home {
     ul {
       @extend %unstyled-list;
       @extend .cf;
-      margin-bottom: 0;
+      margin-bottom: $hsu;
       font-family: $alt-font-family;
       font-size: $h4-size;
       line-height: $base-line-height;
@@ -51,12 +51,9 @@ body.home {
       vertical-align: middle;
     }
 
-    a, .rh {
-      padding: $half-spacing-unit;
-    }
-
     a {
       @include color-link(rgba(black, .35), $link-hover);
+      padding: $half-spacing-unit;
     }
 
     .img {
@@ -65,10 +62,6 @@ body.home {
 
     img {
       height: 2 * $base-spacing-unit;
-    }
-
-    .rh img {
-      height: 3 * $base-spacing-unit;
     }
 
     @media (min-width: 500px) {
@@ -81,7 +74,7 @@ body.home {
     }
 
     @include media-query(lap-and-up) {
-      a, .rh {
+      a {
         padding: $base-spacing-unit;
       }
     }
