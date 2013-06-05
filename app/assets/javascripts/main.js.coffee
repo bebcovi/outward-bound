@@ -21,7 +21,7 @@ do ($ = jQuery) ->
         width: 960 - 2*12 - 2*12
 
       auto:
-        timeoutDuration: 5000
+        timeoutDuration: 3000
 
       prev: ".prev"
       next: ".next"
