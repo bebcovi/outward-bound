@@ -47,7 +47,7 @@
     height: $height;
     padding: 0 $base-spacing-unit;
     font-size: 42px;
-    line-height: $height - $base-spacing-unit;
+    line-height: $height;
     text-shadow: 0 0 5px rgba(black, .75);
     &:hover,
     &:focus {
