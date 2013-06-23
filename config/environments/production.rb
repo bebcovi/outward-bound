@@ -64,7 +64,8 @@ OutwardBound::Application.configure do
 
   config.middleware.use ExceptionNotifier,
     sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
-    exception_recipients: ["janko.marohnic@gmail.com"]
+    exception_recipients: ["janko.marohnic@gmail.com"],
+    ignore_exceptions: []
 
   config.action_mailer.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
