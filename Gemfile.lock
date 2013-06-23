@@ -63,7 +63,6 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     daemons (1.1.9)
-    dalli (2.6.4)
     debug_inspector (0.0.2)
     diff-lcs (1.2.4)
     erubis (2.7.0)
@@ -203,7 +202,6 @@ DEPENDENCIES
   bourbon
   capybara (>= 2.1)
   coffee-rails
-  dalli (>= 2.6)
   exception_notification
   factory_girl
   fancybox2-rails

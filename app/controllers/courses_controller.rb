@@ -3,12 +3,10 @@ class CoursesController < ApplicationController
 
   def index
   end
-  caches_action :index
 
   def show
     @course = COURSES.find { |course| course.to_param == params[:id] }
   end
-  caches_action :show
 
   private
 
