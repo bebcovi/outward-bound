@@ -1,12 +1,18 @@
 require "haml"
+require_relative "../../lib/markdown_rendering"
 
-module Haml::Filters::Markdown
-  include Haml::Filters::Base
-  lazy_require "redcarpet"
+module Haml
+  module Filters
 
-  include MarkdownRendering
+    remove_filter "Markdown"
 
-  def render(text)
-    markdown(text)
+    module Markdown
+      include Base
+
+      def render(text)
+        MarkdownRendering.markdown(text)
+      end
+    end
+
   end
 end

@@ -3,11 +3,11 @@ ruby "2.0.0"
 source "https://rubygems.org"
 
 gem "thin"
-gem "rails", ">= 3.2"
+gem "rails", "4.0.0.rc2"
 gem "pg"
 
 group :assets do
-  gem "sass-rails"
+  gem "sass-rails", "4.0.0.rc2"
   gem "bourbon"
   gem "fancybox2-rails"
   gem "coffee-rails"
@@ -19,41 +19,36 @@ gem "jquery-rails"
 # Views
 gem "haml", ">= 4"
 gem "haml-rails"
-gem "redcarpet"
-gem "will_paginate"
+gem "redcarpet", ">= 2"
+gem "will_paginate", ">= 3"
+gem "simple_form", "3.0.0.rc"
+gem "dalli", ">= 2.6"
 gem "rails-i18n"
-gem "simple_form"
+
+# Database
+gem "friendly_id"
+gem "active_attr", ">= 0.8.1"
+gem "squeel", github: "ernie/squeel"
 
 # External APIs
 gem "twitter"
 gem "flickr-objects", ">= 0.2"
 
-# Database
-gem "friendly_id"
-gem "bcrypt-ruby", ">= 3"
-gem "active_attr"
-gem "squeel", ">= 1"
-
-# Other
+# Errors
 gem "exception_notification"
 
-# Caching
-gem "dalli", ">= 2.6"
-
 group :development do
+  gem "pry-rails"
   gem "better_errors"
   gem "binding_of_caller", ">= 0.7.1"
 end
 
 group :development, :test do
-  gem "pry-rails"
-  gem "rspec-rails"
 end
 
 group :test do
-  gem "capybara", ">= 2"
-  gem "factory_girl_rails"
-  gem "activerecord-nulldb-adapter", ">= 0.2.3"
-  gem "guard-rspec", ">= 2.4.1"
-  gem "rb-inotify", "~> 0.8.8"
+  gem "rspec-rails"
+  gem "capybara", ">= 2.1"
+  gem "factory_girl"
+  gem "pry"
 end
