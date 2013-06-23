@@ -29,7 +29,6 @@ gem "active_attr", ">= 0.8.1"
 gem "squeel", github: "ernie/squeel"
 
 # External APIs
-gem "twitter"
 gem "flickr-objects", ">= 0.2"
 
 # Errors

@@ -182,10 +182,6 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
-    twitter (4.8.1)
-      faraday (~> 0.8, < 0.10)
-      multi_json (~> 1.0)
-      simple_oauth (~> 0.2)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -227,7 +223,6 @@ DEPENDENCIES
   simple_form (= 3.0.0.rc)
   squeel!
   thin
-  twitter
   uglifier
   unicorn
   will_paginate (>= 3)
