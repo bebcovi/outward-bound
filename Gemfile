@@ -2,7 +2,6 @@ ruby "2.0.0"
 
 source "https://rubygems.org"
 
-gem "thin"
 gem "rails", "4.0.0.rc2"
 gem "pg"
 
@@ -40,9 +39,11 @@ group :development do
   gem "pry-rails"
   gem "better_errors"
   gem "binding_of_caller", ">= 0.7.1"
+  gem "thin"
 end
 
-group :development, :test do
+group :production do
+  gem "unicorn"
 end
 
 group :test do
