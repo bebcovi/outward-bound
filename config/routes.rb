@@ -24,17 +24,7 @@ OutwardBound::Application.routes.draw do
   end
 
   namespace :admin do
-    root to: "email_forwards#index"
-
-    resources :email_forwards, except: :show do
-      member do
-        get "", to: :destroy
-      end
-
-      collection do
-        put "update", to: :update_all
-      end
-    end
+    root to: "posts#index"
 
     resources :posts
     resources :announcements

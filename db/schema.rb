@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130623160731) do
+ActiveRecord::Schema.define(version: 20130623161718) do
 
   create_table "albums", force: true do |t|
     t.integer "cover_photo_id"
@@ -36,14 +36,6 @@ ActiveRecord::Schema.define(version: 20130623160731) do
     t.datetime "updated_at", null: false
     t.text     "url_hr"
     t.text     "url_en"
-  end
-
-  create_table "email_forwards", force: true do |t|
-    t.string   "from"
-    t.string   "to"
-    t.string   "uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: true do |t|

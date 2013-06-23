@@ -2,7 +2,6 @@ module Admin::ApplicationHelper
   Page = Struct.new(:title, :path)
   def admin_navigation_pages
     pages = [
-      {controller: "admin/email_forwards", action: "index"},
       {controller: "admin/posts",          action: "index"},
       {controller: "admin/announcements",  action: "index"},
     ]
