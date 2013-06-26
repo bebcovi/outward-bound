@@ -2,18 +2,17 @@ ruby "2.0.0"
 
 source "https://rubygems.org"
 
-gem "rails", "4.0.0.rc2"
+gem "rails", "~> 4.0"
 gem "pg"
 
 group :assets do
-  gem "sass-rails", "4.0.0.rc2"
+  gem "sass-rails", "~> 4.0"
   gem "bourbon"
   gem "fancybox2-rails"
-  gem "coffee-rails"
+  gem "coffee-rails", "~> 4.0"
   gem "uglifier"
+  gem "jquery-rails"
 end
-
-gem "jquery-rails"
 
 # Views
 gem "haml", ">= 4"
