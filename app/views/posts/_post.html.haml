@@ -1,21 +1,19 @@
-- present(post) do |post_presenter|
+%article.post_long
+  %header
+    %h1= post.title
+    = time_tag post.created_at
 
-  %article.post_long
-    %header
-      %h1= post_presenter.title
-      = time_tag post_presenter.created_at
+  = post.body
 
-    = post_presenter.body
+  - if post.has_attachments?
+    %h2= t("misc.attachments")
+    %ul.attachments
+      = list_of post.attachments do |attachment|
+        = link_to attachment.name.prepend_icon("file-#{attachment.extension.chomp("x")}"), attachment.url
 
-    - if post_presenter.has_attachments?
-      %h2= t("misc.attachments")
-      %ul.attachments
-        = list_of post_presenter.attachments do |attachment|
-          = link_to attachment.name.prepend_icon("file-#{attachment.extension.chomp("x")}"), attachment.url
-
-    - if post_presenter.has_photos?
-      %h2= t("misc.photos")
-      %ul.photos
-        - post_presenter.photos.each do |photo|
-          %li{class: (photo == post_presenter.cover_photo && "cover")}
-            = link_to image_tag(photo.url(:medium), alt: photo.title), photo.url(:large)
+  - if post.has_photos?
+    %h2= t("misc.photos")
+    %ul.photos
+      - post.photos.each do |photo|
+        %li{class: (photo == post.cover_photo && "cover")}
+          = link_to image_tag(photo.url(:medium), alt: photo.title), photo.url(:large)

@@ -4,7 +4,7 @@
   %h1.main_title= t("title")
   %p.lead= t("subtitle")
   = render "carousel"
-  = link_to icon("play"), "http://youtu.be/vocg-ubKYFw", class: "play_video", title: t(".play_video"), target: "_blank"
+  = render "intro_video"
 
 - content_for :announcements do
   - if @announcements.any?

@@ -1,4 +1,4 @@
-do ($ = jQuery) ->
+jQuery ->
 
   if $("html").outerWidth() > $(".container").first().outerWidth()
     $(".album_photos").find("a")

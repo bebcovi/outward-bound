@@ -1,15 +1,13 @@
-- present(post) do |post_presenter|
+%article.post_short
+  %header
+    = time_tag post.created_at
+    %h2= link_to post.title, post_path(post)
 
-  %article.post_short
-    %header
-      = time_tag post_presenter.created_at
-      %h2= link_to post_presenter.title, post_presenter.post
+  .cover
+    = link_to post_path(post) do
+      = image_tag post.cover_photo.url(:small), alt: post.cover_photo.title
 
-    .cover
-      = link_to post_presenter.post do
-        = image_tag post_presenter.cover_photo.url(:small), alt: post_presenter.cover_photo.title
+  .inner
+    = post.short_body
 
-    .inner
-      = post_presenter.short_body
-
-      = link_to t("misc.more"), post_presenter.post, class: "more"
+    = link_to t("misc.more"), post_path(post), class: "more"

@@ -1,4 +1,4 @@
-do ($ = jQuery) ->
+jQuery ->
 
   # jQuery
 

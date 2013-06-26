@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 module RSpecHelpers
   def self.included(base)
     base.extend(ClassMethods)

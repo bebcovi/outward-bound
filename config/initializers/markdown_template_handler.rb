@@ -1,3 +1,4 @@
+require Rails.root.join("lib/markdown_rendering")
 include MarkdownRendering
 
 handler = ->(template) {

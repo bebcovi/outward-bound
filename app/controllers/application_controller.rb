@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :set_locale
-  before_filter :set_mentions
-  before_filter :use_locale_cookie
+  before_filter :load_twitter_mentions, unless: :admin?
+  before_filter :use_locale_cookie, unless: :admin?
 
   def render(*args)
     options = args.extract_options!.dup
@@ -15,15 +15,15 @@ class ApplicationController < ActionController::Base
   protected
 
   def default_url_options(options = {})
-    {locale: params[:locale]}
+    {locale: params[:locale]}.merge(options)
   end
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
 
-  def set_mentions
-    @tweets = Tweet.recent
+  def load_twitter_mentions
+    @tweets = Tweet.all
   end
 
   def sub_layout
@@ -43,8 +43,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def logged_in?
-    cookies[:user_id].present? and User.exists?(cookies[:user_id])
+  def admin?
+    self.class.name =~ /admin/i
   end
-  helper_method :logged_in?
 end

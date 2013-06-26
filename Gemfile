@@ -12,6 +12,9 @@ group :assets do
   gem "coffee-rails", "~> 4.0"
   gem "uglifier"
   gem "jquery-rails"
+  gem "turbolinks", ">= 1.2"
+  gem "jquery-turbolinks", ">= 1"
+  gem "ejs"
 end
 
 # Views
@@ -19,19 +22,28 @@ gem "haml", ">= 4"
 gem "haml-rails"
 gem "redcarpet", ">= 2"
 gem "will_paginate", ">= 3"
-gem "simple_form", "3.0.0.rc"
+gem "simple_form", ">= 3.0.0.rc"
 gem "rails-i18n"
+gem "draper"
 
 # Database
 gem "friendly_id"
 gem "active_attr", ">= 0.8.1"
 gem "squeel", github: "ernie/squeel"
+gem "carrierwave", ">= 0.8"
+gem "rmagick"
 
-# External APIs
-gem "flickr-objects", ">= 0.2"
+# ActiveAdmin
+gem "activeadmin",         github: "gregbell/active_admin",        branch: "rails4"
+gem "inherited_resources", github: "josevalim/inherited_resources"
+gem "ransack",             github: "ernie/ransack",                branch: "rails-4"
+gem "formtastic",          github: "justinfrench/formtastic",      branch: "rails4beta"
 
 # Errors
 gem "exception_notification"
+
+# Security
+gem "dotenv", ">= 0.7"
 
 group :development do
   gem "pry-rails"
@@ -40,13 +52,13 @@ group :development do
   gem "thin"
 end
 
-group :production do
-  gem "unicorn"
-end
-
 group :test do
   gem "rspec-rails"
   gem "capybara", ">= 2.1"
   gem "factory_girl"
   gem "pry"
+end
+
+group :production do
+  gem "unicorn"
 end

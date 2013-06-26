@@ -1,4 +1,3 @@
-# encoding: utf-8
 require "flickr-objects"
 
 class ChangePhotoOnEasterProgram < ActiveRecord::Migration

@@ -3,6 +3,7 @@ hr:
   home:
     index:
       page_title: "Početna"
+    intro_video:
       play_video: "Pogledaj video"
 
   albums:
@@ -33,9 +34,6 @@ hr:
     apply:
       page_title: "Prijava"
     navigation:
-      one: "Jednodnevni programi"
-      eight: "Klasični 8-dnevni programi"
-      other: "Ostali programi"
     course:
       dates: "Termini"
       duration: "Trajanje"

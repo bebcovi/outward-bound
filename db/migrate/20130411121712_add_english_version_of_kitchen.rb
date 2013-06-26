@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class AddEnglishVersionOfKitchen < ActiveRecord::Migration
   def up
     begin

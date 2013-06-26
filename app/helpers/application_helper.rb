@@ -1,3 +1,5 @@
+require Rails.root.join("lib/markdown_rendering")
+
 module ApplicationHelper
   include MarkdownRendering
 

@@ -33,7 +33,7 @@ class AboutController < ApplicationController
   end
 
   def set_about_pages
-    @about_pages = %w[index what international instructors support safety locations partners]
+    @about_pages = self.class.actions
   end
 
   def set_title

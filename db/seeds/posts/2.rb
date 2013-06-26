@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 Post.create!(
   title_hr: "Zimski program na Krku (3--9.1.2013.)",
   body_hr: <<-EOS.strip_heredoc,

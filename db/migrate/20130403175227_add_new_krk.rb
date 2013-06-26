@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class AddNewKrk < ActiveRecord::Migration
   def up
     album = AlbumCreator.new("72157633159509022").create

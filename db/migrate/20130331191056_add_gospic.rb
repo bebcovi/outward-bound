@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class AddGospic < ActiveRecord::Migration
   def up
     album = AlbumCreator.new("72157633130514839").create

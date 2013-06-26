@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 Post.create!(
   title_hr: "Inside Out -- Razmjena mladih (Velebit--Rab, 25.9--6.10.2012.)",
   body_hr: <<-EOS.strip_heredoc,

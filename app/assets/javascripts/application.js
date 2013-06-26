@@ -11,9 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//
 //= require fancybox
 //= require jquery.carouFredSel-6.1.0
 //
-//= require_tree .
+//= require_directory .
+//= stub ./active_admin
+//
+//= require turbolinks

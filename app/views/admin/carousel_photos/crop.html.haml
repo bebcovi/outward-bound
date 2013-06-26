@@ -1,0 +1,8 @@
+= simple_form_for [:admin, @carousel_photo], defaults: {wrapper: false} do |f|
+
+  = image_tag @carousel_photo.file_url, width: 940, id: "cropbox"
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit, "Crop"
+      %li.cancel= link_to "Cancel", [:admin, CarouselPhoto]

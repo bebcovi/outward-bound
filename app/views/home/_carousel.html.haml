@@ -1,10 +1,8 @@
 .carousel
   .inner
-    %div{class: "item active"}
-      = image_tag "carousel/0.jpg", size: "940x300"
-    - 8.times do |i|
-      %div{class: "item"}
-        = image_tag "carousel/#{i + 1}.jpg", size: "940x300"
+    - @carousel_photos.each_with_index do |carousel_photo, idx|
+      %div{class: "item #{"active" if idx == 0}"}
+        = image_tag carousel_photo.photo_url(:display), size: "940x300"
 
   = link_to content_tag(:span, ""), "#", class: "prev"
   = link_to content_tag(:span, ""), "#", class: "next"

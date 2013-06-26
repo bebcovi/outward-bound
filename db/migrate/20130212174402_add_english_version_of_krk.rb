@@ -1,4 +1,3 @@
-# encoding: utf-8
 require "flickr-objects"
 require "active_support/core_ext/string/strip"
 

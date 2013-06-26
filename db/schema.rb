@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130623161718) do
+ActiveRecord::Schema.define(version: 20130628204649) do
 
   create_table "albums", force: true do |t|
     t.integer "cover_photo_id"
-    t.integer "event_id"
-    t.string  "event_type"
+    t.string  "name_en"
+    t.string  "name_hr"
   end
 
   create_table "announcements", force: true do |t|
@@ -26,33 +26,81 @@ ActiveRecord::Schema.define(version: 20130623161718) do
     t.date     "expires_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "hr"
+    t.boolean  "en"
   end
 
   create_table "attachments", force: true do |t|
     t.string   "name_hr"
     t.string   "name_en"
     t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text     "url_hr"
-    t.text     "url_en"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "document_id"
   end
 
+  create_table "carousel_photos", force: true do |t|
+    t.string   "photo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "crop_x"
+    t.float    "crop_y"
+    t.float    "crop_w"
+    t.float    "crop_h"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string  "name_en"
+    t.string  "name_hr"
+    t.integer "position"
+    t.boolean "hr"
+    t.boolean "en"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string  "name_en"
+    t.string  "name_hr"
+    t.text    "description_en"
+    t.text    "description_hr"
+    t.string  "dates_en"
+    t.string  "dates_hr"
+    t.string  "contact_en"
+    t.string  "contact_hr"
+    t.string  "price_en"
+    t.string  "price_hr"
+    t.string  "capacity_en"
+    t.string  "capacity_hr"
+    t.integer "category_id"
+    t.string  "duration_hr"
+    t.string  "duration_en"
+    t.integer "application_form_id"
+    t.integer "album_id"
+    t.boolean "hr"
+    t.boolean "en"
+  end
+
+  create_table "documents", force: true do |t|
+    t.string   "file_en"
+    t.string   "file_hr"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 40
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
   create_table "photos", force: true do |t|
-    t.string   "uid"
-    t.string   "url"
-    t.string   "large_url"
-    t.string   "title"
-    t.string   "stored_on"
+    t.string   "file"
     t.integer  "album_id"
-    t.string   "small_url"
-    t.string   "medium_url"
-    t.integer  "large_width"
-    t.integer  "large_height"
-    t.integer  "medium_width"
-    t.integer  "medium_height"
-    t.integer  "small_width"
-    t.integer  "small_height"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,7 +113,8 @@ ActiveRecord::Schema.define(version: 20130623161718) do
     t.integer  "album_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "slug"
+    t.boolean  "hr"
+    t.boolean  "en"
   end
 
   create_table "tweets", force: true do |t|
@@ -73,13 +122,15 @@ ActiveRecord::Schema.define(version: 20130623161718) do
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "locale"
   end
 
   create_table "users", force: true do |t|
     t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "encrypted_password"
+    t.datetime "remember_created_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

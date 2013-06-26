@@ -2,18 +2,18 @@ require File.expand_path('../boot', __FILE__)
 
 require "active_record/railtie"
 require "action_controller/railtie"
-require "action_mailer/railtie" if Rails.env.production?
-
+require "action_mailer/railtie"
 require "sprockets/railtie"
-require "jquery-rails"
-require "bourbon"
-require "fancybox2-rails"
-require "sass-rails"
+
+Bundler.require(:assets)
 
 require "will_paginate/railtie"
-require "rails_i18n/railtie" unless Rails.env.test?
+require "rails_i18n/railtie"
 require "simple_form"
-require "squeel"
+require "carrierwave"
+require "draper"
+require "activeadmin"
+require "kaminari"
 
 if Rails.env.development?
   require "pry-rails"
@@ -28,9 +28,6 @@ module OutwardBound
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
-    # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += ["#{config.root}/lib", "#{config.root}/app/models/services"]
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -66,13 +63,5 @@ module OutwardBound
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
-end
-
-unless ENV["MANUAL_ENV"] == "yes"
-  config = YAML.load(File.read(Rails.root.join("config/settings.yml"))) || {}
-  config.merge! config.fetch(Rails.env, {})
-  config.each do |key, value|
-    ENV[key] = value.to_s unless value.is_a?(Hash)
   end
 end

@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_filter :set_courses
+  before_filter :load_categories
 
   def index
   end
@@ -10,12 +10,8 @@ class CoursesController < ApplicationController
 
   private
 
-  def set_courses
-    @courses = {
-      "one"   => COURSES.select(&:one_day?),
-      "eight" => COURSES.select(&:eight_days?),
-      "other" => COURSES.select(&:other?),
-    }
+  def load_categories
+    @categories = Category.decorate
   end
 
   def sub_layout

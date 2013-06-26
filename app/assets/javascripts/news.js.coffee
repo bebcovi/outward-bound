@@ -1,4 +1,4 @@
-do ($ = jQuery) ->
+jQuery ->
 
   $(".post_long").find(".photos").find("a")
     .attr("rel", "gallery")

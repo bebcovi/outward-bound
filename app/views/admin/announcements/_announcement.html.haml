@@ -1,6 +1,0 @@
-%article
-  = image_tag announcement.post.cover_photo.url(:small)
-  = markdown announcement.content
-
-  = link_to "Izmijeni".prepend_icon("pencil"), edit_admin_announcement_path(announcement), class: "btn"
-  = link_to "Izbriši".prepend_icon("remove"), admin_announcement_path(announcement), method: :delete, confirm: "Jeste li sigurni?", class: "btn-danger"

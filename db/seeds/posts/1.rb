@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 Post.create!(
   title_hr: "Inside Out -- Sljeme",
   body_hr: <<-EOS.strip_heredoc,
