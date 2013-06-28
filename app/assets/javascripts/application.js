@@ -15,8 +15,7 @@
 //= require jquery_ujs
 //= require fancybox
 //= require jquery.carouFredSel-6.1.0
+//= require turbolinks
 //
 //= require_directory .
 //= stub ./active_admin
-//
-//= require turbolinks
