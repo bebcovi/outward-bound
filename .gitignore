@@ -5,3 +5,4 @@ config/settings.yml
 .sass-cache/
 *.DS_Store
 .bundle/
+public/uploads
