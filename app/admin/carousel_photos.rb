@@ -1,7 +1,9 @@
 ActiveAdmin.register CarouselPhoto do
+
   config.paginate = false
 
   index do
+    selectable_column
     column :photo do |carousel_photo|
       image_tag carousel_photo.photo_url(:display)
     end
