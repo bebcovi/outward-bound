@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130702001036) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "albums", force: true do |t|
     t.integer "cover_photo_id"
     t.string  "name_en"

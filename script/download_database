@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+dropdb $1 2>/dev/null || true
+createdb $1
+curl -o latest.dump `heroku pgbackups:url`
+pg_restore -d $1 latest.dump 2>/dev/null
+rm latest.dump
