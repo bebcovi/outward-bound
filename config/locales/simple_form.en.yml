@@ -1,0 +1,16 @@
+en:
+  simple_form:
+    labels:
+      carousel_photo:
+        file: "Photo"
+      photo:
+        file: "Photo"
+      post:
+        hr: "Croatian?"
+        en: "English?"
+        cover_photo:
+          file: "Cover photo"
+
+  helpers:
+    submit:
+      update: "Update"

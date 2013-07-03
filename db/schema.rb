@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130628204649) do
+ActiveRecord::Schema.define(version: 20130702001036) do
 
   create_table "albums", force: true do |t|
     t.integer "cover_photo_id"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20130628204649) do
   end
 
   create_table "carousel_photos", force: true do |t|
-    t.string   "photo"
+    t.string   "file"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "crop_x"
@@ -111,10 +111,11 @@ ActiveRecord::Schema.define(version: 20130628204649) do
     t.text     "body_en"
     t.text     "body_hr"
     t.integer  "album_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.boolean  "hr"
     t.boolean  "en"
+    t.integer  "cover_photo_id"
   end
 
   create_table "tweets", force: true do |t|

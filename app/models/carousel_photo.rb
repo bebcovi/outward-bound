@@ -1,13 +1,13 @@
 require "squeel"
 
 class CarouselPhoto < ActiveRecord::Base
-  mount_uploader :photo, CarouselPhotoUploader
+  mount_uploader :file, CarouselPhotoUploader
 
   default_scope -> { order{created_at.asc} }
 
-  validates :photo, presence: true
+  validates :file, presence: true
 
-  after_update { photo.recreate_versions! }
+  after_update { file.recreate_versions! }
 
   def to_s
     "##{position}"

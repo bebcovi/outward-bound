@@ -1,0 +1,5 @@
+.photo
+  = image_tag photo.file_url, height: 100
+  = f.simple_fields_for :photos, photo do |p|
+    = p.input :_destroy, as: :hidden
+    = link_to "×", "#", class: "delete_photo"

@@ -29,3 +29,18 @@
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
 @import "jquery.Jcrop";
+
+body.active_admin {
+  form {
+    /* Text fields */
+    input[type=text], input[type=password], input[type=email], input[type=number], input[type=url], input[type=tel], textarea {
+      font-size: 1.3em;
+    }
+  }
+
+  .attributes_table {
+    td {
+      font-size: 1.3em;
+    }
+  }
+}

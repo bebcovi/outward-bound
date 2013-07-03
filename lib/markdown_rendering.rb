@@ -6,6 +6,6 @@ module MarkdownRendering
   end
 
   def smarty_pants(text)
-    Redcarpet::Render::SmartyPants.render(text).html_safe
+    Redcarpet::Render::SmartyPants.render(text.to_s).html_safe
   end
 end

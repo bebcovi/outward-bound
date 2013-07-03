@@ -2,7 +2,7 @@
   .inner
     - @carousel_photos.each_with_index do |carousel_photo, idx|
       %div{class: "item #{"active" if idx == 0}"}
-        = image_tag carousel_photo.photo_url(:display), size: "940x300"
+        = image_tag carousel_photo.file_url(:display), size: "940x300"
 
   = link_to content_tag(:span, ""), "#", class: "prev"
   = link_to content_tag(:span, ""), "#", class: "next"

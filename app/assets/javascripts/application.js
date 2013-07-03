@@ -18,4 +18,3 @@
 //= require turbolinks
 //
 //= require_directory .
-//= stub ./active_admin

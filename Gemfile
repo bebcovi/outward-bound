@@ -57,6 +57,9 @@ group :test do
   gem "capybara", ">= 2.1"
   gem "factory_girl"
   gem "pry"
+  gem "cucumber-rails"
+  gem "poltergeist"
+  gem "database_cleaner"
 end
 
 group :production do

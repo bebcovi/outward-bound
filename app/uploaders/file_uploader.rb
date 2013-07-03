@@ -1,4 +1,4 @@
-class PhotoUploader < CarrierWave::Uploader::Base
+class FileUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
   def store_dir

@@ -8,10 +8,13 @@ development:
   <<: *defaults
   database: outward-bound_development
 
-test:
+test: &test
   <<: *defaults
   database: outward-bound_test
 
 production:
   <<: *defaults
   database: outward-bound_production
+
+cucumber:
+  <<: *test

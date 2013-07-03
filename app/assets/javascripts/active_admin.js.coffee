@@ -1,6 +1,9 @@
-#= require_self
 #= require active_admin/base
+#= require jquery.turbolinks
+#= require turbolinks
 #= require jquery.Jcrop
+#
+#= require_self
 #
 #= require_tree ./active_admin
 

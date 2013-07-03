@@ -46,4 +46,16 @@ class ApplicationController < ActionController::Base
   def admin?
     self.class.name =~ /admin/i
   end
+
+  private
+
+  # Go to the application after signing out from the admin interface (Devise)
+  def after_sign_out_path_for(*)
+    "/"
+  end
+
+  # Disable strong_parameters inside the admin interface (Inherited Resources)
+  def permitted_params
+    params.permit!
+  end
 end
