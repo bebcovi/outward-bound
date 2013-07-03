@@ -1,5 +1,3 @@
-require "RMagick"
-
 class CarouselPhotoUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
