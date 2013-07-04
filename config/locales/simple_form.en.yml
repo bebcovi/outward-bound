@@ -10,7 +10,10 @@ en:
         en: "English?"
         cover_photo:
           file: "Cover photo"
+        album:
+          photos:
+            file: "Photo"
 
   helpers:
     submit:
-      update: "Update"
+      update: "Save"
