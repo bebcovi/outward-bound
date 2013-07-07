@@ -5,9 +5,9 @@ class Photo < ActiveRecord::Base
 
   mount_uploader :file, PhotoUploader
 
-  validates :file, presence: true
-
   default_scope -> { order{created_at.asc} }
+
+  validates_presence_of :file
 
   def title
     File.basename(file.url, ".*").titleize

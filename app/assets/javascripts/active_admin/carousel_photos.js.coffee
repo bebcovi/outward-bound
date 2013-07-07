@@ -28,5 +28,5 @@ jQuery ->
       $("#cropbox").Jcrop
         aspectRatio: aspectRatio
         setSelect: [x1, y1, x2, y2]
-        bgOpacity: .1
+        bgOpacity: .2
         onSelect: updateCropInfo

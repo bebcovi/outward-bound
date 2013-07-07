@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    errors:
+      models:
+        attachment:
+          attributes:
+            document:
+              invalid_hr: "The post has a croatian version, but the document you selected doesn't."
+              invalid_en: "The post has an english version, but the document you selected doesn't."
+
+        announcement:
+          attributes:
+            content_en:
+              invalid: "The post you selected isn't available in english. Either provide an english version of your post or leave this field blank."
+            content_hr:
+              invalid: "The post you selected isn't available in croatian. Either provide a croatian version of your post or leave this field blank."

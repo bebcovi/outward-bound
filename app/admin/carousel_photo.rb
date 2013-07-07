@@ -1,5 +1,4 @@
 ActiveAdmin.register CarouselPhoto do
-
   config.paginate = false
   config.filters = false
   config.sort_order = "created_at_desc"
@@ -28,5 +27,4 @@ ActiveAdmin.register CarouselPhoto do
       end
     end
   end
-
 end

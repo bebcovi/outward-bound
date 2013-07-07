@@ -1,12 +1,13 @@
 require "carrierwave"
 require "fileutils"
 
-CarrierWave.configure do |config|
-  config.storage = :file
-  config.store_dir = Rails.root.join("tmp/uploads")
-  config.cache_dir = Rails.root.join("tmp/uploads/cache")
-end
+$initial_files = Dir[File.join(CarrierWave.root, "**/*")]
 
 at_exit do
-  FileUtils.rm_rf(Rails.root.join("tmp/uploads"))
+  created_files = Dir[File.join(CarrierWave.root, "**/*")] - $initial_files
+  created_files.each do |file_path|
+    unless File.directory?(file_path)
+      FileUtils.rm(file_path)
+    end
+  end
 end

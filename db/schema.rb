@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130702001036) do
+ActiveRecord::Schema.define(version: 20130709095955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20130702001036) do
     t.date     "expires_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean  "hr"
-    t.boolean  "en"
   end
 
   create_table "attachments", force: true do |t|
@@ -56,8 +54,6 @@ ActiveRecord::Schema.define(version: 20130702001036) do
     t.string  "name_en"
     t.string  "name_hr"
     t.integer "position"
-    t.boolean "hr"
-    t.boolean "en"
   end
 
   create_table "courses", force: true do |t|
@@ -78,16 +74,14 @@ ActiveRecord::Schema.define(version: 20130702001036) do
     t.string  "duration_en"
     t.integer "application_form_id"
     t.integer "album_id"
-    t.boolean "hr"
-    t.boolean "en"
   end
 
   create_table "documents", force: true do |t|
     t.string   "file_en"
     t.string   "file_hr"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -116,8 +110,6 @@ ActiveRecord::Schema.define(version: 20130702001036) do
     t.integer  "album_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.boolean  "hr"
-    t.boolean  "en"
     t.integer  "cover_photo_id"
   end
 

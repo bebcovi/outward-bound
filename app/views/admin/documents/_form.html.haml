@@ -1,0 +1,16 @@
+= simple_form_for [:admin, @document], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :file_en do
+        = f.input_field :file_en
+        = link_to @document.file_en.extension, @document.file_en_url if @document.file_en.present?
+      = f.input :file_hr do
+        = f.input_field :file_hr
+        = link_to @document.file_hr.extension, @document.file_hr_url if @document.file_hr.present?
+      = f.input :name
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

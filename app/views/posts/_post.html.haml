@@ -15,5 +15,5 @@
     %h2= t("misc.photos")
     %ul.photos
       - post.photos.each do |photo|
-        %li{class: (photo == post.cover_photo && "cover")}
-          = link_to image_tag(photo.url(:medium), alt: photo.title), photo.url(:large)
+        %li{class: (photo == post.photos.first && "cover")}
+          = link_to image_tag(photo.file_url(:medium), alt: photo.title), photo.file_url

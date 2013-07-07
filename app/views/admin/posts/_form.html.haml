@@ -2,32 +2,36 @@
 
   %fieldset.inputs
     %ol
-      = f.input :hr
       = f.input :title_hr
       = f.input :body_hr, input_html: {rows: 15}
 
-      = f.input :en
       = f.input :title_en
       = f.input :body_en, input_html: {rows: 15}
 
+      = f.simple_fields_for :cover_photo, @post.cover_photo do |c|
+        = c.input :file do
+          = c.input_field :file
+          = c.hidden_field :file_cache
+          = image_tag @post.cover_photo.file_url, height: 100 if @post.cover_photo.file?
+
   %fieldset.inputs
     %ol
-      - if @post.new_record?
-        = f.simple_fields_for :cover_photo, Photo.new do |c|
-          = c.input :file
-      - else
-        = f.simple_fields_for :cover_photo, @post.cover_photo do |c|
-          = c.input :file, label: false do
-            = c.input :file, wrapper: false
-            = image_tag @post.cover_photo.file_url, height: 100
+      = f.simple_fields_for :album, @post.album do |a|
+        %li
+          %label Photos
+          = link_to_add_fields "Add photo", a, :photos
 
-        = f.simple_fields_for :album, @post.album do |a|
-          - @post.album.photos.each do |photo|
-            = render "photo", {photo: photo, f: a}
+        = a.simple_fields_for :photos do |p|
+          = render "photo_fields", {f: p}
 
-          = a.simple_fields_for :photos, @post.album.photos.new do |p|
-            = p.input :file
+  %fieldset.inputs.attachments
+    %ol
+      %li
+        %label Attachments
+        = link_to_add_fields "Add attachment", f, :attachments
 
+      = f.simple_fields_for :attachments do |a|
+        = render "attachment_fields", {f: a}
 
   %fieldset.actions
     %ol

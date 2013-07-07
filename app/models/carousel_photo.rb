@@ -3,9 +3,10 @@ require "squeel"
 class CarouselPhoto < ActiveRecord::Base
   mount_uploader :file, CarouselPhotoUploader
 
-  default_scope -> { order{created_at.asc} }
+  default_scope     -> { order{created_at.asc} }
+  scope :ascending, -> { order{created_at.asc} }
 
-  validates :file, presence: true
+  validates_presence_of :file
 
   after_update { file.recreate_versions! }
 
@@ -14,6 +15,6 @@ class CarouselPhoto < ActiveRecord::Base
   end
 
   def position
-    self.class.all.index(self) + 1
+    self.class.all.unscoped.ascending.index(self) + 1
   end
 end

@@ -25,35 +25,46 @@ ActiveAdmin.register Post do
 
   show title: ->(post) { post.to_s } do |post|
     attributes_table do
-      if post.hr?
-        row :title_hr do
-          smarty_pants post.title_hr
-        end
-        row :body_hr do
-          markdown post.body_hr
-        end
-      end
-      if post.en?
-        row :title_en do
-          smarty_pants post.title_en
-        end
-        row :body_en do
-          markdown post.body_en
+      %w[hr en].each do |locale|
+        if post.available_in?(locale)
+          row :"title_#{locale}" do
+            smarty_pants post.send(:"title_#{locale}")
+          end
+          row :"body_#{locale}" do
+            markdown post.send(:"body_#{locale}")
+          end
         end
       end
-    end
-  end
-
-  controller do
-    def create
-      super do |success, failure|
-        success.html { redirect_to edit_resource_path }
+      row :cover_photo do
+        image_tag post.cover_photo.file_url, height: 100
       end
-    end
-
-    def update
-      super do |success, failure|
-        success.html { redirect_to edit_resource_path }
+      if post.photos.any?
+        row :photos do
+          post.photos.inject(raw("")) do |result, photo|
+            result += image_tag photo.file_url, height: 100
+          end
+        end
+      end
+      if post.attachments.any?
+        row :attachments do
+          ul do
+            post.attachments.inject(raw("")) do |result, attachment|
+              result += li do
+                links = [:en, :hr].inject([]) do |result, locale|
+                  if attachment.available_in?(locale)
+                    result << link_to(
+                      attachment.send(:"name_#{locale}"),
+                      attachment.send(:"file_#{locale}").url
+                    )
+                  else
+                    result
+                  end
+                end
+                links.join("/").html_safe
+              end
+            end
+          end
+        end
       end
     end
   end

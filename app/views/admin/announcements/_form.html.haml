@@ -1,0 +1,13 @@
+= simple_form_for [:admin, @announcement], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.association :post, prompt: "Choose one..."
+      = f.input :content_en
+      = f.input :content_hr
+      = f.input :expires_on, default: 1.month.from_now
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

@@ -6,8 +6,8 @@ When(/^I visit (?:the )?(.+)$/) do |page|
   visit path_to(page)
 end
 
-When(/^I check "(.+)"/) do |text|
-  check text
+When(/^I (un)?check "(.+)"/) do |negative, text|
+  negative ? uncheck(text) : check(text)
 end
 
 When(/^I fill in "(.+)" with "(.+)"$/) do |field, text|

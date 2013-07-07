@@ -36,6 +36,12 @@ body.active_admin {
     input[type=text], input[type=password], input[type=email], input[type=number], input[type=url], input[type=tel], textarea {
       font-size: 1.3em;
     }
+
+    fieldset.attachments {
+      input[type=text] {
+        width: 15%
+      }
+    }
   }
 
   .attributes_table {

@@ -10,10 +10,17 @@ en:
         en: "English?"
         cover_photo:
           file: "Cover photo"
+        photo_files: "Photos"
         album:
           photos:
-            file: "Photo"
+            _destroy: "Delete"
+    placeholders:
+      document:
+        name: "Type in your personal identification of this document (e.g. \"Application form for courses\")"
+    hints:
+      announcement:
+        expires_on: "This is the date when the announcement will expire, meaning it won't show on the homepage anymore."
 
   helpers:
     submit:
-      update: "Save"
+      update: "Update"

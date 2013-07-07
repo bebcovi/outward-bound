@@ -1,20 +1,20 @@
 When(/^I attach a photo$/) do
-  attach_file "Photo", photo_path
+  attach_file "Photo", image_path
 end
 
-When(/^I attach (\d+) photos$/) do |n|
-  Integer(n).times do
-    attach_file "Photo", photo_path
+When(/^I attach (\d+)(?: new)? photo(?:s)?$/) do |n|
+  n.times do
+    click_on "Add photo"
+    all("fieldset")[1].all("li").last.attach_file "", image_path
   end
 end
 
-When(/^I choose the crop area$/) do
+When(/^I mark (\d+) photo(?:s)? for deletion$/) do |n|
+  all("fieldset")[1].all("li")[-n..-1].each do |li|
+    li.click_on "Remove"
+  end
 end
 
-Then(/^I should see the carousel photo$/) do
-  expect(page).to have_css("img[src='#{CarouselPhoto.first.file_url(:display)}']")
-end
-
-Then(/^I should be able to crop the photo$/) do
-  expect(current_path).to eq edit_admin_carousel_photo_path(CarouselPhoto.first)
+When(/^I attach a cover photo$/) do
+  attach_file "Cover photo", image_path
 end

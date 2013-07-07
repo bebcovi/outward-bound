@@ -1,0 +1,7 @@
+%li.input
+  %label &nbsp;
+  = f.input :name_en, placeholder: "Name en", wrapper: false, label: false
+  = f.input :name_hr, placeholder: "Name hr", wrapper: false, label: false
+  = f.association :document, wrapper: false, label: false
+  = f.hidden_field :_destroy
+  = link_to_remove_fields "Remove"
