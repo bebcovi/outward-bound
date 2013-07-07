@@ -55,7 +55,7 @@ end
 group :test do
   gem "rspec-rails"
   gem "capybara", ">= 2.1"
-  gem "factory_girl"
+  gem "factory_girl", ">= 4"
   gem "pry"
   gem "cucumber-rails"
   gem "poltergeist"

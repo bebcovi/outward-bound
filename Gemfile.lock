@@ -302,7 +302,7 @@ DEPENDENCIES
   draper
   ejs
   exception_notification
-  factory_girl
+  factory_girl (>= 4)
   fancybox2-rails
   formtastic!
   friendly_id
