@@ -18,15 +18,11 @@ ActiveAdmin.register Document do
       row :file_en do
         if document.file_en.present?
           link_to document.file_en.extension, document.file_en_url
-        else
-          span(class: "empty") { "Empty" }
         end
       end
       row :file_hr do
         if document.file_hr.present?
           link_to document.file_hr.extension, document.file_hr_url
-        else
-          span(class: "empty") { "Empty" }
         end
       end
     end
