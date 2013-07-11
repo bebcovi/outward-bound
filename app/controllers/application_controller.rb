@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_twitter_mentions
-    @tweets = Tweet.all
+    @tweets = Tweet.available_in(current_locale)
   end
 
   def sub_layout

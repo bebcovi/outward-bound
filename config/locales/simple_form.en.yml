@@ -14,12 +14,16 @@ en:
         album:
           photos:
             _destroy: "Delete"
+      tweet:
+        locale: "Language"
     placeholders:
       document:
         name: "Type in your personal identification of this document (e.g. \"Application form for courses\")"
     hints:
       announcement:
         expires_on: "This is the date when the announcement will expire, meaning it won't show on the homepage anymore."
+      tweet:
+        locale: "If you want this tweet to be shown in both languages, leave this blank."
 
   helpers:
     submit:

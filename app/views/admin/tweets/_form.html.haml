@@ -1,0 +1,14 @@
+= simple_form_for [:admin, @tweet], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :content, as: :text
+      = f.input :author do
+        @
+        = f.input_field :author
+      = f.input :locale, as: :select, collection: [["Croatian", "hr"], ["English", "en"]]
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path
