@@ -20,6 +20,10 @@ html,
     }
   }
 
+  a {
+    @include color-link($orange, lighten($orange, 15%));
+  }
+
   .sections {
     @extend .grid-wrapper;
   }

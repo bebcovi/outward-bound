@@ -1,8 +1,5 @@
 %footer.site_footer
   .container
-    - if params[:controller] == "home" and params[:action] == "index"
-      .rh= image_tag("partners/rh.png")
-
     .sections
       %section.contact
         %h2= t("misc.contact")
@@ -29,4 +26,6 @@
         %ol
           = render collection: @tweets, partial: "tweets/tweet"
 
-    %p.copyright #{Date.today.year} © Outward Bound
+    %p.copyright
+      #{Date.today.year} © Outward Bound
+      ∙ This site was made by <a href="//twitter.com/silvenon">Matija</a> and <a href="//twitter.com/m_janko">Janko</a> Marohnić.
