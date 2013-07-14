@@ -9,15 +9,6 @@ GIT
       polyamorous (~> 0.6.0)
 
 GIT
-  remote: git://github.com/ernie/squeel.git
-  revision: c232bf9ea9240f96cf84c18d6ea2bd8d11ab563e
-  specs:
-    squeel (1.1.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      polyamorous (~> 0.6.0)
-
-GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 51a5a72974ba36cfe199d78eebb0747018e48edc
   branch: rails4
@@ -264,6 +255,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    squeel (1.1.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      polyamorous (~> 0.6.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -331,7 +326,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0)
   simple_form (>= 3.0.0.rc)
-  squeel!
+  squeel (>= 1.1)
   thin
   turbolinks (>= 1.2)
   uglifier
