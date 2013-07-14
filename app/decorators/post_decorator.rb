@@ -18,12 +18,4 @@ class PostDecorator < Draper::Decorator
   def body
     h.markdown super
   end
-
-  def has_photos?
-    photos.count > 1
-  end
-
-  def has_attachments?
-    attachments.any?
-  end
 end

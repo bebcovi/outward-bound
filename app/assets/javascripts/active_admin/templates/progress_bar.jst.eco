@@ -1,0 +1,8 @@
+<div class="progress">
+  <% if @current?: %>
+    <div class="bar" style="width: <%= (@current / @total) * 100 %>%"></div>
+    <%= @current %> out of <%= @total %> uploaded
+  <% else: %>
+    <div class="bar" style="width: 0%"></div>
+  <% end %>
+</div>

@@ -14,7 +14,8 @@ group :assets do
   gem "jquery-rails"
   gem "turbolinks", ">= 1.2"
   gem "jquery-turbolinks", ">= 1"
-  gem "ejs"
+  gem "eco", ">= 1"
+  gem "jquery-fileupload-rails", ">= 0.4"
 end
 
 # Views

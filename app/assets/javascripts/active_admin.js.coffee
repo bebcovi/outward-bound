@@ -2,6 +2,7 @@
 #= require jquery.turbolinks
 #= require turbolinks
 #= require jquery.Jcrop
+#= require jquery-fileupload/basic
 #
 #= require_self
 #

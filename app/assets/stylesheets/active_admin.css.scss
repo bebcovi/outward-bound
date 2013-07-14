@@ -49,4 +49,14 @@ body.active_admin {
       font-size: 1.3em;
     }
   }
+
+  .progress {
+    float: right;
+    width: 25%;
+
+    .bar {
+      height: 100%;
+      background-color: darken(green, .2)
+    }
+  }
 }

@@ -1,0 +1,21 @@
+= simple_form_for [:admin, @album], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_en
+      = f.input :name_hr
+
+  - if @album.persisted?
+    %fieldset.inputs
+      %ol
+        = f.simple_fields_for :photos, Photo.new do |p|
+          = p.input :file
+
+        %ol.photos
+          - @album.photos.each do |photo|
+            = render "photo", photo: photo
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

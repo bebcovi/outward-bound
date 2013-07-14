@@ -16,6 +16,9 @@ en:
             _destroy: "Delete"
       tweet:
         locale: "Language"
+      album:
+        photos:
+          file: "Photos"
     placeholders:
       document:
         name: "Type in your personal identification of this document (e.g. \"Application form for courses\")"
@@ -27,4 +30,4 @@ en:
 
   helpers:
     submit:
-      update: "Update"
+      update: "Save"

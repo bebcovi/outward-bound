@@ -5,13 +5,13 @@
 
   = post.body
 
-  - if post.has_attachments?
+  - if post.attachments.any?
     %h2= t("misc.attachments")
     %ul.attachments
       = list_of post.attachments do |attachment|
         = link_to attachment.name.prepend_icon("file-#{attachment.extension.chomp("x")}"), attachment.url
 
-  - if post.has_photos?
+  - if post.photos.any?
     %h2= t("misc.photos")
     %ul.photos
       - post.photos.each do |photo|

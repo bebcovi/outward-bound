@@ -2,7 +2,7 @@ require "squeel"
 
 class Post < ActiveRecord::Base
   belongs_to :cover_photo, class_name: "Photo", dependent: :destroy
-  belongs_to :album, dependent: :destroy
+  has_one :album, class_name: "PostAlbum", dependent: :destroy
   has_many :photos, through: :album
   has_many :attachments, dependent: :destroy
 

@@ -35,9 +35,11 @@ ActiveAdmin.register Post do
           end
         end
       end
+
       row :cover_photo do
         image_tag post.cover_photo.file_url, height: 100
       end
+
       if post.photos.any?
         row :photos do
           post.photos.inject(raw("")) do |result, photo|
@@ -45,6 +47,7 @@ ActiveAdmin.register Post do
           end
         end
       end
+
       if post.attachments.any?
         row :attachments do
           ul do
