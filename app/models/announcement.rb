@@ -9,8 +9,7 @@ class Announcement < ActiveRecord::Base
   scope :not_expired, -> { where{expires_on >= Date.today} }
   scope :ascending,   -> { order{created_at.asc} }
 
-  validates_presence_of :expires_on
-  validates_presence_of :post_id
+  validates_presence_of :post_id, :expires_on
   validates_length_of :content_en, :content_hr, maximum: 255
   validate :validate_that_post_locale_match, if: :post_id?
 

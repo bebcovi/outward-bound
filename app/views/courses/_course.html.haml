@@ -4,46 +4,45 @@
   .course_cover
     .inner
       = link_to course.album, target: "_blank" do
-        = image_tag course.cover_photo.url(:medium), alt: course.cover_photo.title
+        = image_tag course.cover_photo.file_url(:medium), alt: course.cover_photo.title
 
   %p= link_to t("misc.view_gallery").prepend_icon("pictures"), course.album, target: "_blank"
 
 = markdown course.description
 
 .course_info
-  - if course.dates
-    .dates
-      = icon("calendar")
-      .name= t(".dates")
-      .value= markdown course.dates
+  .dates
+    = icon("calendar")
+    .name= t(".dates")
+    .value= markdown course.dates
 
-  - if course.duration
+  - if course.duration.present?
     .duration
       = icon("clock")
       .name= t(".duration")
-      .value= days course.duration
+      .value= smarty_pants course.duration
 
-  - if course.min_people or course.max_people
+  - if course.capacity.present?
     .people
       = icon("users")
       .name= t(".people")
-      .value= "#{course.min_people}–#{course.max_people} #{t("misc.people")}"
+      .value= smarty_pants course.capacity
 
-  - if course.price
+  - if course.price.present?
     .price
       = icon("coins")
       .name= t(".price")
-      .value= course.price
+      .value= smarty_pants course.price
 
-- if course.contact
+- if course.contact.present?
   .course_contact
     = icon("mail")
     = t(".contact") + ":"
     = mail_to(course.contact) + "."
 
-- if course.applyable?
+- if course.application_form.present?
   .apply_for_course
-    = link_to t("misc.apply").append_icon("file-download"), "/files/Application_form_#{I18n.locale}.doc", class: "application_form"
+    = link_to t("misc.apply").append_icon("file-download"), course.application_form.file.url, class: "application_form"
     %p.send_application_form
       = t(".send_application_form")
       = mail_to("apply@outwardbound.hr") + "."

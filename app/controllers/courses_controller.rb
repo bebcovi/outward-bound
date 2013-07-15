@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = COURSES.find { |course| course.to_param == params[:id] }
+    @course = Course.find(params[:id]).decorate
   end
 
   private
