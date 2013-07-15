@@ -5,9 +5,12 @@
       = f.input :name_en
       = f.input :name_hr
 
-  - if @album.persisted?
-    %fieldset.inputs
-      %ol
+  %fieldset.inputs
+    %ol
+      - if @album.new_record?
+        = f.simple_fields_for :cover_photo do |c|
+          = c.input :file
+      - else
         = f.simple_fields_for :photos, Photo.new do |p|
           = p.input :file
 

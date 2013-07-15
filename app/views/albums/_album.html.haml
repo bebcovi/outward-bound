@@ -1,2 +1,2 @@
-= link_to album_path(album), style: "background-image: url(#{album.cover_photo.url(:medium)})" do
+= link_to album_path(album), style: "background-image: url(#{album.cover_photo.file_url(:medium)})" do
   .album_title= album.name

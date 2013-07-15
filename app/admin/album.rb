@@ -16,6 +16,18 @@ ActiveAdmin.register Album do
 
   form partial: "form"
 
+  show title: ->(album) { album.to_s } do |album|
+    attributes_table do
+      row :name_en
+      row :name_hr
+      row :photos do
+        album.photos.inject(raw("")) do |result, photo|
+          result << image_tag(photo.file_url(:small), height: 100)
+        end
+      end
+    end
+  end
+
   controller do
     respond_to :js, only: :update
   end

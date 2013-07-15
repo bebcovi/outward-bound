@@ -1,9 +1,9 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.where(event_type: "Course")
+    @albums = Album.all.decorate
   end
 
   def show
-    @album = Album.where(event_type: "Course").find(params[:id])
+    @album = Album.find(params[:id]).decorate
   end
 end

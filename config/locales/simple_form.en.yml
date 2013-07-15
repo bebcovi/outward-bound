@@ -19,9 +19,11 @@ en:
       album:
         photos:
           file: "Photos"
+        cover_photo:
+          file: "Cover photo"
     placeholders:
       document:
-        name: "Type in your personal identification of this document (e.g. \"Application form for courses\")"
+        name: "Your personal identification of this document (e.g. \"Application form for courses\")"
     hints:
       announcement:
         expires_on: "This is the date when the announcement will expire, meaning it won't show on the homepage anymore."
