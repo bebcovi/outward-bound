@@ -1,5 +1,3 @@
-# #{@title = t(".page_title")}
-
 ## Course objectives
 
 Personal growth and development of new skills through experiential learning in nature.
