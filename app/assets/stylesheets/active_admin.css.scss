@@ -28,6 +28,7 @@
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
+@import "admin/progress";
 @import "jquery.Jcrop";
 
 body.active_admin {
