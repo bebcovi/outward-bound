@@ -37,17 +37,24 @@ jQuery ->
 
   # tweets
 
-  $currentTweet = $(".tweets").find("li:last-child")
+  $tweets = $(".tweets").find("li")
+  $currentTweet = $tweets.last()
   refreshInterval = 10000
 
-  do ->
-    $currentTweet.fadeOut()
+  if $tweets.length
+    unless $tweets.length is 1
+      do ->
+        $currentTweet.fadeOut()
 
-    if $currentTweet.next().length
-      $currentTweet = $currentTweet.next()
+        if $currentTweet.next().length
+          $currentTweet = $currentTweet.next()
+        else
+          $currentTweet = $currentTweet.siblings().first()
+
+        console.log arguments.callee
+
+        $currentTweet.fadeIn()
+
+        setTimeout arguments.callee, refreshInterval
     else
-      $currentTweet = $currentTweet.siblings().first()
-
-    $currentTweet.fadeIn()
-
-    setTimeout arguments.callee, refreshInterval
+      $tweets.show()
