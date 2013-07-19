@@ -30,5 +30,17 @@ ActiveAdmin.register Album do
 
   controller do
     respond_to :js, only: :update
+
+    def create
+      super do |success, failure|
+        success.html { redirect_to edit_resource_path }
+      end
+    end
+
+    def update
+      super do |success, failure|
+        success.html { redirect_to edit_resource_path }
+      end
+    end
   end
 end

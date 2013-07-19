@@ -80,15 +80,19 @@ module ApplicationHelper
   end
 
   def link_to_add_fields(text, f, association)
+    link_to(text, "#", class: "add_fields", data: new_fields(f, association))
+  end
+
+  def link_to_remove_fields(text)
+    link_to(text, "#", class: "remove_fields")
+  end
+
+  def new_fields(f, association)
     new_object = f.object.send(association).klass.new
     id = new_object.object_id
     fields = f.simple_fields_for(association, new_object, child_index: id) do |builder|
       render(association.to_s.singularize + "_fields", f: builder)
     end
-    link_to(text, "#", class: "add_fields", data: {id: id, fields: fields.delete("\n")})
-  end
-
-  def link_to_remove_fields(text)
-    link_to(text, "#", class: "remove_fields")
+    {id: id, fields: fields.delete("\n")}
   end
 end

@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 
   required_locale_columns :title, :body
 
-  default_scope -> { order{created_at.desc} }
+  default_scope  -> { order{created_at.desc} }
 
   after_initialize :build_cover_photo, unless: :cover_photo
   after_initialize :build_album,       unless: :album

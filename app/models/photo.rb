@@ -12,4 +12,8 @@ class Photo < ActiveRecord::Base
   def title
     File.basename(file.url, ".*").titleize
   end
+
+  def present?
+    file.present?
+  end
 end

@@ -19,6 +19,7 @@ en:
       album:
         photos:
           file: "Photos"
+          _destroy: "Delete"
         cover_photo:
           file: "Cover photo"
 

@@ -16,6 +16,17 @@ jQuery ->
         stop: (event) ->
           progressBar.reset()
 
+    $("form").on "click", ".delete_photo", (event) ->
+      $(@).prev("input[type='hidden']").val("true")
+
+      form = $(@).closest("form")
+      $.ajax form.attr("action"),
+        type: "PUT"
+        data: form.serializeArray()
+        dataType: "script"
+
+      event.preventDefault()
+
 class ProgressBar
 
   constructor: (@location) ->
