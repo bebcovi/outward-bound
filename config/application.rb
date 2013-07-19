@@ -17,6 +17,7 @@ require "activeadmin"
 if Rails.env.development?
   require "pry-rails"
   require "better_errors"
+  require "quiet_assets"
 end
 
 module OutwardBound

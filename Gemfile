@@ -51,6 +51,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller", ">= 0.7.1"
   gem "thin"
+  gem "quiet_assets", ">= 1.0.2"
 end
 
 group :test do
