@@ -1,6 +1,4 @@
-require "active_support/core_ext/string/strip"
-
-Text.destroy_all
+Text.delete_all
 
 texts = [
   ["home", "index"],
