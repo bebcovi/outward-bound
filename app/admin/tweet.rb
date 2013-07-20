@@ -28,6 +28,10 @@ ActiveAdmin.register Tweet do
 
   form partial: "form"
 
+  action_item only: :show do
+    link_to "New Tweet", new_admin_tweet_path
+  end
+
   show title: ->(tweet) { "@#{tweet.author}" } do |tweet|
     attributes_table do
       row :author do
