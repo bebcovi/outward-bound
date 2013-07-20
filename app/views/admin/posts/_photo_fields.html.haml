@@ -1,7 +1,0 @@
-%li.input
-  %label &nbsp;
-  = f.input_field :file
-  = f.hidden_field :file_cache
-  = image_tag f.object.file_url, height: 100 if f.object.file?
-  = f.hidden_field :_destroy
-  = link_to_remove_fields "Remove"

@@ -72,4 +72,8 @@ ActiveAdmin.register Post do
       end
     end
   end
+
+  controller do
+    respond_to :js, only: :update
+  end
 end

@@ -18,9 +18,10 @@
         = f.simple_fields_for :photos, Photo.new, child_index: -1 do |p|
           = p.input :file
 
-        %ol.photos
-          = f.simple_fields_for :photos do |p|
-            = render "photo", f: p
+    - if @album.persisted?
+      %ol.photos
+        = f.simple_fields_for :photos do |p|
+          = render "photo", f: p
 
   %fieldset.actions
     %ol

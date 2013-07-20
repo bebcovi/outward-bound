@@ -14,15 +14,18 @@
           = c.hidden_field :file_cache
           = image_tag @post.cover_photo.file_url(:small), height: 100 if @post.cover_photo.file?
 
-  %fieldset.inputs
-    %ol
-      = f.simple_fields_for :album, @post.album do |a|
-        %li
-          %label Photos
-          = link_to_add_fields "Add photo", a, :photos
+  - if @post.persisted?
 
-        = a.simple_fields_for :photos do |p|
-          = render "photo_fields", {f: p}
+    = f.simple_fields_for :album do |a|
+
+      %fieldset.inputs
+        %ol
+          = a.simple_fields_for :photos, Photo.new, child_index: -1 do |p|
+            = p.input :file
+
+        %ol.photos
+          = a.simple_fields_for :photos do |p|
+            = render "photo", f: p
 
   %fieldset.inputs.attachments
     %ol
