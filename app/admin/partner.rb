@@ -2,9 +2,24 @@ ActiveAdmin.register Partner do
   menu parent: "About us", priority: 8
   config.filters = false
   config.paginate = false
+  config.sort_order = "position_asc"
+
+  member_action :move_higher, method: :put do
+    Partner.find(params[:id]).move_higher
+    redirect_to collection_path
+  end
+
+  member_action :move_lower, method: :put do
+    Partner.find(params[:id]).move_lower
+    redirect_to collection_path
+  end
 
   index do
     selectable_column
+    column :position do |partner|
+      link_to("▲", [:move_higher, :admin, partner], method: :put) +
+      link_to("▼", [:move_lower,  :admin, partner], method: :put)
+    end
     column :photo do |partner|
       image_tag partner.photo_url(:small), height: 100
     end

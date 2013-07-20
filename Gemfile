@@ -33,6 +33,7 @@ gem "active_attr", ">= 0.8.1"
 gem "squeel", ">= 1.1"
 gem "carrierwave", ">= 0.8"
 gem "rmagick"
+gem "acts_as_list", ">= 0.2"
 
 # ActiveAdmin
 gem "activeadmin",         github: "gregbell/active_admin",        branch: "rails4"
