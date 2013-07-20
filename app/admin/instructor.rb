@@ -8,8 +8,7 @@ ActiveAdmin.register Instructor do
     column :photo do |instructor|
       image_tag instructor.photo_url(:small), height: 100
     end
-    column :name_en
-    column :name_hr
+    column :name
     default_actions
   end
 
@@ -20,11 +19,10 @@ ActiveAdmin.register Instructor do
       row :photo do
         image_tag instructor.photo_url(:small), height: 100
       end
-      row :name_en
+      row :name
       row :biography_en do
         markdown instructor.biography_en
       end
-      row :name_hr
       row :biography_hr do
         markdown instructor.biography_hr
       end

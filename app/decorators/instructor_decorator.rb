@@ -1,4 +1,4 @@
 class InstructorDecorator < Draper::Decorator
   delegate_all
-  translates :name, :biography
+  translates :biography
 end
