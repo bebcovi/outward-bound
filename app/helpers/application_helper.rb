@@ -48,24 +48,6 @@ module ApplicationHelper
     current_locale == :en
   end
 
-  def TranslationHash(value)
-    TranslationHash.new(value)
-  end
-
-  class TranslationHash
-    def initialize(hash)
-      @hash = hash
-    end
-
-    def [](key)
-      if @hash.has_key?(key)
-        @hash[key]
-      else
-        @hash[:"#{key}_#{I18n.locale}"]
-      end
-    end
-  end
-
   def present(object, klass = nil)
     klass ||= "#{object.class}Presenter".constantize
     presenter = klass.new(object, self)

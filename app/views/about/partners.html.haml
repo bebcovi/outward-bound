@@ -1,5 +1,5 @@
 %ul.partner_list
   = list_of partners do |partner|
-    %a{href: partner[:href]}
-      .img= image_tag "partners/#{partner[:image]}"
-      .name>= raw partner[:title]
+    = link_to partner.url do
+      .img= image_tag partner.photo_url(:small)
+      .name>= raw partner.name

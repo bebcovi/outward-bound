@@ -16,14 +16,14 @@
 
         = render @announcements
 
-= render "about"
+.about_items
+  = markdown @text.body
 
 .partners
   %ul
-    - important_partners.each do |partner|
-      %li
-        %a{href: partner[:href]}
-          .img= image_tag "partners/#{partner[:image]}"
-          .name>= raw partner[:title]
+    = list_of @important_partners do |partner|
+      = link_to partner.url do
+        .img= image_tag partner.photo_url(:small)
+        .name>= raw partner.name
     %li
       .img= image_tag "partners/rh.png"

@@ -1,4 +1,5 @@
 ActiveAdmin.register Course do
+  menu parent: "Courses", priority: 2
   config.paginate = false
   config.filters = false
 

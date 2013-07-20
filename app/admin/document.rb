@@ -1,4 +1,5 @@
 ActiveAdmin.register Document do
+  menu false
   config.per_page = 10
   config.sort_order = "updated_at_desc"
 

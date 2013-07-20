@@ -1,4 +1,5 @@
 ActiveAdmin.register Album do
+  menu parent: "Gallery", priority: 1
   config.paginate = false
 
   index do

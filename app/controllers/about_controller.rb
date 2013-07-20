@@ -12,6 +12,7 @@ class AboutController < ApplicationController
   end
 
   def instructors
+    @instructors = Instructor.decorate
   end
 
   def support
@@ -24,6 +25,7 @@ class AboutController < ApplicationController
   end
 
   def partners
+    @partners = Partner.decorate
   end
 
   private
@@ -33,7 +35,7 @@ class AboutController < ApplicationController
   end
 
   def set_about_pages
-    @about_pages = self.class.actions
+    @about_pages = self.class.action_methods
   end
 
   def set_title

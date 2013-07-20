@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  menu parent: "News", priority: 1
   config.per_page = 10
   config.sort_order = "created_at_desc"
 

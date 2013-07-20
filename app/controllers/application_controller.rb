@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :load_twitter_mentions, unless: :admin?
   before_filter :use_locale_cookie, unless: :admin?
+  before_filter :load_text, unless: :admin?
 
   def render(*args)
     options = args.extract_options!.dup
@@ -41,6 +42,11 @@ class ApplicationController < ActionController::Base
     else
       redirect_to locale: cookies[:locale]
     end
+  end
+
+  def load_text
+    @text = Text.find("#{params[:controller]}/#{params[:action]}")
+      .try(:decorate)
   end
 
   def admin?

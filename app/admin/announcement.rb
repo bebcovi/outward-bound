@@ -1,4 +1,5 @@
 ActiveAdmin.register Announcement do
+  menu parent: "Home", priority: 2
   config.per_page = 10
   config.sort_order = "created_at_desc"
 

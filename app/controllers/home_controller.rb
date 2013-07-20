@@ -5,5 +5,6 @@ class HomeController < ApplicationController
       .available_in(current_locale)
       .decorate
     @carousel_photos = CarouselPhoto.all
+    @important_partners = Partner.important.decorate
   end
 end

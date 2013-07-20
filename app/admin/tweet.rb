@@ -1,4 +1,5 @@
 ActiveAdmin.register Tweet do
+  menu parent: "Home", priority: 5
   config.paginate = false
 
   index do
