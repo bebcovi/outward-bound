@@ -45,7 +45,7 @@ ActiveAdmin.register_page "Important Partners" do
 
   content do
     table_for Partner.all, class: "index_table index" do
-      column "Important?" do |partner|
+      column "On homepage?" do |partner|
         simple_form_for [:admin, partner], defaults: {wrapper: false, label: false} do |f|
           f.input :important
         end
