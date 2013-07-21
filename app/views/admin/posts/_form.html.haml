@@ -10,9 +10,9 @@
 
       = f.simple_fields_for :cover_photo, @post.cover_photo do |c|
         = c.input :file do
+          = image_tag @post.cover_photo.file_url(:small), height: 100 if @post.cover_photo.file?
           = c.input_field :file
           = c.hidden_field :file_cache
-          = image_tag @post.cover_photo.file_url(:small), height: 100 if @post.cover_photo.file?
 
   - if @post.persisted?
 
