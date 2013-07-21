@@ -32,6 +32,7 @@
       %li
         %label Attachments
         = link_to_add_fields "Add attachment", f, :attachments
+        %p.inline-hints You can manage documents #{link_to "here", admin_documents_path}.
 
       = f.simple_fields_for :attachments do |a|
         = render "attachment_fields", {f: a}

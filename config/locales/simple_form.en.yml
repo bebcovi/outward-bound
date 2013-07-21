@@ -33,9 +33,9 @@ en:
       tweet:
         locale: "If you want this tweet to be shown in both languages, leave this blank."
       course:
-        application_form: "You can manage these files under \"Documents\"."
         contact_en: "Here goes the contact email address."
         contact_hr: "Here goes the contact email address."
+        application_form: "You can manage documents <a href=\"/admin/documents\">here</a>."
 
   helpers:
     submit:
