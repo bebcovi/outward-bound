@@ -7,7 +7,7 @@
 
   %fieldset.inputs
     %ol
-      = f.simple_fields_for :cover_photo, @album.cover_photo || Photo.new do |c|
+      = f.simple_fields_for :cover_photo, @album.cover_photo do |c|
         = c.input :file do
           = image_tag @album.cover_photo.file_url(:small), height: 100 if @album.cover_photo.present?
           = c.input_field :file
