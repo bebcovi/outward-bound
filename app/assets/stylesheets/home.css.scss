@@ -44,24 +44,31 @@ body.home {
       line-height: $base-line-height;
     }
 
-    a,
-    .img,
-    .name {
+    a {
+      @extend .cf;
+      @include color-link(rgba(black, .35), $link-hover);
       display: inline-block;
+      padding: $half-spacing-unit;
       vertical-align: middle;
     }
 
-    a {
-      @include color-link(rgba(black, .35), $link-hover);
-      padding: $half-spacing-unit;
+    .img {
+      float: left;
+      margin-right: $half-spacing-unit;
     }
 
-    .img {
-      margin-right: $half-spacing-unit;
+    .name {
+      max-width: 160px;
+      overflow: hidden;
     }
 
     img {
       height: 2 * $base-spacing-unit;
+    }
+
+    .rh {
+      width: auto;
+      padding: $half-spacing-unit;
     }
 
     @media (min-width: 500px) {
@@ -69,12 +76,13 @@ body.home {
 
       li {
         display: inline-block;
+        vertical-align: middle;
         text-align: left;
       }
     }
 
     @include media-query(lap-and-up) {
-      a {
+      a, .rh {
         padding: $base-spacing-unit;
       }
     }
