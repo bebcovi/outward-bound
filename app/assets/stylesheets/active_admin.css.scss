@@ -30,6 +30,7 @@
 
 @import "admin/progress";
 @import "jquery.Jcrop";
+@import "icons";
 
 body.active_admin {
   form {
@@ -58,6 +59,18 @@ body.active_admin {
     .bar {
       height: 100%;
       background-color: darken(green, .2)
+    }
+  }
+
+  td.position {
+    a {
+      text-decoration: none;
+      margin-right: 2px;
+      padding: 0 4px;
+
+      &:first-child {
+
+      }
     }
   }
 }

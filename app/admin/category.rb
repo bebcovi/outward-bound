@@ -17,8 +17,8 @@ ActiveAdmin.register Category do
   index do
     selectable_column
     column :position do |category|
-      link_to("▲", [:move_higher, :admin, category], method: :put) +
-      link_to("▼", [:move_lower,  :admin, category], method: :put)
+      link_to(raw("<i class='icon-arrow-up'></i>"), [:move_higher, :admin, category], method: :put) +
+      link_to(raw("<i class='icon-arrow-down'></i>"), [:move_lower,  :admin, category], method: :put)
     end
     column :name_en
     column :name_hr

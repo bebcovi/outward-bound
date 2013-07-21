@@ -17,8 +17,8 @@ ActiveAdmin.register Instructor do
   index do
     selectable_column
     column :position do |instructor|
-      link_to("▲", [:move_higher, :admin, instructor], method: :put) +
-      link_to("▼", [:move_lower,  :admin, instructor], method: :put)
+      link_to(raw("<i class='icon-arrow-up'></i>"), [:move_higher, :admin, instructor], method: :put) +
+      link_to(raw("<i class='icon-arrow-down'></i>"), [:move_lower,  :admin, instructor], method: :put)
     end
     column :photo do |instructor|
       image_tag instructor.photo_url(:small), height: 100

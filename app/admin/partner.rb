@@ -17,8 +17,8 @@ ActiveAdmin.register Partner do
   index do
     selectable_column
     column :position do |partner|
-      link_to("▲", [:move_higher, :admin, partner], method: :put) +
-      link_to("▼", [:move_lower,  :admin, partner], method: :put)
+      link_to(raw("<i class='icon-arrow-up'></i>"), [:move_higher, :admin, partner], method: :put) +
+      link_to(raw("<i class='icon-arrow-down'></i>"), [:move_lower,  :admin, partner], method: :put)
     end
     column :photo do |partner|
       image_tag partner.photo_url(:small), height: 100
