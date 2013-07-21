@@ -18,7 +18,6 @@ jQuery ->
           dataType: "script"
           success: do ($input = $(@), $progress) ->
             (data) ->
-              $progress.html $tick.show()
               window.setTimeout ->
-                $tick.fadeOut(1000)
-              , 1500
+                $progress.empty()
+              , 500
