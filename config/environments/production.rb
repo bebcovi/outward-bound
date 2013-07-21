@@ -62,11 +62,6 @@ OutwardBound::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.middleware.use ExceptionNotifier,
-    sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
-    exception_recipients: ["janko.marohnic@gmail.com"],
-    ignore_exceptions: []
-
   config.action_mailer.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
@@ -76,4 +71,11 @@ OutwardBound::Application.configure do
     :domain         => 'herokuapp.com'
   }
   config.action_mailer.delivery_method = :smtp
+
+  config.middleware.use ExceptionNotification::Rack,
+    email: {
+      sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
+      exception_recipients: ["janko.marohnic@gmail.com"],
+      ignore_exceptions: [],
+    }
 end

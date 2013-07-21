@@ -41,9 +41,6 @@ gem "inherited_resources", github: "josevalim/inherited_resources"
 gem "ransack",             github: "ernie/ransack",                branch: "rails-4"
 gem "formtastic",          github: "justinfrench/formtastic",      branch: "rails4beta"
 
-# Errors
-gem "exception_notification"
-
 # Security
 gem "dotenv", ">= 0.7"
 
@@ -67,4 +64,5 @@ end
 
 group :production do
   gem "unicorn"
+  gem "exception_notification", ">= 4"
 end

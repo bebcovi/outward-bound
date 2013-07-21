@@ -328,7 +328,7 @@ DEPENDENCIES
   dotenv (>= 0.7)
   draper
   eco (>= 1)
-  exception_notification
+  exception_notification (>= 4)
   factory_girl (>= 4)
   fancybox2-rails
   fog (>= 1.14)
