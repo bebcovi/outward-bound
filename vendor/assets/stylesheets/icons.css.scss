@@ -1,6 +1,6 @@
 @include font-face(icons, "icons/icons", normal, $asset-pipeline: true);
 
-.icon-bullhorn, .icon-menu, .icon-facebook, .icon-users, .icon-play, .icon-home, .icon-feed, .icon-twitter, .icon-support, .icon-phone, .icon-coins, .icon-clock, .icon-youtube, .icon-share, .icon-caret-left, .icon-caret-down, .icon-caret-right, .icon-caret-up, .icon-chevron-left, .icon-chevron-down, .icon-chevron-right, .icon-chevron-up, .icon-key, .icon-expand, .icon-link, .icon-drive, .icon-cog, .icon-calendar, .icon-compass, .icon-file-download, .icon-pictures, .icon-search, .icon-mail, .icon-cancel, .icon-pencil, .icon-images, .icon-file-word, .icon-file-pdf, .icon-newspaper, .icon-loop, .icon-arrow-right, .icon-remove, .icon-plus, .icon-close, .icon-exit, .icon-question, .icon-cancel-circle, .icon-mobile, .icon-arrow-up, .icon-arrow-down {
+.icon-bullhorn, .icon-menu, .icon-facebook, .icon-users, .icon-play, .icon-home, .icon-feed, .icon-twitter, .icon-support, .icon-phone, .icon-coins, .icon-clock, .icon-youtube, .icon-share, .icon-caret-left, .icon-caret-down, .icon-caret-right, .icon-caret-up, .icon-chevron-left, .icon-chevron-down, .icon-chevron-right, .icon-chevron-up, .icon-key, .icon-expand, .icon-link, .icon-drive, .icon-cog, .icon-calendar, .icon-compass, .icon-file-download, .icon-pictures, .icon-search, .icon-mail, .icon-cancel, .icon-pencil, .icon-images, .icon-file-word, .icon-file-pdf, .icon-newspaper, .icon-loop, .icon-arrow-right, .icon-remove, .icon-plus, .icon-close, .icon-exit, .icon-question, .icon-cancel-circle, .icon-mobile, .icon-arrow-up, .icon-arrow-down, .icon-checkmark-circle, .icon-spinner {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -160,6 +160,12 @@
 }
 .icon-arrow-down:before {
   content: "\e031";
+}
+.icon-checkmark-circle:before {
+  content: "\e032";
+}
+.icon-spinner:before {
+  content: "\e033";
 }
 
 .icon-file-doc {

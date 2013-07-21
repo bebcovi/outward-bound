@@ -28,10 +28,20 @@
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
+@import "bourbon";
 @import "admin/progress";
 @import "jquery.Jcrop";
 @import "mixins";
 @import "icons";
+
+@include keyframes(spin) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
 
 body.active_admin {
   form {
@@ -105,5 +115,21 @@ body.active_admin {
 
       }
     }
+  }
+
+  .icon-spinner,
+  .icon-checkmark-circle {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 16px;
+    vertical-align: -2px;
+  }
+
+  .icon-spinner {
+    @include animation(spin 1s linear infinite);
+  }
+
+  .icon-checkmark-circle {
+    color: green;
   }
 }
