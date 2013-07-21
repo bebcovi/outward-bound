@@ -3,9 +3,10 @@
   %fieldset.inputs
     %ol
       = f.input :photo do
-        = image_tag @instructor.photo_url(:small), height: 100 if @instructor.photo?
-        = f.input_field :photo
-        = f.hidden_field :photo_cache
+        .list-inline-block
+          = image_tag @instructor.photo_url(:small), height: 100 if @instructor.photo?
+          = f.input_field :photo
+          = f.hidden_field :photo_cache
 
       = f.input :name
       = f.input :biography_en, input_html: {rows: 15}

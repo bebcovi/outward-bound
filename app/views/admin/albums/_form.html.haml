@@ -9,9 +9,10 @@
     %ol
       = f.simple_fields_for :cover_photo, @album.cover_photo do |c|
         = c.input :file do
-          = image_tag @album.cover_photo.file_url(:small), height: 100 if @album.cover_photo.present?
-          = c.input_field :file
-          = c.hidden_field :file_cache
+          .list-inline-block
+            = image_tag @album.cover_photo.file_url(:small), height: 100 if @album.cover_photo.present?
+            = c.input_field :file
+            = c.hidden_field :file_cache
 
       - if @album.persisted?
 

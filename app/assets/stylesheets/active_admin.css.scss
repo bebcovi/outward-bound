@@ -98,9 +98,13 @@ body.active_admin {
     }
   }
 
-  .album_cover_photo_file {
-    img {
+  .list-inline-block {
+    > * {
+      display: inline-block;
       vertical-align: middle;
+    }
+
+    img {
       margin-right: 10px;
     }
   }
