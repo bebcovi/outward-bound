@@ -1,9 +1,13 @@
 ActiveAdmin.register Album do
   menu parent: "Gallery", priority: 1
   config.paginate = false
+  config.sort_order = "created_at_asc"
 
   index do
     selectable_column
+    column :cover_photo do |album|
+      image_tag album.cover_photo.file_url(:small), height: 100
+    end
     column :name_en
     column :name_hr
     column :photos do |album|
@@ -22,8 +26,12 @@ ActiveAdmin.register Album do
       row :name_en
       row :name_hr
       row :photos do
-        album.photos.inject(raw("")) do |result, photo|
-          result << image_tag(photo.file_url(:small), height: 100)
+        ol class: "photos" do
+          album.photos.inject(raw("")) do |result, photo|
+            result << li(class: "photo") do
+              image_tag(photo.file_url(:small), height: 100)
+            end
+          end
         end
       end
     end
@@ -40,7 +48,7 @@ ActiveAdmin.register Album do
 
     def update
       super do |success, failure|
-        success.html { redirect_to edit_resource_path }
+        success.html { redirect_to collection_path }
       end
     end
   end

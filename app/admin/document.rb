@@ -16,15 +16,27 @@ ActiveAdmin.register Document do
   show do |document|
     attributes_table do
       row :name
+
       row :file_en do
-        if document.file_en.present?
-          link_to document.file_en.extension, document.file_en_url
-        end
-      end
+        link_to document.file_en.extension, document.file_en_url
+      end if document.file_en?
+
       row :file_hr do
-        if document.file_hr.present?
-          link_to document.file_hr.extension, document.file_hr_url
-        end
+        link_to document.file_hr.extension, document.file_hr_url
+      end if document.file_hr?
+    end
+  end
+
+  controller do
+    def create
+      super do |success, failure|
+        success.html { redirect_to collection_path }
+      end
+    end
+
+    def update
+      super do |success, failure|
+        success.html { redirect_to collection_path }
       end
     end
   end

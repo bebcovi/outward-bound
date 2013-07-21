@@ -161,7 +161,6 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
-    friendly_id (4.0.9)
     gherkin (2.12.0)
       multi_json (~> 1.3)
     haml (4.0.3)
@@ -334,7 +333,6 @@ DEPENDENCIES
   fancybox2-rails
   fog (>= 1.14)
   formtastic!
-  friendly_id
   haml (>= 4)
   haml-rails
   inherited_resources!

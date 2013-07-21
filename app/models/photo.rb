@@ -1,7 +1,7 @@
 require "squeel"
 
 class Photo < ActiveRecord::Base
-  belongs_to :album
+  belongs_to :album, polymorphic: true
 
   mount_uploader :file, PhotoUploader
 

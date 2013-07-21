@@ -5,8 +5,6 @@
       = f.input :name_en
       = f.input :name_hr
 
-  %fieldset.inputs
-    %ol
       = f.simple_fields_for :cover_photo, @album.cover_photo do |c|
         = c.input :file do
           .list-inline-block
@@ -14,15 +12,24 @@
             = c.input_field :file
             = c.hidden_field :file_cache
 
-      - if @album.persisted?
+  - if @album.persisted?
 
+    %fieldset.inputs
+      %ol
         = f.simple_fields_for :photos, Photo.new, child_index: -1 do |p|
           = p.input :file
 
-    - if @album.persisted?
       %ol.photos
         = f.simple_fields_for :photos do |p|
           = render "photo", f: p
+
+  - else
+
+    %fieldset.inputs
+      %ol
+        %li.input
+          %label Photos
+          %p.inline-hints You will be able to add photos after you create the album.
 
   %fieldset.actions
     %ol

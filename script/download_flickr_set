@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require "flickr-objects"
+require "fileutils"
+require "open-uri"
+
+set_id = ARGV[0]
+folder = ARGV[1]
+
+Flickr.configure do |config|
+  config.api_key = "e271d511df9b8a1d679bf223fe017f41"
+  config.shared_secret = "15f6721a118c8efe"
+end
+
+set = Flickr.sets.find(set_id)
+
+photos = set.get_photos(sizes: :all).map do |photo|
+  open(photo.largest.source_url)
+end
+
+FileUtils.rm_r    folder
+FileUtils.mkdir_p folder
+
+photos.each.with_index do |photo, idx|
+  path = File.join(folder, "#{idx + 1}.jpg")
+  File.write(path, photo.read)
+end

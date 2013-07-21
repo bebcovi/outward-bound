@@ -19,8 +19,8 @@ ActiveAdmin.register Announcement do
   show title: ->(announcement) { announcement.to_s } do |announcement|
     attributes_table do
       row :post
-      row :content_en
-      row :content_hr
+      row :content_en if announcement.content_en?
+      row :content_hr if announcement.content_hr?
       row :expires_on
     end
   end

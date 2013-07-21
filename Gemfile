@@ -28,7 +28,6 @@ gem "rails-i18n"
 gem "draper"
 
 # Database
-gem "friendly_id"
 gem "active_attr", ">= 0.8.1"
 gem "squeel", ">= 1.1"
 gem "carrierwave", ">= 0.8"

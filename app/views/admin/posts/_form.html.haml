@@ -2,18 +2,26 @@
 
   %fieldset.inputs
     %ol
-      = f.input :title_hr
-      = f.input :body_hr, input_html: {rows: 15}
-
-      = f.input :title_en
-      = f.input :body_en, input_html: {rows: 15}
-
       = f.simple_fields_for :cover_photo, @post.cover_photo do |c|
         = c.input :file do
           .list-inline-block
             = image_tag @post.cover_photo.file_url(:small), height: 100 if @post.cover_photo.file?
             = c.input_field :file
             = c.hidden_field :file_cache
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :title_en
+      = f.input :body_en, input_html: {rows: 15}
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :title_hr
+      = f.input :body_hr, input_html: {rows: 15}
 
   - if @post.persisted?
 
@@ -27,6 +35,14 @@
         %ol.photos
           = a.simple_fields_for :photos do |p|
             = render "photo", f: p
+
+  - else
+
+    %fieldset.inputs
+      %ol
+        %li.input
+          %label Photos
+          %p.inline-hints You will be able to add photos after you create the post.
 
   %fieldset.inputs.attachments
     %ol

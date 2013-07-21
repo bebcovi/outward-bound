@@ -73,8 +73,11 @@ body.active_admin {
     }
   }
 
-  .photos {
+  ol.photos {
     @include clearfix;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 
     img { vertical-align: middle; }
 

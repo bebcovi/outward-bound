@@ -37,6 +37,11 @@ en:
         capacity_hr: "Capacity"
         duration_en: "Duration"
         duration_hr: "Duration"
+      partner:
+        name_en: "Name"
+        name_hr: "Name"
+        url_en: "URL"
+        url_hr: "URL"
 
     placeholders:
       document:

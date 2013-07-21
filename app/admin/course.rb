@@ -36,7 +36,7 @@ ActiveAdmin.register Course do
           markdown course.send("dates_#{locale}")
         end
         row "Contact" do
-          course.send("contact_#{locale}")
+          mail_to course.send("contact_#{locale}")
         end
         row "Price" do
           smarty_pants course.send("price_#{locale}")

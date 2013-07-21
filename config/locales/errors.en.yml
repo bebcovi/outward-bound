@@ -5,8 +5,8 @@ en:
         attachment:
           attributes:
             document:
-              invalid_hr: "The post has a croatian version, but the document you selected doesn't."
-              invalid_en: "The post has an english version, but the document you selected doesn't."
+              invalid_hr: "The document you selected doesn't have a croatian version."
+              invalid_en: "The document you selected doesn't have an english version."
 
         announcement:
           attributes:

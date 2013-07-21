@@ -1,8 +1,10 @@
 require "squeel"
 
 class Album < ActiveRecord::Base
-  has_many :photos, dependent: :destroy
+  has_many :photos, as: :album, dependent: :destroy
   belongs_to :cover_photo, class_name: "Photo"
+
+  default_scope -> { order{created_at.asc} }
 
   validates_presence_of :name_hr, :name_en
 

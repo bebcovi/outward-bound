@@ -4,17 +4,18 @@
   .course_cover
     .inner
       = link_to course.album, target: "_blank" do
-        = image_tag course.cover_photo.file_url(:medium), alt: course.cover_photo.title
+        = image_tag course.cover_photo.file_url(:medium), alt: course.cover_photo.title, height: 373
 
   %p= link_to t("misc.view_gallery").prepend_icon("pictures"), course.album, target: "_blank"
 
 = markdown course.description
 
 .course_info
-  .dates
-    = icon("calendar")
-    .name= t(".dates")
-    .value= markdown course.dates
+  - if course.dates.present?
+    .dates
+      = icon("calendar")
+      .name= t(".dates")
+      .value= markdown course.dates
 
   - if course.duration.present?
     .duration

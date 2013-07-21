@@ -1,5 +1,4 @@
 require "squeel"
-require "friendly_id"
 
 class Course < ActiveRecord::Base
   belongs_to :category
@@ -7,8 +6,6 @@ class Course < ActiveRecord::Base
   belongs_to :application_form, class_name: "Document"
 
   delegate :cover_photo, to: :album
-  # extend FriendlyId
-  # friendly_id :name_en, use: [:slugged, :history]
   required_locale_columns :name, :description
 
   validates_presence_of :category_id
@@ -20,7 +17,27 @@ class Course < ActiveRecord::Base
     :duration_en, :duration_hr,
     maximum: 255
 
+  before_create :create_slug
+
+  def self.find(id)
+    begin
+      super(Integer(id))
+    rescue ArgumentError
+      find_by_slug(id)
+    end
+  end
+
   def to_s
-    [name_en, name_hr].reject(&:blank?).join("/")
+    [name_en, name_hr].find(&:present?)
+  end
+
+  def to_param
+    slug
+  end
+
+  private
+
+  def create_slug
+    self.slug = name_en.parameterize
   end
 end

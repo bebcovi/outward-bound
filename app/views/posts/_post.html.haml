@@ -3,7 +3,7 @@
     %h1= post.title
     = time_tag post.created_at
 
-  = post.body
+  = markdown post.body
 
   - if post.attachments.any?
     %h2= t("misc.attachments")

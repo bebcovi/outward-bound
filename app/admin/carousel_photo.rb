@@ -2,12 +2,12 @@ ActiveAdmin.register CarouselPhoto do
   menu parent: "Home", priority: 1
   config.paginate = false
   config.filters = false
-  config.sort_order = "created_at_desc"
+  config.sort_order = "created_at_asc"
 
   index do
     selectable_column
     column "Photo" do |carousel_photo|
-      image_tag carousel_photo.file_url(:display), width: 400
+      image_tag carousel_photo.file_url(:display), height: 150
     end
     default_actions
   end

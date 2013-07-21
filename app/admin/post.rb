@@ -11,7 +11,9 @@ ActiveAdmin.register Post do
     column :title_en do |post|
       smarty_pants post.title_en
     end
-    column :created_at
+    column :created_at do |post|
+      post.created_at.to_date.to_s(:long)
+    end
     default_actions
   end
 
@@ -26,7 +28,11 @@ ActiveAdmin.register Post do
 
   show title: ->(post) { post.to_s } do |post|
     attributes_table do
-      %w[hr en].each do |locale|
+      row :cover_photo do
+        image_tag post.cover_photo.file_url, height: 100
+      end
+
+      %w[en hr].each do |locale|
         if post.available_in?(locale)
           row :"title_#{locale}" do
             smarty_pants post.send(:"title_#{locale}")
@@ -37,14 +43,19 @@ ActiveAdmin.register Post do
         end
       end
 
-      row :cover_photo do
-        image_tag post.cover_photo.file_url, height: 100
-      end
-
-      if post.photos.any?
-        row :photos do
-          post.photos.inject(raw("")) do |result, photo|
-            result += image_tag photo.file_url, height: 100
+      row :photos do
+        if post.photos.any?
+          ol class: "photos" do
+            post.photos.inject(raw("")) do |result, photo|
+              result << li(class: "photo") do
+                image_tag(photo.file_url(:small), height: 100)
+              end
+            end
+          end
+        else
+          span(class: "empty") { "No photos." }
+          a href: edit_resource_path(anchor: "post_album_attributes_photos_attributes_-1_file") do
+            "Add some"
           end
         end
       end

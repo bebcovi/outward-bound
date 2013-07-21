@@ -2,7 +2,10 @@ require "redcarpet"
 
 module MarkdownRendering
   def markdown(text)
-    smarty_pants(Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(text.to_s))
+    options = {superscript: true}
+    renderer = Redcarpet::Render::HTML
+    result = Redcarpet::Markdown.new(renderer, options).render(text.to_s)
+    smarty_pants(result)
   end
 
   def smarty_pants(text)

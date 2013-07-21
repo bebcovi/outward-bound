@@ -1,5 +1,5 @@
 %ul.partner_list
   = list_of @partners do |partner|
     = link_to partner.url do
-      .img= image_tag partner.photo_url(:small), width: 100
+      .img= image_tag partner.photo_url(:small), height: 70
       .name>= raw partner.name

@@ -8,6 +8,7 @@ jQuery ->
       .attr("multiple", "multiple")
       .fileupload
         dataType: "script"
+        sequentialUploads: true
         add: (event, data) ->
           progressBar.addTask()
           data.submit()

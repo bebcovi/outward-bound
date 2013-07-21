@@ -12,7 +12,7 @@ class Partner < ActiveRecord::Base
     :url_en, :url_hr
 
   def to_s
-    "#{name_en}/#{name_hr}"
+    name_en
   end
 
   def important!

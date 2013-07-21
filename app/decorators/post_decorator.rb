@@ -8,14 +8,14 @@ class PostDecorator < Draper::Decorator
   end
 
   def created_at
-    super.to_date
+    object.created_at.to_date
   end
 
   def short_body
-    h.markdown h.truncate(body, length: 300, separator: " ")
+    h.truncate(body, length: 300, separator: " ")
   end
 
-  def body
-    h.markdown super
+  def attachments
+    object.attachments.available_in(h.current_locale).decorate
   end
 end

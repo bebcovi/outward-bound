@@ -8,6 +8,6 @@
       = image_tag post.cover_photo.file_url, alt: post.cover_photo.title
 
   .inner
-    = post.short_body
+    = markdown post.short_body
 
     = link_to t("misc.more"), post_path(post), class: "more"

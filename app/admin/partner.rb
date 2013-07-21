@@ -21,7 +21,7 @@ ActiveAdmin.register Partner do
       link_to(raw("<i class='icon-arrow-down'></i>"), [:move_lower,  :admin, partner], method: :put)
     end
     column :photo do |partner|
-      image_tag partner.photo_url(:small), height: 100
+      image_tag partner.photo_url(:small), height: 50
     end
     column :name_en
     column :name_hr
@@ -33,7 +33,7 @@ ActiveAdmin.register Partner do
   show title: ->(partner) { partner.to_s } do |partner|
     attributes_table do
       row :photo do
-        image_tag partner.photo_url(:small), height: 100
+        image_tag partner.photo_url(:small), height: 50
       end
       row :name_en
       row :url_en do
@@ -47,8 +47,15 @@ ActiveAdmin.register Partner do
   end
 
   controller do
+    def create
+      super do |success, failure|
+        success.html { redirect_to collection_path }
+      end
+    end
+
     def update
       super do |success, failure|
+        success.html { redirect_to collection_path }
         success.js { head :ok }
       end
     end
