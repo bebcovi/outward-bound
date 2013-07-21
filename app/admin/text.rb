@@ -1,10 +1,9 @@
 ActiveAdmin.register Text do
   menu false
-  decorate_with TextDecorator
 
   form partial: "form"
 
-  show title: ->(text) { text.title } do |text|
+  show title: ->(text) { text.to_s } do |text|
     attributes_table do
       row :body_en do
         markdown text.body_en

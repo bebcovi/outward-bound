@@ -16,4 +16,12 @@ class Text < ActiveRecord::Base
       where(controller: controller, action: action).first
     end
   end
+
+  def to_s
+    case controller
+    when "home"    then "Home introduction"
+    when "courses" then "Courses introduction"
+    else                I18n.t("about.#{action}.page_title", locale: :en)
+    end
+  end
 end

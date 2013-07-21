@@ -189,8 +189,7 @@ ActiveAdmin.setup do |config|
 
       menu.add label: "About us", priority: 5 do |about_us|
         add_item = proc do |text, priority|
-          text = text.decorate
-          about_us.add label: text.title, url: "/admin/texts/#{text.id}", priority: priority
+          about_us.add label: text.to_s, url: "/admin/texts/#{text.id}", priority: priority
         end
 
         add_item.(Text.find("about/index"), 1)
