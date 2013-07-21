@@ -18,6 +18,7 @@ jQuery ->
           progressBar.reset()
 
     $("form").on "click", ".delete_photo", (event) ->
+      $spinner = $("<i>", class: "icon-spinner").insertAfter $(@)
       $(@).prev("input[type='hidden']").val("true")
 
       form = $(@).closest("form")
@@ -25,6 +26,7 @@ jQuery ->
         type: "PUT"
         data: form.serializeArray()
         dataType: "script"
+        success: -> $spinner.remove()
 
       event.preventDefault()
 
