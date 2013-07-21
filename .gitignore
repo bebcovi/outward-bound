@@ -6,3 +6,4 @@ config/settings.yml
 *.DS_Store
 .bundle/
 public/uploads
+.env

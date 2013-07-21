@@ -32,6 +32,7 @@ gem "friendly_id"
 gem "active_attr", ">= 0.8.1"
 gem "squeel", ">= 1.1"
 gem "carrierwave", ">= 0.8"
+gem "fog", ">= 1.14"
 gem "rmagick"
 gem "acts_as_list", ">= 0.2"
 
