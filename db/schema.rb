@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130720192844) do
+ActiveRecord::Schema.define(version: 20130721102641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20130720192844) do
     t.text    "description_hr"
     t.string  "dates_en"
     t.string  "dates_hr"
-    t.string  "contact_en"
-    t.string  "contact_hr"
+    t.string  "contact_en",          default: "contact@outwardbound.hr"
+    t.string  "contact_hr",          default: "kontakt@outwardbound.hr"
     t.string  "price_en"
     t.string  "price_hr"
     t.string  "capacity_en"

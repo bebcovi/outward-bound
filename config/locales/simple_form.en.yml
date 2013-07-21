@@ -22,6 +22,21 @@ en:
           _destroy: "Delete"
         cover_photo:
           file: "Cover photo"
+      course:
+        name_en: "Name"
+        name_hr: "Name"
+        description_en: "Description"
+        description_hr: "Description"
+        dates_en: "Dates"
+        dates_hr: "Dates"
+        contact_en: "Contact"
+        contact_hr: "Contact"
+        price_en: "Price"
+        price_hr: "Price"
+        capacity_en: "Capacity"
+        capacity_hr: "Capacity"
+        duration_en: "Duration"
+        duration_hr: "Duration"
 
     placeholders:
       document:
@@ -33,8 +48,6 @@ en:
       tweet:
         locale: "If you want this tweet to be shown in both languages, leave this blank."
       course:
-        contact_en: "Here goes the contact email address."
-        contact_hr: "Here goes the contact email address."
         application_form: "You can manage documents <a href=\"/admin/documents\">here</a>."
 
   helpers:
