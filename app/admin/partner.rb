@@ -59,6 +59,8 @@ ActiveAdmin.register_page "Important Partners" do
   menu parent: "Home", priority: 4
 
   content do
+    para(class: "hint") { "Novi partneri se stvaraju u \"About us\" > \"Partners\"." }
+
     table_for Partner.all, class: "index_table index" do
       column "On homepage?" do |partner|
         simple_form_for [:admin, partner], defaults: {wrapper: false, label: false} do |f|
