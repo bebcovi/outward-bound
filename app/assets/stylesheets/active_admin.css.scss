@@ -30,6 +30,7 @@
 
 @import "admin/progress";
 @import "jquery.Jcrop";
+@import "mixins";
 @import "icons";
 
 body.active_admin {
@@ -59,6 +60,38 @@ body.active_admin {
     .bar {
       height: 100%;
       background-color: darken(green, .2)
+    }
+  }
+
+  .photos {
+    @include clearfix;
+
+    img { vertical-align: middle; }
+
+    .photo {
+      position: relative;
+      float: left;
+      padding: 0;
+      margin: 10px;
+    }
+
+    .delete_photo {
+      @include position(absolute, 0px 0 0 0px);
+      @include color-link(rgba(white, .75), white);
+      display: inline-block;
+      padding: 2px 6px;
+      text-decoration: none;
+
+      @include on-interact {
+        background-color: rgba(black, .75);
+      }
+    }
+  }
+
+  .album_cover_photo_file {
+    img {
+      vertical-align: middle;
+      margin-right: 10px;
     }
   }
 
