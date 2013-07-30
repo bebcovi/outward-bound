@@ -76,6 +76,5 @@ OutwardBound::Application.configure do
     email: {
       sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
       exception_recipients: ["janko.marohnic@gmail.com"],
-      ignore_exceptions: [],
     }
 end
