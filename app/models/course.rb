@@ -23,7 +23,7 @@ class Course < ActiveRecord::Base
     begin
       super(Integer(id))
     rescue ArgumentError
-      find_by_slug(id)
+      find_by!(slug: id)
     end
   end
 
