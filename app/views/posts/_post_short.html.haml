@@ -5,7 +5,7 @@
 
   .cover
     = link_to post_path(post) do
-      = image_tag post.cover_photo.file_url, alt: post.cover_photo.title
+      = image_tag post.cover_photo.file_url(:small), alt: post.cover_photo.title
 
   .inner
     = markdown post.short_body

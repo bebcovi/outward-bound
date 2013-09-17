@@ -7,11 +7,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   resize_to_limit nil, 800
 
-  version :small do
-    resize_to_limit nil, 200
-  end
-
   version :medium do
     resize_to_limit nil, 500
+  end
+
+  version :small do
+    resize_to_limit nil, 200
   end
 end
