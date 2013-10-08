@@ -23,7 +23,7 @@ gem "haml", ">= 4"
 gem "haml-rails"
 gem "redcarpet", ">= 2"
 gem "will_paginate", ">= 3"
-gem "simple_form", ">= 3.0.0.rc"
+gem "simple_form", ">= 3.0.0"
 gem "rails-i18n"
 gem "draper"
 
@@ -36,7 +36,7 @@ gem "rmagick"
 gem "acts_as_list", ">= 0.2"
 
 # ActiveAdmin
-gem "activeadmin",         github: "gregbell/active_admin", branch: "rails4"
+gem "activeadmin",         github: "gregbell/active_admin"
 gem "inherited_resources", github: "josevalim/inherited_resources"
 
 # Security
