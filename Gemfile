@@ -36,10 +36,8 @@ gem "rmagick"
 gem "acts_as_list", ">= 0.2"
 
 # ActiveAdmin
-gem "activeadmin",         github: "gregbell/active_admin",        branch: "rails4"
+gem "activeadmin",         github: "gregbell/active_admin", branch: "rails4"
 gem "inherited_resources", github: "josevalim/inherited_resources"
-gem "ransack",             github: "ernie/ransack",                branch: "rails-4"
-gem "formtastic",          github: "justinfrench/formtastic",      branch: "rails4beta"
 
 # Security
 gem "dotenv", ">= 0.7"
