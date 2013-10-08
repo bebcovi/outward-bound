@@ -3,6 +3,8 @@ OutwardBound::Application.routes.draw do
   scope "(:locale)", locale: /en|hr/ do
     root to: "home#index"
 
+    get "cpanel", to: redirect(subdomain: false), constraints: {subdomain: "www"}
+
     controller :about do
       get "about", to: :index
       get "about/:action"
