@@ -1,6 +1,6 @@
 module ButtonsHelper
   def back_button(string, path, options = {})
-    link_to string.prepend_icon("chevron-left"), path, options = {}
+    link_to string.prepend_icon("chevron-left"), path, option
   end
 
   def delete_button(text, path, options = {})
