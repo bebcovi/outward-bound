@@ -11,6 +11,7 @@ OutwardBound::Application.routes.draw do
     end
 
     resources :courses
+    get "courses/:category_id/:id", to: "courses#show", as: :pretty_course
     resources :posts
     resources :albums
 

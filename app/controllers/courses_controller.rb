@@ -5,7 +5,14 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id]).decorate
+    @course =
+      if params[:category_id]
+        category = Category.find(params[:category_id])
+        category.courses.find_by!(slug: params[:id])
+      else
+        Course.find(params[:id])
+      end
+    @course = @course.decorate
   end
 
   private

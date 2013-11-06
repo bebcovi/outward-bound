@@ -31,10 +31,6 @@ class Course < ActiveRecord::Base
     [name_en, name_hr].find(&:present?)
   end
 
-  def to_param
-    slug
-  end
-
   private
 
   def create_slug

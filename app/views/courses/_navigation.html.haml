@@ -3,5 +3,5 @@
     %li.nav-header
       = category.name
       - category.courses.each do |course|
-        %li{class: ("active" if request.path == course_path(course))}
-          = link_to course.name, course_path(course)
+        %li{class: ("active" if @course == course)}
+          = link_to course.name, pretty_course_path(category.slug, course.slug)
