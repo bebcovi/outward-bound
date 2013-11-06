@@ -200,8 +200,12 @@ ActiveAdmin.setup do |config|
         add_item.(Text.find("about/locations"), 7)
       end
     end
-  end
 
+    admin.build_menu :utility_navigation do |menu|
+      menu.add label: "Markdown", url: "/admin/markdown"
+      admin.add_logout_button_to_menu menu
+    end
+  end
 
   # == Download Links
   #
