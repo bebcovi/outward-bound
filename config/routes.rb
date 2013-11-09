@@ -1,5 +1,7 @@
 OutwardBound::Application.routes.draw do
 
+  get "admin", to: redirect(subdomain: "www"), constraints: {subdomain: nil}
+
   scope "(:locale)", locale: /en|hr/ do
     root to: "home#index"
 
