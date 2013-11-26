@@ -12,7 +12,7 @@ group :assets do
   gem "coffee-rails", "~> 4.0"
   gem "uglifier"
   gem "jquery-rails"
-  gem "turbolinks", ">= 1.2"
+  gem "turbolinks", ">= 1.3.1"
   gem "jquery-turbolinks", ">= 1"
   gem "eco", ">= 1"
   gem "jquery-fileupload-rails", ">= 0.4"
