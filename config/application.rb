@@ -20,6 +20,10 @@ if Rails.env.development?
   require "quiet_assets"
 end
 
+if Rails.env.production?
+  require "newrelic_rpm"
+end
+
 module OutwardBound
   class Application < Rails::Application
     # Don't initialize application when precompiling assets (for Heroku)
