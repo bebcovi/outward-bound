@@ -26,6 +26,7 @@ gem "will_paginate", ">= 3"
 gem "simple_form", ">= 3.0.0"
 gem "rails-i18n"
 gem "draper"
+gem "kaminari", "0.14.1"
 
 # Database
 gem "active_attr", ">= 0.8.1"
