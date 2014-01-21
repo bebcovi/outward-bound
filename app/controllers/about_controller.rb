@@ -22,6 +22,7 @@ class AboutController < ApplicationController
   end
 
   def locations
+    @locations = Location.decorate
   end
 
   def partners
