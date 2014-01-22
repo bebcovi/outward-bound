@@ -61,3 +61,20 @@
     }
   }
 }
+
+.location {
+  img {
+    @extend %img-polaroid;
+    margin-top: 5px;
+  }
+
+  &:nth-child(even) img {
+    float: left;
+    margin-right: 10px;
+  }
+
+  &:nth-child(odd) img {
+    float: right;
+    margin-left: 10px;
+  }
+}

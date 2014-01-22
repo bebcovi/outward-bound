@@ -1,4 +1,5 @@
-%section
+%section.location
   %h2= location.name
 
+  = image_tag location.image_url(:medium), width: 300, class: "img-polaroid" if location.image?
   = location.description
