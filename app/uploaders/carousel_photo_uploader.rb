@@ -1,5 +1,5 @@
 class CarouselPhotoUploader < CarrierWave::Uploader::Base
-  include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   resize_to_fit 940, nil
 
