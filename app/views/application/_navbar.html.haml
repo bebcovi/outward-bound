@@ -7,15 +7,15 @@
       - navigation_pages.each do |page|
         = page.title if params[:controller] == page.path[:controller]
 
-    %ol.main.nav
-      - navigation_pages.each do |page|
-        %li{class: (params[:controller] == page.path[:controller] && "active")}
-          = link_to page.title, page.path
-
     %ol.lang.nav
       %li{class: english? && "current"}
         = link_to image_tag("lang/GB.png", size: "32x22"), locale: :en
       %li{class: croatian? && "current"}
         = link_to image_tag("lang/HR.png", size: "32x22"), locale: :hr
+
+    %ol.main.nav
+      - navigation_pages.each do |page|
+        %li{class: (params[:controller] == page.path[:controller] && "active")}
+          = link_to page.title, page.path
 
     = render "newsletter"

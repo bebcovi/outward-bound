@@ -1,7 +1,7 @@
 .navbar {
   $border-width: 1px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   height: $navbar-height;
   font-size: $h4-size;
   font-weight: $base-light;
@@ -14,6 +14,7 @@
     @extend .cf;
     position: relative;
     height: 100%;
+    padding-left: 0;
   }
 
   $hover-color: white;
@@ -32,6 +33,10 @@
     }
   }
 
+  .nav_expander {
+    padding-right: 0;
+  }
+
   .active a {
     @include color-link($hover-color);
     font-weight: $base-bold;
@@ -39,9 +44,9 @@
 
   .brand {
     display: inline-block;
+    height: 100%;
+    float: left;
     height: auto;
-    margin-right: $half-spacing-unit;
-    margin-bottom: $half-spacing-unit;
     padding: 7px $half-spacing-unit/2;
     line-height: 0;
     border-left: 1px solid black;
@@ -68,26 +73,15 @@
 
   .main {
     @extend %transition-all;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-  }
-
-  @mixin expanded {
-    height: auto;
-    opacity: 1;
-  }
-
-  .expanded {
-    @include expanded;
   }
 
   .lang {
-    margin-left: -8px;
+    float: right;
+    margin-left: 0;
 
     li { float: left; }
 
-    a { padding: 5px 8px; }
+    a { padding: 0 8px; }
 
     .current {
       a {
@@ -103,40 +97,13 @@
     }
   }
 
-  @include media-query(palm) {
-    $link-height: $base-spacing-unit * 1.5;
-    height: auto;
-
-    li { line-height: $link-height; }
-
-    .nav a,
-    .nav_expander,
-    .lang a{
-      height: $link-height;
-      display: block;
-      padding: 0;
-      line-height: $link-height;
-    }
-
-    .brand {
-      margin-top: $half-spacing-unit;
-      line-height: 0;
-      border-radius: 5px;
-    }
-
-    .lang {
-      margin-bottom: $half-spacing-unit;
-
-      li { line-height: 0; }
-
-      a { padding: 5px 8px; }
-    }
-  }
-
   @include media-query(lap-and-up) {
+    .container {
+      padding-left: $site-padding;
+    }
+
     .brand {
-      float: left;
-      height: 100%;
+      margin-right: $half-spacing-unit;
     }
 
     .nav_expander {
@@ -147,10 +114,6 @@
       &, li {
         float: left;
       }
-    }
-
-    .main {
-      @include expanded;
     }
 
     .lang {

@@ -1,0 +1,32 @@
+$off-canvas-width: 140px;
+
+.wrapper {
+  @include transition-property(transform);
+  @include transition-duration(.2s);
+  @include transform(translate(0, 0));
+  background: $body-background;
+  position: relative;
+  z-index: 5;
+
+  .off-canvas & {
+    @include transform(translate(#{$off-canvas-width}, 0));
+  }
+}
+
+.navbar {
+  position: relative;
+
+  .main {
+    @include position(absolute, $navbar-height 0 0 0);
+    @include transition(opacity .2s);
+    pointer-events: none;
+    opacity: 0;
+    width: $off-canvas-width;
+    z-index: -5;
+
+    .off-canvas & {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}

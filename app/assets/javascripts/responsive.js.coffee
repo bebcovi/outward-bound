@@ -1,7 +1,7 @@
 jQuery ->
 
-  $mainNav = $(".main.nav")
+  $html = $("html")
 
   $(".nav_expander").on "click", (e) ->
     e.preventDefault()
-    $mainNav.toggleClass("expanded")
+    $html.toggleClass("off-canvas")
