@@ -3,6 +3,7 @@ en:
   home:
     index:
       page_title: "Home"
+      announcements: "Announcements"
     intro_video:
       play_video: "Play video"
 

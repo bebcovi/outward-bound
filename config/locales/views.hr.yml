@@ -3,6 +3,7 @@ hr:
   home:
     index:
       page_title: "Početna"
+      announcements: "Najave"
     intro_video:
       play_video: "Pogledaj video"
 
