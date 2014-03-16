@@ -52,8 +52,13 @@ body.home {
       vertical-align: middle;
     }
 
+    .img,
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     .img {
-      float: left;
       margin-right: $half-spacing-unit;
     }
 
