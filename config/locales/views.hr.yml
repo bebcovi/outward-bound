@@ -28,6 +28,8 @@ hr:
       page_title: "Lokacije"
     partners:
       page_title: "Partneri"
+    statute:
+      page_title: "Statut"
 
   courses:
     index:

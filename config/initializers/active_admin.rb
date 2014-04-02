@@ -38,6 +38,7 @@ ActiveAdmin.setup do |config|
         add_item.(Text.find("about/international"), 3)
         add_item.(Text.find("about/support"), 5)
         add_item.(Text.find("about/safety"), 6)
+        add_item.(Text.find("about/statute"), 7)
       end
     end
 

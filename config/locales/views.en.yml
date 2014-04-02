@@ -28,6 +28,8 @@ en:
       page_title: "Locations"
     partners:
       page_title: "Partners"
+    statute:
+      page_title: "Statute"
 
   courses:
     index:

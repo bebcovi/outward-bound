@@ -29,6 +29,9 @@ class AboutController < ApplicationController
     @partners = Partner.decorate
   end
 
+  def statute
+  end
+
   private
 
   def sub_layout
