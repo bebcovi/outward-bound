@@ -35,6 +35,7 @@ gem "squeel", ">= 1.1"
 gem "carrierwave", ">= 0.8"
 gem "fog", ">= 1.14"
 gem "mini_magick"
+gem "rmagick"
 gem "acts_as_list", ">= 0.2"
 
 # ActiveAdmin
