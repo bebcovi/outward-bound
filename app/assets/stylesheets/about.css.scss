@@ -30,6 +30,7 @@
   @extend %unstyled-list;
   @extend .cf;
   font-family: $alt-font-family;
+  font-size: 0;
 
   a {
     @include color-link(rgba(black, .35), $link-hover);
@@ -53,6 +54,7 @@
   }
 
   img {
+    max-width: 100%;
     margin-bottom: $half-spacing-unit;
 
     @media (min-width: 540px) {
